@@ -1,0 +1,59 @@
+{
+ "dexcom_g7": [
+  "Google CrashLytics",
+  "Google Firebase Analytics",
+  "Qualtrics"
+ ],
+ "duolingo": [
+  "Adjust",
+  "Amazon Advertisement",
+  "AppLovin (MAX and SparkLabs)",
+  "AppMonet",
+  "Appodeal Stack",
+  "BidMachine",
+  "ChartBoost",
+  "Facebook Ads",
+  "Facebook Analytics",
+  "Facebook Login",
+  "Facebook Share",
+  "Fyber",
+  "Google AdMob",
+  "Google Firebase Analytics",
+  "HyprMX",
+  "IAB Open Measurement",
+  "Inmobi",
+  "Mintegral",
+  "Ogury Presage",
+  "Pangle",
+  "Prebid Mobile",
+  "PubNative",
+  "Sentry",
+  "Smaato",
+  "SuperAwesome",
+  "Tapjoy",
+  "Unity3d Ads",
+  "Vungle",
+  "Yandex Ad",
+  "ironSource",
+  "maio by i-mobile",
+  "myTarget"
+ ],
+ "instagram": [
+  "Facebook Flipper",
+  "Facebook Login",
+  "Facebook Notifications",
+  "Google Analytics"
+ ],
+ "protonmail": [
+  "Sentry"
+ ],
+ "reddit": [
+  "AppsFlyer",
+  "Google CrashLytics",
+  "Google Firebase Analytics"
+ ],
+ "snapchat": [
+  "Google Firebase Analytics",
+  "Mapbox"
+ ]
+}

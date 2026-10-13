@@ -1,0 +1,32 @@
+== apks/base/dexcom_g7.apk
+  package=com.dexcom.g7 version=2.2.1.7105 (7105) minSdk=29 targetSdk=34
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Android, Organizational Unit: Android, Organization: Google Inc., Locality: Mountain View, State/Province: California, Country: US
+  cert sha256 : 795f017f66c00a98c62356354df45edad92cdae2db9ac8739208ffe6c04dfc61
+== apks/base/duolingo.apk
+  package=com.duolingo version=6.101.2 (2476) minSdk=29 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Vicki Cheung, Organization: Duolingo
+  cert sha256 : 1233ff6de4c70ef4d7deae54af15b167fc7cfd2539517bd2175870f3cb771731
+== apks/base/instagram.apk
+  package=com.instagram.android version=451.0.0.53.80 (385713116) minSdk=28 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Kevin Systrom, Organization: Instagram Inc, Locality: San Francisco, State/Province: California, Country: US
+  cert sha256 : 5f3e50f435583c9ae626302a71f7340044087a7e2c60adacfc254205a993e305
+  cert subject: Common Name: Meta Platforms Inc., Organizational Unit: Meta Mobile, Organization: Meta Platforms Inc., Locality: Menlo Park, State/Province: California, Country: US
+  cert sha256 : 3a10c50c18ba937506c2875e9047be74f8fd8b86fae2ff9feaa50a81fcb4c014
+== apks/base/protonmail.apk
+  package=ch.protonmail.android version=7.11.10 (18325) minSdk=29 targetSdk=36
+  signed v1=True v2=True v3=True
+  cert subject: Common Name: Proton Technologies AG, Organizational Unit: Proton Technologies AG, Organization: Proton Technologies AG, Locality: Geneva, State/Province: Geneva, Country: CH
+  cert sha256 : dcc9439ec1a6c6a8d0203f3423ee42bcc8b970628e53cb73a0393f398dd5b853
+== apks/base/reddit.apk
+  package=com.reddit.frontpage version=2026.40.0 (2640090) minSdk=29 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Mobile Apps, Organization: reddit Inc., Locality: San Francisco, State/Province: CA, Country: US
+  cert sha256 : 970b91143813b4c9d5f3634f672c9fcaa5621b4efaaedafd6c235cbbb869736f
+== apks/base/snapchat.apk
+  package=com.snapchat.android version=14.27.0.53 (319422) minSdk=23 targetSdk=36
+  signed v1=True v2=True v3=True
+  cert subject: Common Name: Daniel Smith, Organizational Unit: Captain Captcha, Organization: Snapchat, Locality: Los Angeles, State/Province: California, Country: 01
+  cert sha256 : 2f1caafca1ed30d0b4e38863eefabea0e815711fa4cf79b822519a8259d95a58

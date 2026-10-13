@@ -1,0 +1,550 @@
+{
+ "package": "com.reddit.frontpage",
+ "version": "2026.40.0",
+ "permissions": [
+  "android.permission.ACCESS_ADSERVICES_AD_ID",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.CAMERA",
+  "android.permission.DETECT_SCREEN_CAPTURE",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.INTERNET",
+  "android.permission.MODIFY_AUDIO_SETTINGS",
+  "android.permission.PACKAGE_USAGE_STATS",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_APP_BADGE",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_SYNC_SETTINGS",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.WRITE_SYNC_SETTINGS",
+  "com.anddoes.launcher.permission.UPDATE_COUNT",
+  "com.android.launcher.permission.INSTALL_SHORTCUT",
+  "com.android.vending.BILLING",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "com.google.android.gms.permission.AD_ID",
+  "com.google.android.providers.gsf.permission.READ_GSERVICES",
+  "com.htc.launcher.permission.READ_SETTINGS",
+  "com.htc.launcher.permission.UPDATE_SHORTCUT",
+  "com.huawei.android.launcher.permission.CHANGE_BADGE",
+  "com.huawei.android.launcher.permission.READ_SETTINGS",
+  "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+  "com.majeur.launcher.permission.UPDATE_BADGE",
+  "com.oppo.launcher.permission.READ_SETTINGS",
+  "com.oppo.launcher.permission.WRITE_SETTINGS",
+  "com.reddit.frontpage.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "com.sec.android.provider.badge.permission.READ",
+  "com.sec.android.provider.badge.permission.WRITE",
+  "com.sonyericsson.home.permission.BROADCAST_BADGE",
+  "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+  "me.everything.badger.permission.BADGE_COUNT_READ",
+  "me.everything.badger.permission.BADGE_COUNT_WRITE"
+ ],
+ "dangerous_permissions": [
+  "android.permission.CAMERA",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "com.amazon.mShop.android.shopping",
+   "com.instagram.android",
+   "com.snapchat.android",
+   "com.facebook.katana",
+   "com.twitter.android",
+   "com.google.android.apps.messaging",
+   "com.facebook.orca",
+   "com.google.android.gm",
+   "com.nextdoor",
+   "com.instagram.barcelona",
+   "com.android.vending",
+   "com.google.android.engage.verifyapp",
+   "com.facebook.lite",
+   "com.samsung.android.mapsagent"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.media.action.IMAGE_CAPTURE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SENDTO"
+    ],
+    "data": [
+     {
+      "scheme": "*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.settings.WIRELESS_SETTINGS"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.settings.PANEL_ACTION_INTERNET_CONNECTIVITY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "@7F1324A8"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "@7F1324A2"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "@7F1324A9"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.android.vending.billing.InAppBillingService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.appsflyer.referrer.INSTALL_PROVIDER"
+    ],
+    "data": []
+   }
+  ],
+  "providers": []
+ },
+ "app_attrs": {
+  "theme": "@7F140017",
+  "label": "@7F130430",
+  "icon": "@7F100001",
+  "name": "com.reddit.frontpage.FrontpageApplication",
+  "allowBackup": "true",
+  "largeHeap": "true",
+  "supportsRtl": "true",
+  "extractNativeLibs": "false",
+  "fullBackupContent": "@7F160003",
+  "networkSecurityConfig": "@7F160007",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "preserveLegacyExternalStorage": "true",
+  "dataExtractionRules": "@7F160001",
+  "localeConfig": "@7F160006",
+  "enableOnBackInvokedCallback": "true"
+ },
+ "meta_data": {
+  "com.reddit.startup.dns.DnsLookupInitializer": "androidx.startup",
+  "com.reddit.logging.LoggingInitializer": "androidx.startup",
+  "com.reddit.frontpage.di.DaggerComponentInitializer": "androidx.startup",
+  "com.apollographql.cache.normalized.sql.ApolloInitializer": "androidx.startup",
+  "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "androidx.profileinstaller.ProfileInstallerInitializer": "androidx.startup",
+  "okhttp3.internal.platform.PlatformInitializer": "androidx.startup",
+  "google_analytics_automatic_screen_reporting_enabled": "false",
+  "com.google.android.engage.service.ENV": "PRODUCTION",
+  "android.app.searchable": "@7F16000A",
+  "photopicker_activity:0:required": null,
+  "android.accounts.AccountAuthenticator": "@7F160002",
+  "asset_statements": "@7F13046C",
+  "android.support.FILE_PROVIDER_PATHS": "@7F160008",
+  "firebase_analytics_collection_enabled": "false",
+  "google_analytics_default_allow_ad_storage": "false",
+  "google_analytics_default_allow_analytics_storage": "false",
+  "google_analytics_default_allow_ad_user_data": "false",
+  "google_analytics_default_allow_ad_personalization_signals": "false",
+  "preloaded_fonts": "@7F030011",
+  "com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "androidx.credentials.CREDENTIAL_PROVIDER_KEY": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl",
+  "com.bumptech.glide.integration.okhttp3.OkHttpGlideModule": "GlideModule",
+  "com.google.android.play.billingclient.version": "9.1.0",
+  "com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED": "true",
+  "com.google.android.gms.version": "@7F0C000F",
+  "backend:com.google.android.datatransport.cct.CctBackendFactory": "cct",
+  "com.android.vending.splits.required": "true",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_DISTRIBUTION_APK",
+  "com.android.vending.splits": "@7F160010",
+  "com.android.vending.derived.apk.id": "2"
+ },
+ "activities": 59,
+ "services": [
+  {
+   "name": "com.google.android.gms.metadata.ModuleDependencies",
+   "exported": "false",
+   "actions": [
+    "com.google.android.gms.metadata.MODULE_DEPENDENCIES"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.auth.login.impl.AuthService",
+   "exported": "true",
+   "actions": [
+    "android.accounts.AccountAuthenticator"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.reddit.notification.impl.fcm.RedditMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.sessions.SessionLifecycleService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.jakewharton.processphoenix.PhoenixService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.reddit.notification.impl.controller.CancelNotificationReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.notification.impl.controller.DismissNotificationReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.cubes.AppEngageBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.engage.action.PUBLISH_RECOMMENDATION",
+    "com.google.android.engage.action.PUBLISH_FEATURED",
+    "com.google.android.engage.action.PUBLISH_CONTINUATION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.sharing.ShareIntentReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.sharing.custom.ExternalShareResultReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.homeshortcuts.HomeShortcutPlacedReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.tracing.profiler.ConnectedProfilerTracingEnabledReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.tracing.profiler.ConnectedProfilerTracingReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.tracing.profiler.action.START",
+    "androidx.tracing.profiler.action.FLUSH_TRACES_GET_PATH",
+    "androidx.tracing.profiler.action.STOP"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.frontpage.di.DependencyInjectionInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.firebase.provider.RedditFirebaseInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "org.matrix.android.sdk.api.session.file.MatrixSDKFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.domain.session.foreground.lifecycleowner.PreStartProcessLifecycleOwnerContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.reddit.activityflows.ActivityFlowsContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.content.FileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

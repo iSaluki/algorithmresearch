@@ -1,0 +1,117 @@
+{
+ "evidence_id": "ev_978d42c6fb3493e8e105e0aaab5715935664bf67c9d728201807d14d256098da",
+ "subject": {
+  "name": "instagram.apk",
+  "digest": {
+   "sha256": "4c0e618298317eac84afa7ee9059a3c28561b055d474e4b983a817f19a120c37"
+  },
+  "format": "apk",
+  "architecture": null,
+  "local_path": "/home/user/algorithmresearch/apks/base/instagram.apk"
+ },
+ "provider": {
+  "id": "jadx",
+  "name": "JADX headless",
+  "version": "0.7.1"
+ },
+ "operation": "inspect_android_class",
+ "parameters": {
+  "path": "apks/base/instagram.apk",
+  "class_name": "X.C0Ebz"
+ },
+ "normalized_result": {
+  "engine": {
+   "name": "jadx-headless-mcp",
+   "version": "0.7.1",
+   "artifact_sha256": "6e5eacf500b64292bfb73c49797c1958f6ee44646e43e868039ae7feb573ff75",
+   "source_revision": "5844800a486d2248fa949b74c9896285f5b54de2",
+   "worker_count": 1,
+   "heap_limit_mib": 5120
+  },
+  "class_name": "X.C0Ebz",
+  "methods": [
+   {
+    "name": "<init>",
+    "reported_signature": "<init>(java.lang.Object, int): void",
+    "overload_index": 0,
+    "is_constructor": true,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A00",
+    "reported_signature": "A00(X.01Cn, X.0Jzl): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A01",
+    "reported_signature": "A01(X.0Ebz): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A02",
+    "reported_signature": "A02(X.0Ebz): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A03",
+    "reported_signature": "A03(X.0Ebz): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A04",
+    "reported_signature": "A04(X.0Ebz): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A05",
+    "reported_signature": "A05(X.0Ebz): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "A06",
+    "reported_signature": "A06(X.0Ebz): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   },
+   {
+    "name": "invoke",
+    "reported_signature": "invoke(): java.lang.Object",
+    "overload_index": 0,
+    "is_constructor": false,
+    "dex_descriptor": null
+   }
+  ],
+  "fields": [
+   {
+    "name": "$t",
+    "reported_type": "int"
+   },
+   {
+    "name": "A00",
+    "reported_type": "java.lang.Object"
+   }
+  ],
+  "inner_classes": []
+ },
+ "confidence": "observed",
+ "authority": "shipped-artifact",
+ "limitations": [
+  "Static decompiler observations do not establish runtime behavior; the APK is never executed.",
+  "Method signatures use provider display types; exact DEX descriptors and instruction offsets are unavailable. Overload indices are local to this engine and artifact.",
+  "Class inventories use parsed metadata before code generation, including synthetic members that may be omitted from decompiled source. Source positions remain unknown.",
+  "Manifest summary fields are extracted by the upstream engine; decoded XML is retained for verification. APK signatures, split APKs, native libraries and Android runtime capture are not verified by this provider."
+ ]
+}

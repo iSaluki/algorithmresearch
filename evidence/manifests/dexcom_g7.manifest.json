@@ -1,0 +1,508 @@
+{
+ "package": "com.dexcom.g7",
+ "version": "2.2.1.7105",
+ "permissions": [
+  "android.permission.ACCESS_BACKGROUND_LOCATION",
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_NOTIFICATION_POLICY",
+  "android.permission.BLUETOOTH",
+  "android.permission.BLUETOOTH_ADMIN",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.BLUETOOTH_SCAN",
+  "android.permission.CALL_PHONE",
+  "android.permission.CAMERA",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.INTERNET",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.QUERY_ALL_PACKAGES",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+  "android.permission.SCHEDULE_EXACT_ALARM",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.health.READ_ACTIVE_CALORIES_BURNED",
+  "android.permission.health.READ_BASAL_METABOLIC_RATE",
+  "android.permission.health.READ_DISTANCE",
+  "android.permission.health.READ_EXERCISE",
+  "android.permission.health.READ_HEART_RATE",
+  "android.permission.health.READ_STEPS",
+  "android.permission.health.WRITE_BLOOD_GLUCOSE",
+  "com.dexcom.g7.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+ ],
+ "dangerous_permissions": [
+  "android.permission.ACCESS_BACKGROUND_LOCATION",
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.BLUETOOTH_SCAN",
+  "android.permission.CALL_PHONE",
+  "android.permission.CAMERA",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "com.google.android.apps.healthdata"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.speech.RecognitionService"
+    ],
+    "data": []
+   }
+  ],
+  "providers": []
+ },
+ "app_attrs": {
+  "theme": "@7F15015A",
+  "label": "@7F140360",
+  "icon": "@7F0801B6",
+  "name": "com.dexcom.phoenix.G7CgmApplication",
+  "allowBackup": "false",
+  "largeHeap": "true",
+  "supportsRtl": "true",
+  "extractNativeLibs": "true",
+  "usesCleartextTraffic": "false",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "zygotePreloadName": "ig.\u1ad5\u1ac2"
+ },
+ "meta_data": {
+  "android.app.shortcuts": "@7F170001",
+  "firebase_analytics_collection_deactivated": "true",
+  "preloaded_fonts": "@7F03000A",
+  "com.google.firebase.messaging.default_notification_icon": "@7F0801C3",
+  "com.google.firebase.messaging.default_notification_color": "@7F060082",
+  "com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.gms.fitness.sdk.version": "19.0.0",
+  "com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.iid.Registrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.android.gms.version": "@7F0B000E",
+  "androidx.work.WorkManagerInitializer": "androidx.startup",
+  "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "androidx.profileinstaller.ProfileInstallerInitializer": "androidx.startup",
+  "backend:com.google.android.datatransport.cct.CctBackendFactory": "cct",
+  "com.android.dynamic.apk.fused.modules": "base",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_STANDALONE_APK",
+  "com.android.vending.splits": "@7F170002",
+  "com.android.vending.derived.apk.id": "2"
+ },
+ "activities": 23,
+ "services": [
+  {
+   "name": "com.dexcom.coresdk.g6txkit.g6core.G6CoreService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.dexcom.coresdk.g7txkit.g7core.G7CoreService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "androidx.health.platform.client.impl.sdkservice.HealthDataSdkService",
+   "exported": "true",
+   "actions": [
+    "androidx.health.platform.client.ACTION_BIND_SDK_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "ig.\u1ade\u0873",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "vv.\u1ac5\u0872",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.dexcom.phoenix.ui.screens.settings.alerts.schedule.AlertScheduleAlarmReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.util.alerts.TimeChangeBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.TIME_SET",
+    "android.intent.action.TIMEZONE_CHANGED",
+    "android.intent.action.DATE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.util.alerts.BootCompletedReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.receiver.NotificationReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.system.AlertReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.system.heartbeat.HeartbeatReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.system.DndAlertReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.phoenix.system.BackgroundRestrictionReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.qualtrics.digital.QualtricsNotificationManager",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MAIN"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.coresdk.g6txkit.g6core.BootUpReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.LOCKED_BOOT_COMPLETED",
+    "android.intent.action.QUICKBOOT_POWERON",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.coresdk.g6txkit.g6core.EventReceiver",
+   "exported": "false",
+   "actions": [
+    "com.dexcom.timed_event"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.coresdk.g6txkit.g6core.ForegroundServiceReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.coresdk.g7txkit.g7core.BootUpReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.LOCKED_BOOT_COMPLETED",
+    "android.intent.action.QUICKBOOT_POWERON",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.coresdk.g7txkit.g7core.EventReceiver",
+   "exported": "false",
+   "actions": [
+    "com.dexcom.timed_event"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.dexcom.coresdk.g7txkit.g7core.ForegroundServiceReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "android.intent.action.ACTION_POWER_DISCONNECTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BATTERY_OKAY",
+    "android.intent.action.BATTERY_LOW"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.DEVICE_STORAGE_LOW",
+    "android.intent.action.DEVICE_STORAGE_OK"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+   "exported": "false",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.TIME_SET",
+    "android.intent.action.TIMEZONE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "androidx.work.impl.background.systemalarm.UpdateProxies"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.provider.FirebaseInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

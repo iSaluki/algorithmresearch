@@ -1,0 +1,1028 @@
+{
+ "package": "com.snapchat.android",
+ "version": "14.27.0.53",
+ "permissions": [
+  "android.permission.ACCESS_ADSERVICES_AD_ID",
+  "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+  "android.permission.ACCESS_BACKGROUND_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.AUTHENTICATE_ACCOUNTS",
+  "android.permission.BLUETOOTH",
+  "android.permission.BLUETOOTH_ADMIN",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.BLUETOOTH_SCAN",
+  "android.permission.CAMERA",
+  "android.permission.CHANGE_NETWORK_STATE",
+  "android.permission.CHANGE_WIFI_STATE",
+  "android.permission.DETECT_SCREEN_CAPTURE",
+  "android.permission.DETECT_SCREEN_RECORDING",
+  "android.permission.FLASHLIGHT",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.FOREGROUND_SERVICE_LOCATION",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+  "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.HIGH_SAMPLING_RATE_SENSORS",
+  "android.permission.INTERNET",
+  "android.permission.MANAGE_OWN_CALLS",
+  "android.permission.MODIFY_AUDIO_SETTINGS",
+  "android.permission.NEARBY_WIFI_DEVICES",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.POST_PROMOTED_NOTIFICATIONS",
+  "android.permission.READ_APP_BADGE",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_NUMBERS",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.READ_PROFILE",
+  "android.permission.READ_SYNC_SETTINGS",
+  "android.permission.READ_SYNC_STATS",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.USE_FULL_SCREEN_INTENT",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.WRITE_SYNC_SETTINGS",
+  "com.amazon.device.messaging.permission.RECEIVE",
+  "com.anddoes.launcher.permission.UPDATE_COUNT",
+  "com.android.vending.BILLING",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "com.google.android.gms.permission.AD_ID",
+  "com.htc.launcher.permission.READ_SETTINGS",
+  "com.htc.launcher.permission.UPDATE_SHORTCUT",
+  "com.huawei.android.launcher.permission.CHANGE_BADGE",
+  "com.huawei.android.launcher.permission.READ_SETTINGS",
+  "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+  "com.majeur.launcher.permission.UPDATE_BADGE",
+  "com.oplus.systemui.permission.LOCKSCREEN_SHORTCUTS",
+  "com.oppo.launcher.permission.READ_SETTINGS",
+  "com.oppo.launcher.permission.WRITE_SETTINGS",
+  "com.samsung.android.mapsagent.permission.READ_APP_INFO",
+  "com.sec.android.provider.badge.permission.READ",
+  "com.sec.android.provider.badge.permission.WRITE",
+  "com.snapchat.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "com.snapchat.android.permission.RECEIVE_ADM_MESSAGE",
+  "com.snapchat.android.permission.UPDATE_STICKER_INDEX",
+  "com.sonyericsson.home.permission.BROADCAST_BADGE",
+  "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+  "com.vivo.notification.permission.BADGE_ICON",
+  "me.everything.badger.permission.BADGE_COUNT_READ",
+  "me.everything.badger.permission.BADGE_COUNT_WRITE"
+ ],
+ "dangerous_permissions": [
+  "android.permission.ACCESS_BACKGROUND_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.BLUETOOTH_SCAN",
+  "android.permission.CAMERA",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.NEARBY_WIFI_DEVICES",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_NUMBERS",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "com.twitter.android",
+   "com.whatsapp",
+   "com.zhiliaoapp.musically",
+   "com.facebook.katana",
+   "com.facebook.orca",
+   "com.instagram.android",
+   "com.waze",
+   "com.google.android.apps.maps",
+   "com.android.settings",
+   "com.huawei.systemmanager",
+   "com.sonymobile.cta",
+   "com.meizu.safe",
+   "com.miui.securitycenter",
+   "com.color.safecenter",
+   "com.letv.android.letvsafe",
+   "com.qihoo360.mobilesafe",
+   "ai.perplexity.app.android",
+   "com.apple.android.music",
+   "com.netflix.mediaclient",
+   "com.google.android.apps.youtube.music",
+   "com.google.android.youtube",
+   "com.whatsapp.w4b",
+   "com.spotify.music",
+   "com.spotify.music.debug",
+   "com.spotify.music.canary",
+   "com.spotify.music.partners",
+   "com.google.android.webview",
+   "com.google.android.webview.beta",
+   "com.google.android.webview.dev",
+   "com.google.android.webview.canary",
+   "com.google.android.webview.debug",
+   "com.android.webview",
+   "com.venmo",
+   "com.paypal.android.p2pmobile",
+   "com.samsung.android.mapsagent",
+   "com.android.vending",
+   "com.google.ar.core"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "image/jpeg"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "video/mp4"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "text/plain"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SENDTO"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.DIAL"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.android.vending.billing.InAppBillingService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.settings.LOCATION_SOURCE_SETTINGS"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.support.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.spotify.sso.action.START_AUTH_FLOW"
+    ],
+    "data": [
+     {
+      "mimeType": "text/plain"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*",
+      "scheme": "*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*",
+      "scheme": "upi",
+      "host": "pay"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.MAIN"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "rzp.device_token.share"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.media.action.IMAGE_CAPTURE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SENDTO"
+    ],
+    "data": [
+     {
+      "scheme": "mailto",
+      "host": "*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.google.android.play.core.install.BIND_INSTALL_SERVICE"
+    ],
+    "data": []
+   }
+  ],
+  "providers": [
+   "com.transsion.XOSLauncher.unreadprovider",
+   "com.transsion.hilauncher.unreadprovider",
+   "com.transsion.itel.launcher.unreadprovider",
+   "com.transsion.walauncher.unreadprovider"
+  ]
+ },
+ "app_attrs": {
+  "theme": "@7F140240",
+  "label": "@7F130353",
+  "icon": "@7F1000D9",
+  "name": "com.snap.mushroom.app.MushroomApplication",
+  "manageSpaceActivity": "com.snap.managespace.core.MushroomManageSpaceActivity",
+  "backupAgent": "com.snap.backup.api.MushroomBackupAgent",
+  "allowBackup": "true",
+  "vmSafeMode": "false",
+  "hardwareAccelerated": "true",
+  "largeHeap": "true",
+  "supportsRtl": "true",
+  "extractNativeLibs": "false",
+  "networkSecurityConfig": "@7F16008B",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "hasFragileUserData": "true",
+  "requestLegacyExternalStorage": "true"
+ },
+ "meta_data": {
+  "com.google.android.gms.ads.AD_MANAGER_APP": "true",
+  "com.google.android.backup.api_key": "unused",
+  "com.samsung.android.support.REMOTE_ACTION": "@7F16008F",
+  "android.service.chooser.chooser_target_service": "com.snap.shortcuts.list.SnapChooserTargetService",
+  "android.app.shortcuts": "@7F160136",
+  "com.oplus.systemui.lockscreen_shortcut": "true",
+  "com.samsung.keyguard.HIDE_LOCKSCREEN_SHORTCUT_APP": "true",
+  "android.max_aspect": "2.100000",
+  "android.support.FILE_PROVIDER_PATHS": "@7F160088",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
+  "AmazonAPIKey": "eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjlmY2YxMmZkMTVhYTQ5MWZiNTU2NTQwODA5Y2MxNjQyIiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi4zODQyYzg3YTg3NmU0ZjFkYjNmNTY4MjExNzE4Y2UwMSIsImlzcyI6IkFtYXpvbiIsInR5cGUiOiJBUElLZXkiLCJwa2ciOiJjb20uc25hcGNoYXQuYW5kcm9pZCIsImFwcFZhcmlhbnRJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC43OThmMmViZGJlNWE0M2VlODEzNTYzNzM5MDU0ZTgxZiIsInRydXN0UG9vbCI6bnVsbCwiYXBwc2lnU2hhMjU2IjoiMkY6MUM6QUE6RkM6QTE6RUQ6MzA6RDA6QjQ6RTM6ODg6NjM6RUU6RkE6QkU6QTA6RTg6MTU6NzE6MUY6QTQ6Q0Y6Nzk6Qjg6MjI6NTE6OUE6ODI6NTk6RDk6NUE6NTgiLCJhcHBzaWciOiI4ODo1QjoxNDo0MTpCODpGRTpEOTo3NDo5NDo0NTo2QjpBQTpBNzo3MTo4RjpGMiIsImFwcElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50Ljc5OGYyZWJkYmU1YTQzZWU4MTM1NjM3MzkwNTRlODFmIiwiaWQiOiJkM2VhMmZkMi1hY2YxLTQ2MzEtYTRjNy0yMGU3MzAzYWRkNzYiLCJpYXQiOiIxNzA1OTYzMzEzMjkwIn0=.NOya9VmckfuG6Wp+2Ok9yN+Pn2D+xqFTiYk2gdxNsQ5eJHrGAcYkiy676fNcFM7nbc3ql2PDo43h571YtCvtCp68MVsQpgDIXZDs2+zKigThirKrRixLmWwm1vGgTBlkav1SawjRELpyKuZC6hUuqfMwzs8dGFAkbC7zk2OmM032ub9kIxdfNYNpoJVqUZY8XIYKFELXij5j0vOy8baGWCRWtWgTuvbRMfHY73xA4DBpzRPq3lCF7XiA72a8DROQY+BpcAzOlPPPH2zfTFT2W9Q7hC3Lqx9OaRhSPWL74nl0UgKdsc2A8dxLc8ccALoEnB7XNCYcFktHjTtl/Z66uQ==",
+  "com.google.android.gms.version": "@7F0C0046",
+  "com.a3l.clsName": "com.snap.ms.notification.service.SnapNotificationA3LMessageService",
+  "firebase_crashlytics_collection_enabled": "false",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.pnv.internal.FirebasePhoneNumberVerificationRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "backend:com.google.android.datatransport.cct.CctBackendFactory": "cct",
+  "aiinternals:native_library": "bloops",
+  "face2face:native_library": "bloops",
+  "facedetectiontensorflow:native_library": "bloops",
+  "faceidentitymatcher:native_library": "bloops",
+  "faceneutrality:native_library": "bloops",
+  "facesegmentation:native_library": "bloops",
+  "genderclassification:native_library": "bloops",
+  "landmarksextractor:native_library": "bloops",
+  "scenariossearch:native_library": "bloops",
+  "modelcrypto:native_library": "bloops",
+  "facesegmentation:model_path_face": "/face_segmentation_dnn/FaceSegmentation_02.07.2019_smaller_8bit/FaceSegmentation_02.07.2019_smaller_8bit.dnn.enc",
+  "facesegmentation:model_path_eyes": "/face_segmentation_dnn/EyesSegmentation_06.06.2019_ver2_8bit/EyesSegmentation_06.06.2019_ver2_8bit.dnn.enc",
+  "faceneutrality:model_path_neutralization": "/face_neutrality_model_dnn/FaceNeutralityModel_16.04.2019_small_model_8bit_new_format/FaceNeutralityModel_16.04.2019_small_model_8bit_new_format.dnn.enc",
+  "faceneutrality:model_path_classification": "/face_neutrality_model_dnn/FaceNeutralityClassifier_24.05.2019_classifier_8bit_new_format/FaceNeutralityClassifier_24.05.2019_classifier_8bit_new_format.dnn.enc",
+  "landmarksextractor:model_path_aligner": "/landmarks_model_dnn/LandmarksAlignerModel_v11/cnn_aligner_v113_best_inference_fused_8bit.dnn.enc",
+  "landmarksextractor:model_path_refiner": "/landmarks_model_dnn/LandmarksRefinerModel_v11/cnn_refiner_v118_best_inference_fused_8bit.dnn.enc",
+  "com.google.android.play.billingclient.version": "9.0.0",
+  "android.webkit.WebView.UseWebViewResourceContext": "true",
+  "android.accounts.AccountAuthenticator": "@7F160000",
+  "android.content.SyncAdapter": "@7F160005",
+  "android.provider.CONTACTS_STRUCTURE": "@7F160004",
+  "com.razorpay.plugin.googlepay_all": "com.razorpay.RzpGpayMerged",
+  "androidx.credentials.CREDENTIAL_PROVIDER_KEY": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl",
+  "app_measurement_lite": "true",
+  "firebase_analytics_collection_enabled": "false",
+  "analytics.safelisted_events": "@7F030016",
+  "android.appwidget.provider": "@7F160137",
+  "android.view.im": "@7F160089",
+  "com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.segmentation.subject.internal.SubjectSegmentationRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.mlkit.vision.DEPENDENCIES": "barcode,subject_segment,face",
+  "com.google.android.gms.vision.DEPENDENCIES": "face,barcode",
+  "com.google.ar.core": "optional",
+  "com.google.ar.core.min_apk_version": "242590000",
+  "com.samsung.keyguard.SHOW_WHEN_LOCKED_SHORTCUT": "true",
+  "com.samsung.keyguard.LAUNCH_INSECURE_MAIN_SHORTCUT": "true",
+  "com.android.vending.splits.required": "true",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_DISTRIBUTION_APK",
+  "com.android.vending.splits": "@7F160141",
+  "com.android.vending.derived.apk.id": "5"
+ },
+ "activities": 330,
+ "services": [
+  {
+   "name": "androidx.browser.customtabs.PostMessageService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.mushroom.startup.BackgroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.ms.ads.AdvertisingIdClientInfoFetcherApiService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.ms.notification.service.SnapNotificationMessageService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.amazon.A3L.messaging.FCM.messaging.A3LMessagingFCMPlatformListener",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.service.ForcedLogoutService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.notification.service.RegistrationIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.notification.service.ClearNotificationIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.notification.service.NotificationActionButtonService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.mapbox.services.android.telemetry.service.TelemetryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.shortcuts.list.SnapChooserTargetService",
+   "exported": "true",
+   "actions": [
+    "android.service.chooser.ChooserTargetService"
+   ],
+   "permission": "android.permission.BIND_CHOOSER_TARGET_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.mapbox.android.telemetry.errors.ErrorReporterJobIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.mapbox.android.telemetry.MapboxTelemetryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.spotlight.core.features.feed.SpotlightPipService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.bluetoothdevice.service.SpectaclesService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000010"
+  },
+  {
+   "name": "android.webkit.MetaDataHolderService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.enhancedcontacts.core.SnapAndroidAccountAuthenticatorService",
+   "exported": "true",
+   "actions": [
+    "android.accounts.AccountAuthenticator"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.enhancedcontacts.core.EnhancedContactsSyncService",
+   "exported": "true",
+   "actions": [
+    "android.content.SyncAdapter"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.braintreepayments.api.internal.AnalyticsIntentService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.shake2report.controller.screenshot.CaptureScreenService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000020"
+  },
+  {
+   "name": "com.snap.keyboard.lib.SnapKeyboardIME",
+   "exported": "true",
+   "actions": [
+    "android.view.InputMethod"
+   ],
+   "permission": "android.permission.BIND_INPUT_METHOD",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.keyboard.lib.messenger.KeyboardMessengerService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.media.export.MediaExportService",
+   "exported": "false",
+   "actions": [
+    "snap.intent.action.MEDIA_EXPORT_SERVICE_START"
+   ],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.snap.talk.core.telecom.SnapConnectionService",
+   "exported": "false",
+   "actions": [
+    "android.telecom.ConnectionService"
+   ],
+   "permission": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.talk.core.InCallService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x000000A4"
+  },
+  {
+   "name": "androidx.core.telecom.internal.JetpackConnectionService",
+   "exported": "true",
+   "actions": [
+    "android.telecom.ConnectionService"
+   ],
+   "permission": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.location.loda.bindings.LodaDaemonService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000008"
+  },
+  {
+   "name": "com.snap.location.loda.bindings.LodaMainAppMailboxService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.ms.notification.service.SnapNotificationA3LMessageService",
+   "exported": "false",
+   "actions": [
+    "com.amazon.A3L.messaging.intent.REGISTRATION",
+    "com.amazon.A3L.messaging.intent.MESSAGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "android.intent.action.ACTION_POWER_DISCONNECTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BATTERY_OKAY",
+    "android.intent.action.BATTERY_LOW"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.DEVICE_STORAGE_LOW",
+    "android.intent.action.DEVICE_STORAGE_OK"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+   "exported": "false",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.TIME_SET",
+    "android.intent.action.TIMEZONE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "androidx.work.impl.background.systemalarm.UpdateProxies"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.amazon.A3L.messaging.ADM.messaging.A3LMessagingADMPlatformListener",
+   "exported": "true",
+   "actions": [
+    "com.amazon.device.messaging.intent.RECEIVE"
+   ],
+   "permission": "com.amazon.device.messaging.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.service.ForcedLogoutBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "snap.intent.action.FORCE_LOG_OUT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.lib.whatsappotp.WhatsappOtpCodeReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.OTP_RETRIEVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.lib.whatsappotp.WhatsappOtpErrorReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.OTP_ERROR"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.notification.channels.NotificationBlockStateBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED",
+    "android.app.action.NOTIFICATION_CHANNEL_GROUP_BLOCK_STATE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.notification.service.LoginNotificationReceiver",
+   "exported": "false",
+   "actions": [
+    "snap.intent.action.LOGIN_COMPLETE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.atlas.TimezoneChangeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.TIMEZONE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.memories.lib.media.ExternalExportBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.ads.attachments.core.attachmentopener.OpenInBrowserBroadcastReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.razorpay.RzpTokenReceiver",
+   "exported": "true",
+   "actions": [
+    "rzp.device_token.share"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.identity.loginsignup.RegistrationReengagementNotificationMushroomReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.sharing.ShareSheetBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.widgets.core.BestFriendsWidgetProvider",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "com.snap.android.WIDGET_APP_START_UPDATE_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.widgets.core.mapwidget.MapWidgetProvider",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "com.snap.android.MAP_WIDGET_UPDATE_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.widgets.core.snapcodewidget.SnapcodeWidgetProvider",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "com.snap.android.SNAPCODE_WIDGET_UPDATE_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.keyboard.lib.rkr.simplekeyboard.inputmethod.latin.SystemBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.media.export.ExportStatusBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "snap.intent.action.EXPORT_STATUS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.telecom.internal.MuteStateReceiver",
+   "exported": "true",
+   "actions": [
+    "android.media.action.MICROPHONE_MUTE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.ms.authapiphone.gms.GoogleSmsRetrieverV2",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+   ],
+   "permission": "com.google.android.gms.auth.api.phone.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.location.loda.bindings.GeofenceBroadcastReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "com.snap.media.provider.MediaPackageFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.content.LockscreenModeContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.cardinalcommerce.a.setOutlineSpotShadowColor",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.snap.keyboard.lib.KeyboardContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}
