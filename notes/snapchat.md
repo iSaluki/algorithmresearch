@@ -21,3 +21,31 @@
 - BSSID read (E1b.java) used only as local key for bandwidth estimate cache.
 - Queried packages (MIUI/Huawei security centers) = deep links to permission settings (C46472tUe.java); Netflix/Spotify etc. = "open in app" link handling (C23005eCe.java); TikTok = share target (QJc.java).
 - Clipboard reads only on paste in OTP/chat/comment inputs.
+
+## Sponsored Snaps (ads in chat inbox)
+- strings: "New in Your Chat Feed: Sponsored Snaps", "Choose Your Ad Experience" with only "Smaller In-Feed Ads" / "Larger Banner Ads" (no "no ads"), "I'm In!" / "Not Now"; framed as "personalized messages from your favorite artists, creators, brands".
+- defpackage/AKi.java:2481-2489 defaults: sponsored_snaps_eu_modal_dismissal_reprompt_ttl_seconds=172800 (48h), ..._dismissal_reprompt_frequency_cap=10, ..._opt_in_reprompt_ttl_days=183.
+## Snap Pixel identity cookie
+- AKi: pixel_tracking_host tr.snapchat.com, path /cm/wv, cookie sc_at, ttl 120h. defpackage/C41823qSg.java:229-237 GET https://tr.snapchat.com/cm/wv?scut=<pixel token>; AdsCookieManagerV2 (defpackage/C33862lH.java) caches; attached for WEB ad attachments (defpackage/C34056lOk.java:472-482).
+## Other ad config defaults (AKi)
+- ads_mushroom_location_in_ad_req=false (remote switch), snapads_mushroom_enable_check_on_device_can_open_url=false, ads_mushroom_remove_isshow_unskippable=true, ads_device_cluster.
+
+## Location history / Footsteps / background location
+- strings: "Clear your location history, including travel updates and Places you've visited while location is turned on" (separate carve-outs: "not including Footsteps", "not including Places you tagged in Snaps"); "Your location history updates while you have Snapchat open"; Places "Visited", "Highly Revisited", "Recently Visited", "Visited by $0".
+- Footsteps: "Your first steps will be based on Snaps in your Memories" (backfill from Memories location metadata); Snapchat+ feature; "Get Footsteps!" upsell.
+- "Allow all the time" upsell trays; com/snap/map_me_tray/MeTrayUpsellType BackgroundLocationRecovery; LodaDaemonService (foregroundServiceType=location), GeofenceBroadcastReceiver (enter/exit/dwell), LodaPushNotificationHandler, LodaLocationAccumulator + disk buffer + upload client.
+- UK U18: "Your last location is shared for 24 hours after app close".
+## My AI
+- Disclosure: uses content + location; "Content you share is retained until you delete it"; "We use My AI information to improve our products and ads"; "We share information with our service providers and advertising partners"; group: "My AI can read all messages in the chat".
+- Snapchat+ ad-free plan: "You may still see sponsored places and My AI responses."
+## Snapchat+ cancellation: "Don't Cancel" → "You will lose access to the following features..." → exit survey → "Finish canceling in settings".
+## Minors
+- "If you open this message, $0 may be able to determine that you have their phone number in your contact book."
+- Public profile for 16+ ("Grow Your Audience" — "Anyone can see your Public Profile"); Spotlight payouts to minors 16+ with parental consent.
+- "Solar Systems" Best Friend orbit ranking (Snapchat+).
+
+## Camera roll + Memories processing
+- Memories DB (defpackage/C44243s2b.java): detected_face(snap_id, cluster_id, bbox, encoding BLOB), face_cluster(tagged_user_id), face_cluster_blocklist; snap_indexing_process_status (visual tagging, visual tag cluster, TinyClip caption + embeddings); camera_roll_metadata(date_taken, is_favorite, path, relative_path, is_uploaded); save_operations(latitude, longitude).
+- Face Tagging toggle copy: "organized by face for easier searching, resurfacing, and future manual or automatic creative use"; turn-off: "All your face groups and group names will be deleted ... start over" ("Keep On"/"Turn Off").
+- Config: FACE_CLUSTERING_ENABLED default false (MEMORIES_ANDROID_FACE_CLUSTERING), FACE_TAGGING_MAX_BACKFILL_SIZE 10000.
+- Camera-roll metadata: CameraRollMetadataScanRecurringDurableJob (every 8h default, 50 items/page), CameraRollMetadataGrpcService, ENABLE_CAMERA_ROLL_FS_METADATA_UPLOAD default false (defpackage/Q1d.java:1142-1160); Flashback "featured stories" from camera roll.
