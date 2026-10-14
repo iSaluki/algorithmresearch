@@ -55,5 +55,62 @@
  "snapchat": [
   "Google Firebase Analytics",
   "Mapbox"
- ]
+ ],
+ "facebook": [
+  "Facebook Ads"
+ ],
+ "discord": [
+  "AppsFlyer",
+  "Google Analytics",
+  "Sentry"
+ ],
+ "signal": [],
+ "whatsapp": [],
+ "gphotos": [
+  "Google Firebase Analytics"
+ ],
+ "protonvpn": [
+  "Sentry"
+ ],
+ "waze": [
+  "Google CrashLytics"
+ ],
+ "chess": [
+  "Amazon Advertisement",
+  "AppLovin (MAX and SparkLabs)",
+  "AppsFlyer",
+  "Facebook Analytics",
+  "Facebook Login",
+  "Facebook Share",
+  "Google AdMob",
+  "Google CrashLytics",
+  "Google Firebase Analytics",
+  "IAB Open Measurement",
+  "Inmobi",
+  "Prebid Mobile"
+ ],
+ "bbcnews": [
+  "ATInternet",
+  "AppsFlyer",
+  "Chartbeat",
+  "Google CrashLytics",
+  "Optimizely",
+  "Urbanairship"
+ ],
+ "bbcnews_ww": [
+  "Adjust",
+  "AppLovin (MAX and SparkLabs)",
+  "AppsFlyer",
+  "Chartbeat",
+  "ComScore",
+  "Google AdMob",
+  "Google CrashLytics",
+  "Google Firebase Analytics",
+  "IAB Open Measurement",
+  "Prebid Mobile",
+  "Unity3d Ads",
+  "Urbanairship",
+  "ironSource"
+ ],
+ "telegram": []
 }

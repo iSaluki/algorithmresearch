@@ -1,0 +1,402 @@
+{
+ "package": "ch.protonvpn.android",
+ "version": "5.20.57.0",
+ "permissions": [
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.CAMERA",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+  "android.permission.INTERNET",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.QUERY_ALL_PACKAGES",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.WAKE_LOCK",
+  "ch.protonvpn.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+ ],
+ "dangerous_permissions": [
+  "android.permission.CAMERA",
+  "android.permission.POST_NOTIFICATIONS"
+ ],
+ "queries": {
+  "packages": [],
+  "intents": [
+   {
+    "actions": [
+     "android.support.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "*",
+      "host": "account.proton.me",
+      "pathPrefix": "/plan/upgrade"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   }
+  ],
+  "providers": []
+ },
+ "app_attrs": {
+  "theme": "@7F140215",
+  "label": "@7F13007D",
+  "icon": "@7F100000",
+  "name": "com.protonvpn.android.ProtonApplicationHilt",
+  "taskAffinity": "",
+  "allowBackup": "false",
+  "supportsRtl": "true",
+  "banner": "@7F080647",
+  "extractNativeLibs": "true",
+  "networkSecurityConfig": "@7F170003",
+  "roundIcon": "@7F100009",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "requestLegacyExternalStorage": "true",
+  "gwpAsanMode": "-1"
+ },
+ "meta_data": {
+  "android.content.APP_RESTRICTIONS": "@7F170000",
+  "android.appwidget.provider": "@7F170008",
+  "android.support.FILE_PROVIDER_PATHS": "@7F170001",
+  "android.max_aspect": "2.100000",
+  "asset_statements": "@7F130085",
+  "android.webkit.WebView.MetricsOptOut": "true",
+  "io.sentry.auto-init": "false",
+  "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "androidx.profileinstaller.ProfileInstallerInitializer": "androidx.startup"
+ },
+ "activities": 77,
+ "services": [
+  {
+   "name": "com.protonvpn.android.vpn.wireguard.WireguardWrapperService",
+   "exported": "false",
+   "actions": [
+    "android.net.VpnService"
+   ],
+   "permission": "android.permission.BIND_VPN_SERVICE",
+   "foregroundServiceType": "0x00000400"
+  },
+  {
+   "name": "com.wireguard.android.backend.GoBackend$VpnService",
+   "exported": "false",
+   "actions": [
+    "android.net.VpnService"
+   ],
+   "permission": "android.permission.BIND_VPN_SERVICE",
+   "foregroundServiceType": "0x00000400"
+  },
+  {
+   "name": "com.protonvpn.android.components.QuickTileService",
+   "exported": "true",
+   "actions": [
+    "android.service.quicksettings.action.QS_TILE"
+   ],
+   "permission": "android.permission.BIND_QUICK_SETTINGS_TILE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.ui.settings.AppInfoService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000400"
+  },
+  {
+   "name": "androidx.glance.appwidget.GlanceRemoteViewsService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_REMOTEVIEWS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "me.proton.vpn.core.service.ProTunVpnService",
+   "exported": "false",
+   "actions": [
+    "android.net.VpnService"
+   ],
+   "permission": "android.permission.BIND_VPN_SERVICE",
+   "foregroundServiceType": "0x00000400"
+  },
+  {
+   "name": "androidx.core.widget.RemoteViewsCompatService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_REMOTEVIEWS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.protonvpn.android.OnUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.vpn.autoconnect.AutoConnectBootReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.l10n.LocaleChangedBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.notifications.NotificationActionReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.quicktile.QuickTileActionReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.widget.ProtonVpnWidgetReceiver",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.widget.ProtonVpnWidgetBigReceiver",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.widget.ProtonVpnWidgetMaterialReceiver",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.widget.ProtonVpnWidgetMaterialBigReceiver",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.protonvpn.android.widget.WidgetActionBroadcastReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "me.proton.core.notification.presentation.deeplink.DeeplinkBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.glance.appwidget.action.ActionCallbackBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.glance.appwidget.UnmanagedSessionReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.glance.appwidget.MyPackageReplacedReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "android.intent.action.ACTION_POWER_DISCONNECTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BATTERY_OKAY",
+    "android.intent.action.BATTERY_LOW"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.DEVICE_STORAGE_LOW",
+    "android.intent.action.DEVICE_STORAGE_OK"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+   "exported": "false",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.TIME_SET",
+    "android.intent.action.TIMEZONE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "androidx.work.impl.background.systemalarm.UpdateProxies"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "androidx.core.content.FileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "io.sentry.android.core.SentryPerformanceProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

@@ -1,0 +1,2880 @@
+{
+ "package": "com.facebook.katana",
+ "version": "582.0.0.50.54",
+ "permissions": [
+  "android.permission.ACCESS_ADSERVICES_AD_ID",
+  "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+  "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
+  "android.permission.ACCESS_ADSERVICES_TOPICS",
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.AUTHENTICATE_ACCOUNTS",
+  "android.permission.BATTERY_STATS",
+  "android.permission.BLUETOOTH",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.BROADCAST_STICKY",
+  "android.permission.CAMERA",
+  "android.permission.CAPTURE_VIDEO_OUTPUT",
+  "android.permission.CHANGE_NETWORK_STATE",
+  "android.permission.CHANGE_WIFI_STATE",
+  "android.permission.CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS",
+  "android.permission.DETECT_SCREEN_CAPTURE",
+  "android.permission.DETECT_SCREEN_RECORDING",
+  "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_CAMERA",
+  "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+  "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.GET_TASKS",
+  "android.permission.INTERNET",
+  "android.permission.MANAGE_ACCOUNTS",
+  "android.permission.MANAGE_OWN_CALLS",
+  "android.permission.MODIFY_AUDIO_SETTINGS",
+  "android.permission.NFC",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_BASIC_PHONE_STATE",
+  "android.permission.READ_CALENDAR",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.READ_PROFILE",
+  "android.permission.READ_SYNC_SETTINGS",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.REORDER_TASKS",
+  "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+  "android.permission.RUN_USER_INITIATED_JOBS",
+  "android.permission.SYSTEM_ALERT_WINDOW",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.USE_FULL_SCREEN_INTENT",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_CALENDAR",
+  "android.permission.WRITE_CONTACTS",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.WRITE_SYNC_SETTINGS",
+  "com.amazon.device.messaging.permission.RECEIVE",
+  "com.android.launcher.permission.INSTALL_SHORTCUT",
+  "com.android.vending.BILLING",
+  "com.facebook.appmanager.UNPROTECTED_API_ACCESS",
+  "com.facebook.katana.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "com.facebook.katana.permission.CREATE_SHORTCUT",
+  "com.facebook.katana.permission.CROSS_PROCESS_BROADCAST_MANAGER",
+  "com.facebook.katana.permission.RECEIVE_ADM_MESSAGE",
+  "com.facebook.katana.provider.ACCESS",
+  "com.facebook.mlite.provider.ACCESS",
+  "com.facebook.orca.provider.ACCESS",
+  "com.facebook.pages.app.provider.ACCESS",
+  "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+  "com.facebook.receiver.permission.ACCESS",
+  "com.facebook.services.identity.FEO2",
+  "com.google.android.apps.aicore.service.BIND_SERVICE",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "com.google.android.gms.permission.AD_ID",
+  "com.google.android.providers.gsf.permission.READ_GSERVICES",
+  "com.htc.launcher.permission.READ_SETTINGS",
+  "com.htc.launcher.permission.UPDATE_SHORTCUT",
+  "com.motorola.launcher3.permission.UNREAD_BADGE",
+  "com.nokia.pushnotifications.permission.RECEIVE",
+  "com.oculus.twilight.provider.ACCESS",
+  "com.sec.android.provider.badge.permission.READ",
+  "com.sec.android.provider.badge.permission.WRITE",
+  "com.sonyericsson.home.permission.BROADCAST_BADGE",
+  "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"
+ ],
+ "dangerous_permissions": [
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.CAMERA",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_CALENDAR",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.WRITE_CALENDAR",
+  "android.permission.WRITE_CONTACTS",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "com.google.android.webview",
+   "com.facebook.browser.helium.standalone",
+   "com.facebook.wallaby.pulse",
+   "com.whatsapp",
+   "com.whatsapp.w4b",
+   "com.google.android.apps.maps",
+   "com.facebook.loja",
+   "com.facebook.loja.debug",
+   "com.facebook.stella",
+   "com.facebook.stella_debug",
+   "tech.butterfly.app",
+   "com.replit.app",
+   "com.arco.youware",
+   "com.emergentagent.app",
+   "dev.a0.android.app",
+   "com.google.android.apps.labs.language.tailwind",
+   "com.openai.chatgpt",
+   "com.google.android.apps.bard",
+   "com.microsoft.copilot",
+   "ai.perplexity.app.android",
+   "com.anthropic.claude",
+   "ai.replika.app",
+   "ai.character.app",
+   "com.quora.poe",
+   "com.inflection.pi",
+   "net.dinglisch.android.taskerm",
+   "com.ifttt.ifttt",
+   "com.zapier.android",
+   "com.arlosoft.macrodroid",
+   "com.llamalab.automate",
+   "io.homeassistant.companion.android",
+   "notion.id",
+   "com.formagrid.airtable",
+   "com.twitter.android",
+   "org.telegram.messenger",
+   "com.google.android.aicore",
+   "com.spotify.music",
+   "com.spotify.music.debug",
+   "com.spotify.music.canary",
+   "com.spotify.music.partners",
+   "com.facebook.appmanager",
+   "com.facebook.system",
+   "com.facebook.services",
+   "com.LogiaGroup.LogiaDeck"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.DIAL"
+    ],
+    "data": [
+     {
+      "scheme": "tel"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.CALL"
+    ],
+    "data": [
+     {
+      "scheme": "tel"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.MAIN"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.android.vending.billing.InAppBillingService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "androidx.browser.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SENDTO"
+    ],
+    "data": [
+     {
+      "scheme": "mailto"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "geo"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "audio/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.media.action.IMAGE_CAPTURE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "text/plain"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https",
+      "host": "play.google.com"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.IS_READY_TO_PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.UPDATE_PAYMENT_DETAILS"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "http"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.support.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.spotify.sso.action.START_AUTH_FLOW"
+    ],
+    "data": [
+     {
+      "mimeType": "text/plain"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.facebook.secure.packagefinder.intent.ACTION_QUERY_PACKAGES"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.facebook.GET_PHONE_ID"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.facebook.GET_UNIQUE_ID"
+    ],
+    "data": []
+   }
+  ],
+  "providers": []
+ },
+ "app_attrs": {
+  "theme": "@7F20066F",
+  "label": "@7F1400BD",
+  "icon": "@7F100001",
+  "name": "com.facebook.katana.app.FacebookApplication",
+  "debuggable": "false",
+  "backupAgent": "com.facebook.messaging.backup.AutoBackupAgent",
+  "allowBackup": "true",
+  "vmSafeMode": "false",
+  "restoreAnyVersion": "true",
+  "hardwareAccelerated": "true",
+  "largeHeap": "true",
+  "supportsRtl": "true",
+  "fullBackupOnly": "true",
+  "extractNativeLibs": "true",
+  "fullBackupContent": "@7F170002",
+  "resizeableActivity": "true",
+  "networkSecurityConfig": "@7F170004",
+  "appComponentFactory": "com.facebook.common.appcomponentfactory.fb4a.Fb4aAppComponentFactory",
+  "requestLegacyExternalStorage": "true",
+  "dataExtractionRules": "@7F170003",
+  "allowCrossUidActivitySwitchFromBelow": "false"
+ },
+ "meta_data": {
+  "com.facebook.fd": "true",
+  "com.facebook.mobileconfig.params_map": "true",
+  "com.google.android.backup.api_key": "[redacted]",
+  "com.facebook.build_rule": "fbandroid_henosis_dextr_splitarsc_dlstr_xzdex_arm64_release_fbsign",
+  "com.facebook.package_type": "release",
+  "com.facebook.build_time": "1791258538000L",
+  "com.facebook.versioncontrol.branch": "master",
+  "com.facebook.versioncontrol.revision": "MASTER",
+  "com.facebook.build_id": "1085046469",
+  "android.allow_multiple_resumed_activities": "true",
+  "instantapps.clients.allowed": "true",
+  "com.google.android.safetynet.API_KEY": "[redacted]",
+  "asset_statements": "@7F14000D",
+  "android.max_aspect": "3.000000",
+  "com.google.android.gms.version": "@7F0C0014",
+  "com.google.android.ALLOW_PHISHING_DETECTION": "false",
+  "miui.badge.decoupling": "true",
+  "com.oculus.twilight.fbpermission.SSO_ACCESS": null,
+  "com.facebook.stella.fbpermission.SSO_ACCESS": null,
+  "com.whatsapp.fbpermission.ACCESS_LIBRARY_PROVIDER_ACCESS": null,
+  "com.whatsapp.android.fbpermission.WFL_OPERATIONS": null,
+  "com.facebook.services.fbpermission.STORAGE": null,
+  "com.facebook.secure.fileprovider.SECURE_FILE_PROVIDER_PATHS": "@7F170024",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "enable-stage": "enable-warm-pretos",
+  "default-state": "false",
+  "crash.loop.exclude": "true",
+  "android.accounts.AccountAuthenticator": "@7F170001",
+  "com.google.android.play.billingclient.version": "8.3.0",
+  "platform_share_activity_alias_metadata": "platform_share_to_status",
+  "com.facebook.services.fbpermission.FEO2": null,
+  "com.facebook.services.fbpermission.FEO2_IMPLICIT_CALLER": null,
+  "com.facebook.services.fbpermission.FEO2_READ_DEVICE_COOKIE": null,
+  "com.facebook.services.fbpermission.FEO2_READ_SIM_KEY": null,
+  "com.facebook.secure.key.fbpermission.SECURE_KEY": null,
+  "android.support.PARENT_ACTIVITY": "com.facebook.messenger.neue.MainActivity",
+  "com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.android.gms.wallet.api.enabled": "true",
+  "com.meta.wearable.acdc.service.fbpermission.ACDC_SERVICE": null,
+  "com.facebook.wearable.companion.fbpermission.APP_LINKS": null,
+  "android.appwidget.provider": "@7F170026",
+  "com.meta.mfa.service.fbpermission.MFA_SERVICE": null,
+  "com.meta.trusteddevice.service.fbpermission.TRUSTED_DEVICE_FOUNDATION_SERVICE": null,
+  "coldpretos.whitelisted": "true",
+  "com.fbpay.w3c.ipc.fbpermission.GET_CROSS_APP_KEY": null,
+  "com.facebook.common.jobscheduler.compat.jobIds": "@7F030020",
+  "org.chromium.content.browser.NUM_SANDBOXED_SERVICES": "2",
+  "org.chromium.content.browser.NUM_PRIVILEGED_SERVICES": "0",
+  "android.supports_size_changes": "true",
+  "com.google.mlkit.genai.DEPENDENCIES": "genai_prompt",
+  "com.facebook.wearable.fbpermission.DISPATCH_REQUEST": null,
+  "android.support.FILE_PROVIDER_PATHS": "@7F170025",
+  "cmp_manager.persist_state": "true",
+  "androidx.credentials.CREDENTIAL_PROVIDER_KEY": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl",
+  "backend:com.google.android.datatransport.cct.CctBackendFactory": "cct",
+  "androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER": "androidx.camera.camera2.Camera2Config$DefaultProvider",
+  "com.google.firebase.components:com.google.firebase.iid.Registrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.android.dynamic.apk.fused.modules": "base,longtail",
+  "com.android.vending.splits.required": "true",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_DISTRIBUTION_APK",
+  "com.android.vending.splits": "@7F170027",
+  "com.android.vending.derived.apk.id": "1"
+ },
+ "activities": 1071,
+ "services": [
+  {
+   "name": "com.facebook.katana.RemoveRawContactsService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.lite.BrowserLiteInMainProcessIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.liteclient.BrowserLiteCallbackService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.browser.lite.BrowserLiteCallback"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.businessintegrity.cloakingdetection.service.CloakingDetectionService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.audiencenetwork.AudienceNetworkService",
+   "exported": "true",
+   "actions": [
+    "com.facebook.audiencenetwork.AUDIENCE_NETWORK_VERIFY"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.cameracore.mediapipeline.asyncscripting.AsyncScriptingService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.platform.FacebookAuthenticationService",
+   "exported": "true",
+   "actions": [
+    "android.accounts.AccountAuthenticator"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.platform.TokenRefreshService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.platform.common.service.PlatformService",
+   "exported": "true",
+   "actions": [
+    "com.facebook.platform.PLATFORM_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.adinterfaces.service.BoostLiveService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.adinterfaces.service.BOOST_LIVE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.notify.logging.MessagesSystemTrayLogService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.contacts.service.ContactLocaleChangeService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.friending.jewel.FriendRequestsPrivacySettingService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.tv.notification.CastNotificationActionService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.video.tv.notification.TV_DISCONNECT_ACTION",
+    "com.facebook.video.tv.notification.TV_PLAY_PAUSE_ACTION",
+    "com.facebook.video.tv.notification.TV_CLICK_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fbns.dgw.KotlinInappFbnsService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.common.zopt.ZOptBackgroundService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.smartglasses.ipc.service.SmartGlassesTunnelService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.fabric.onefabric.FFAlarmUploadJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.falco.jobscheduler.FFJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.bloks.signatures.frontiergooglepayimpl.FrontierGooglePayCallbacksService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.wallet.callback.PAYMENT_DATA_CALLBACKS"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_PAYMENTS_CALLBACK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.wearable.mediastream.service.MediaStreamService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000010"
+  },
+  {
+   "name": "com.meta.wearable.acdc.sdk.service.ACDCRegistrationService",
+   "exported": "true",
+   "actions": [
+    "com.meta.wearable.acdc.sdk.service.ACDCRegistrationService.BIND"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.adspayments.analytics.ExperimentExposeService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbshorts.appwidget.ReelsTabWidgetCollectionService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_REMOTEVIEWS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.lite.webviewrtc.RTCService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.meta.mfa.service.MfaCrossAppServiceImpl",
+   "exported": "true",
+   "actions": [
+    "com.meta.mfa.MFA_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.registration.notification.RegistrationNotificationService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.appwidget.refresh.NotificationsWidgetCollectionService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_REMOTEVIEWS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.appwidget.bugreporter.NotificationsWidgetDebugHelper",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.ppml.receiver.ReceiverService",
+   "exported": "true",
+   "actions": [
+    "ReceiverService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.meta.trusteddevice.service.TrustedDeviceFoundationServiceImpl",
+   "exported": "true",
+   "actions": [
+    "com.meta.trusteddevice.TRUSTED_DEVICE_FOUNDATION_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fixie.fixes.signal.AppDeathSignalService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.account.login.notification.LoginNotificationService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.battery.monitor.ContinuousBatteryMonitorService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.googleplay.GooglePlayInstallRefererService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.watchandgo.service.WatchAndGoService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.video.watchandgo.service.WatchAndGoService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.watchandgo.service.UnifiedMiniPlayerService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.video.watchandgo.service.UnifiedMiniPlayerService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.ads.internal.ipc.AudienceNetworkRemoteService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbpay.w3c.ipc.IsReadyToPayServiceImpl",
+   "exported": "true",
+   "actions": [
+    "org.chromium.intent.action.IS_READY_TO_PAY"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbpay.w3c.ipc.FBPaymentServiceImpl",
+   "exported": "false",
+   "actions": [
+    "com.fbpay.w3c.FB_EXTENSIONS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.fbpay.w3c.ipc.AutofillKeyFetchServiceImpl",
+   "exported": "true",
+   "actions": [
+    "com.fbpay.w3c.GET_DEVICE_KEY"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.glc.ScheduledWifiMonitorService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.glc.LongRunningWifiMonitorService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.glc.GLCService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.papaya.fb.client.services.FBPapayaJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fcm.FcmListenerService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fcm.FcmRegistrarFbJobIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fcm.GetFcmTokenRegistrarGCMService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fcm.GetFcmTokenRegistrarLollipopService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fbpushdata.common.FbPushDataHandlerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.pumpkin.PumpkinService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rti.push.service.FbnsService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.helium.trampoline.fb4a.FB4ARendererHostService0",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.helium.trampoline.fb4a.FB4ARendererHostService1",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.common.errorreporting.memory.service.jobschedulercompat.fbsvc.DumperUploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.profilo.upload.TraceUploadRetryJob",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.secure.usdid.signing.CrossSigningService",
+   "exported": "true",
+   "actions": [
+    "com.facebook.usdid.CROSS_SIGN_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.conditionalworker.ConditionalWorkerService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.conditionalworker.LollipopConditionalWorkerService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.conditionalworker.GooglePlayConditionalWorkerService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.compost.service.CompostNotificationService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.huddle.notification.speakernotification.impl.HuddleLiveSessionNotificationService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.huddle.notification.speakernotification.impl.HuddleLiveSessionNotificationService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.service.SystemTrayLogService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.actions.PushNotificationsActionService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rooms.mainapp.incallservice.InRoomsCallForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": "0x000000E4"
+  },
+  {
+   "name": "com.facebook.photos.upload.service.PhotosUploadHelperService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.bgplayback.notification.service.PlaybackNotificationService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.video.bgplayback.notification.service.PlaybackNotificationService"
+   ],
+   "permission": null,
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.facebook.facecast.broadcast.notifications.LiveAudioRoomV2NotificationService",
+   "exported": "false",
+   "actions": [
+    "com.facebook.facecast.broadcast.notifications.LiveAudioRoomV2NotificationService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.quicksilver.webviewservice.QuicksilverWebviewService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.quicksilver.webviewprocess.QuicksilverWarmupService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.composer.publish.internal.ComposerPublishService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.facecast.display.debugoverlay.FacecastDebugOverlayService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.watch.entrypoint.WatchEntryPointLaunchService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rtc.notification.metaai.MetaAiNotificationForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": "0x000000E4"
+  },
+  {
+   "name": "com.facebook.rtc.notification.RtcNotificationForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": "0x000000E4"
+  },
+  {
+   "name": "com.facebook.directinstall.shortcut.ShortcutInstallerService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.notify.client.MessagesNotificationService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.wearlistener.DataLayerListenerService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.wearable.BIND_LISTENER"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.confirmation.service.AutoSmsConfirmService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.confirmation.notification.ConfirmationNotificationService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.media.local.UpdateLocalMediaStoreJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.media.local.UpdateLocalMediaStoreGcmTaskService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rtc.connectionservice.RtcSelfManagedConnectionService",
+   "exported": "false",
+   "actions": [
+    "android.telecom.ConnectionService"
+   ],
+   "permission": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.helium.preload.AppZygoteWarmerService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.helium.content.SandboxedProcessService0",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.browser.helium.content.SandboxedProcessService1",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "org.chromium.content.app.SandboxedProcessService0",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "org.chromium.content.app.SandboxedProcessService1",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rp.platform.metaai.rsys.service.MetaAICallDismissalService",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.voltron.download.scheduledinstaller.OxygenScheduledInstallerJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.prefs.notifications.NotificationPrefsSyncService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.ADMService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.ADMBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.ADMBroadcastReceiverJobBase",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.ADMJobIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.AdmWorkGCMService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.AdmWorkLollipopService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.negativefeedback.PushNegativeFeedbackFbJobIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.nna.NNAService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.feed.platformads.AppInstallService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.feed.platformads.AppInstallTrackerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.directinstall.feed.progressservice.ProgressService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.directinstall.feed.progressservice.InstallNotificationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppCacheService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppCacheJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.videolite.api.VideoUploadForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.facebook.videolite.api.VideoUploadJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.videolite.api.jobscheduler.UploadJobSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.RegistrarHelperService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.FacebookPushServerRegistrarGCMService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.FacebookPushServerRegistrarLollipopService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.FacebookPushServerFinishNotifiedGCMService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.FacebookPushServerFinishNotifiedLollipopService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.PushNegativeFeedbackGCMService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.PushNegativeFeedbackLollipopService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.pushlite.PushLiteFallbackJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.pushlite.PushLiteLollipopJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.pushlite.PushLiteGCMJobService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.multiusermqtt.MultiuserMqttService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.bugreporter.core.scheduler.GCMBugReportService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.bugreporter.core.scheduler.LollipopBugReportService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.screencast.ScreencastService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000020"
+  },
+  {
+   "name": "com.google.android.gms.analytics.AnalyticsService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.analytics.AnalyticsJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.camera.core.impl.MetadataHolderService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.bgaudio.BgAudioPlayerService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.facebook.video.heroplayer.service.HeroKeepAliveService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.mqtt.service.MqttPushHelperService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.mqtt.service.MqttServiceV2",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.mqttlite.MqttService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.account.twofac.protocol.LoginApprovalNotificationService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.reportaproblem.base.bugreport.BugReportUploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.appcomponentmanager.AppComponentManagerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.graphql.executor.offlinemutations.OfflineMutationsRetryJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.graphql.executor.offlinemutations.OfflineMutationsRetryGCMTaskService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbservice.service.BlueService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbservice.service.BlueServiceJobIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.delayedworker.DelayedWorkerService",
+   "exported": null,
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.logger.GooglePlayUploadService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.gcm.ACTION_TASK_READY"
+   ],
+   "permission": "com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.logger.service.LollipopUploadSafeService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.logger.legacy.uploader.LollipopUploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.logger.legacy.uploader.Analytics2UploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.logger.legacy.uploader.AlarmBasedUploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.facebook.mobileconfig.init.enable.fb.MobileConfigEnableReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.FacebookAccountReceiver",
+   "exported": "false",
+   "actions": [
+    "android.accounts.LOGIN_ACCOUNTS_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.notify.client.MessagesNotificationBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.orca.notify.ACTION_NEW_MESSAGE",
+    "com.facebook.orca.notify.ACTION_FAILED_SEND",
+    "com.facebook.orca.notify.ACTION_NEW_FRIEND_INSTALL",
+    "com.facebook.orca.notify.ACTION_P2P_PAYMENT",
+    "com.facebook.orca.notify.ACTION_LOGGED_OUT_MESSAGE",
+    "com.facebook.orca.notify.ACTION_CLEAR_THREAD",
+    "com.facebook.orca.notify.ACTION_CLEAR_FRIEND_INSTALL",
+    "com.facebook.orca.notify.ACTION_CLEAR_ALL_NOTIFICATIONS",
+    "com.facebook.orca.notify.ACTION_INTERNAL_MESSAGE",
+    "com.facebook.orca.notify.ACTION_PRE_REG_PUSH_MESSAGE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.common.init.OnAppUpdateReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "com.facebook.appcomponentmanager.ENABLING_CMPS_DONE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.urimap.warmstart.WarmStartBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.katana.action.WARM_START_HINT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.crossapp.warmup.ReelWarmupBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.reels.intent.action.WARMUP_REEL_LINK"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.privatesharing.sender.sharesheet.actionhandler.implementations.whatsapp.util.WaShareConfirmationReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.whatsapp.SHARE_SENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.contacts.service.ContactLocaleChangeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.watson.WatsonBroadcastReceiver",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.ui.mainview.tabshortcut.TabShortcutCreator$ShortcutMadeIntentReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.navigation.tabbar.appshortcut.CREATE_SHORTCUT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbreact.neo.ReactParentDashboardShortcutModule$ParentDashboardShortcutInstalledIntentReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.fbreact.neo.INSTALL_PD_SHORTCUT_SUCCESS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.games.entrypoint.shortcut.GamesShortcutHelper$GamingTabBookmarkShortcutCreatedIntentReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.games.entrypoint.shortcut.CREATE_GAMING_TAB_BOOKMARK_SHORTCUT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.messengerprefs.notif.NoteNotificationBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.messaging.messengerprefs.notif.ACTION_MUTE_NOTE_NOTIFICATION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rooms.call.receivers.PictureInPictureReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.PICTURE_IN_PICTURE_MUTE_TOGGLE",
+    "com.facebook.intent.action.prod.PICTURE_IN_PICTURE_VIDEO_TOGGLE",
+    "com.facebook.intent.action.prod.PICTURE_IN_PICTURE_END_CALL"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rooms.call.receivers.RoomEndCallReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.ROOMS_END_CALL_ACTION"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.fabric.onefabric.OneFabricUploadAlarmReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.analytics2.fabric.ACTION_ONEFABRIC_UPLOAD"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.caa.shared.identityhash.IdentityHashReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.ID_HASH_REQUESTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbshorts.appwidget.ReelsTabWidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "com.facebook.android.appwidget.action.APPWIDGET_UPDATE",
+    "com.facebook.android.appwidget.action.APPWIDGET_ENABLE_AND_UPDATE",
+    "com.facebook.fbshorts.appwidget.ACTION_REEL_TAPPED",
+    "com.facebook.fbshorts.appwidget.ACTION_REFRESH"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fbshorts.appwidget.ReelsTabWidgetUpgradeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fds.core.theme.debug.FDSThemeDebugAdbReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.debug.FDS_THEME"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.prefs.theme.debug.DarkModeDebugReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.debug.DARK_MODE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.media.viewer.receiver.MessengerChosenComponentReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.registration.notification.RegistrationNotificationServiceReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.FOR_REGISTRATION_NOTIFICATION_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.appwidget.MediumNotificationsWidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "android.appwidget.action.APPWIDGET_ENABLED",
+    "android.appwidget.action.APPWIDGET_DISABLED",
+    "android.appwidget.action.APPWIDGET_UPDATE_OPTIONS",
+    "android.appwidget.action.APPWIDGET_RESTORED",
+    "android.appwidget.action.APPWIDGET_ENABLE_AND_UPDATE",
+    "android.appwidget.action.APPWIDGET_DELETED",
+    "com.facebook.android.appwidget.action.APPWIDGET_UPDATE",
+    "com.facebook.android.appwidget.action.APPWIDGET_ENABLED",
+    "com.facebook.android.appwidget.action.APPWIDGET_DISABLED",
+    "com.facebook.android.appwidget.action.APPWIDGET_UPDATE_OPTIONS",
+    "com.facebook.android.appwidget.action.APPWIDGET_RESTORED",
+    "com.facebook.android.appwidget.action.APPWIDGET_ENABLE_AND_UPDATE",
+    "com.facebook.android.appwidget.action.APPWIDGET_DELETED",
+    "com.facebook.notifications.appwidget.ACTION_FORCE_UPDATE",
+    "com.facebook.notifications.appwidget.ACTION_CONTENT_TAPPED",
+    "com.facebook.notifications.appwidget.ACTION_ONEWIDGET_TAB_SELECTOR_TAPPED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.appwidget.SmallNotificationsWidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE",
+    "android.appwidget.action.APPWIDGET_ENABLED",
+    "android.appwidget.action.APPWIDGET_DISABLED",
+    "android.appwidget.action.APPWIDGET_UPDATE_OPTIONS",
+    "android.appwidget.action.APPWIDGET_RESTORED",
+    "android.appwidget.action.APPWIDGET_ENABLE_AND_UPDATE",
+    "android.appwidget.action.APPWIDGET_DELETED",
+    "com.facebook.android.appwidget.action.APPWIDGET_UPDATE",
+    "com.facebook.android.appwidget.action.APPWIDGET_ENABLED",
+    "com.facebook.android.appwidget.action.APPWIDGET_DISABLED",
+    "com.facebook.android.appwidget.action.APPWIDGET_UPDATE_OPTIONS",
+    "com.facebook.android.appwidget.action.APPWIDGET_RESTORED",
+    "com.facebook.android.appwidget.action.APPWIDGET_ENABLE_AND_UPDATE",
+    "com.facebook.android.appwidget.action.APPWIDGET_DELETED",
+    "com.facebook.notifications.appwidget.ACTION_FORCE_UPDATE",
+    "com.facebook.notifications.appwidget.ACTION_ONEWIDGET_TAB_SELECTOR_TAPPED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.appwidget.receiver.NotificationsWidgetAppUpgradeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.appwidget.widgetpicker.NotificationsWidgetPickerPinnedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.android.appwidget.action.WIDGET_PICKER_SUCCESS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.settings.wa.ITA",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.appcomponentmanager.fb.FbAppComponentReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.appcomponentmanager.testreceivers.AppComponentManagerTestingReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.appcomponentmanager.ACTION_TEST",
+    "com.facebook.appcomponentmanager.ACTION_PRINT_COMPONENTS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.appcomponentmanager.testreceivers.FirstEnableStageTestReceiver",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.appcomponentmanager.testreceivers.SecondEnableStageTestReceiver",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.account.login.notification.LoginNotificationServiceReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.FOR_LOGIN_NOTIFICATION_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.account.login.notification.LoginNotificationServiceScheduler",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "com.facebook.android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "com.facebook.android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.battery.monitor.ContinuousBatteryMonitorService$BroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "android.intent.action.ACTION_POWER_DISCONNECTED",
+    "android.intent.action.ACTION_SHUTDOWN"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.credentials.AuthTokenDebugLogger",
+   "exported": "true",
+   "actions": [
+    "com.facebook.credentials.AuthTokenDebugLogger.Trigger"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.groups.share.helpers.GroupOpenChooserShareIntentBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.googleplay.GooglePlayInstallReferrerReceiver",
+   "exported": "true",
+   "actions": [
+    "com.android.vending.INSTALL_REFERRER"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.account.switcher.shortcuts.AccountSwitcherShortcutReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.account.switcher.shortcuts.SHORTCUT_CREATED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.glc.GLCServiceSchedulerReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.zero.iptest.ZeroIPTestBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.ZERO_IP_TEST_ACTION"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.integration.appstartup.flag.FirstAppOpenFlag",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.integration.appstartup.flag.FirstAppLoginFlag",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.integration.dogfooding.AuthListener$EmployeeLoggedInMarkerReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rti.orca.UpdateQeBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rti.orca.FbnsLiteBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.USER_PRESENT",
+    "android.net.conn.CONNECTIVITY_CHANGE",
+    "com.facebook.rti.mqtt.intent.ACTION_WAKEUP"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.videohome.prefetching.background.ReelsBackgroundPrefetchUpgradeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.zero.v2.simulation.ZeroV2SimulationNotificationReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.zero.v2.SIMULATE_ON",
+    "com.facebook.zero.v2.SIMULATE_OFF",
+    "com.facebook.zero.v2.DUMP_STATE",
+    "com.facebook.zero.v2.REFRESH_TOKEN"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.secure.usdid.signing.CrossSigningBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.usdid.CROSS_SIGN"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.integrity.featurelimits.alarmmanager.FeatureLimitExpiredBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.ENFORCE_FEATURE_LIMIT_ACTION"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.conditionalworker.ConditionalWorkerServiceReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.FOR_CONDITIONAL_WORKER_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.compost.service.CompostNotificationServiceReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.FOR_COMPOST_NOTIFICATION_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaginginblue.threadview.ui.activity.main.BubblesDeleteIntentReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.ACTION_FB_BUBBLE_DELETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.recovery.replay.NotifRecoveryReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "com.facebook.android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "com.facebook.android.intent.action.MY_PACKAGE_REPLACED",
+    "com.facebook.notifications.recovery.DELAYED_REPLAY"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.util.NotificationsClientSignalStaticBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_POWER_DISCONNECTED",
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "android.intent.action.BATTERY_OKAY",
+    "android.intent.action.BATTERY_LOW",
+    "android.intent.action.AIRPLANE_MODE",
+    "android.intent.action.SCREEN_ON",
+    "android.intent.action.SCREEN_OFF"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.util.NotificationsClientSignalFamilyStaticBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.instagram.stateupdate.SYS_ENTER"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.util.NotificationsM4aClientSignalStaticBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.messaging.stateupdate.SYS_ENTER",
+    "com.facebook.messaging.stateupdate.SYS_EXIT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.util.NotificationsPreloadsFbnsClientSignalStaticBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.oxygen.services.fbns.SYS_ENTER"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rooms.mainapp.receivers.RoomsStartCallReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.ROOMS_ACCEPT_CALL_ACTION",
+    "com.facebook.intent.action.prod.ROOMS_DECLINE_CALL_ACTION",
+    "com.facebook.intent.action.prod.ROOMS_SHOW_CURRENT_CALL_ACTION",
+    "com.facebook.intent.action.prod.ROOM_MODULE_DOWNLOAD_COMPLETE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.photos.upload.receiver.ConnectivityChangeReceiver",
+   "exported": "true",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.integration.sso.PostInstallSsoReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.appmanager.POST_INSTALL_SSO"
+   ],
+   "permission": "com.facebook.appmanager.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.zero.easydogfooding.notification.ZeroEasyDogfoodNotificationActionReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.quicksilver.util.QuicksilverShortcutCreationUtil$ShortcutMadeIntentReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.quicksilver.CREATE_SHORTCUT"
+   ],
+   "permission": "com.facebook.katana.permission.CREATE_SHORTCUT",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rtc.notification.metaai.MetaAiVoiceBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.rtc.notification.metaai.END_SESSION_ACTION",
+    "com.facebook.rtc.notification.metaai.TOGGLE_MUTE_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rtc.notification.NotificationDeletedBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rtc.notification.RtcMultiCallActionReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.rtc.notification.DECLINE_MULTI_CALL_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.notify.util.intent.MessengerNotificationAndroidSurveyReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.messaging.notify.util.intent.MESSENGER_NOTIFICATION_ANDROID_SURVEY_USEFUL_ACTION",
+    "com.facebook.messaging.notify.util.intent.MESSENGER_NOTIFICATION_ANDROID_SURVEY_NOT_USEFUL_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.notify.util.intent.NoteNotificationMuteBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.messaging.notify.util.intent.MESSENGER_NOTIFICATION_NOTE_MUTE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.leadgen.util.otp.LeadGenPhoneOTPWACodeReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.OTP_RETRIEVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.caa.shared.wacoderetriever.CAARegWACodeReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.OTP_RETRIEVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.confirmation.util.VoiceCallListenerExpiryReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.confirmation.task.SMSBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.confirmation.notification.ConfirmationNotificationServiceReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.FOR_CONFIRMATION_NOTIFICATION_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.confirmation.notification.ConfirmationNotificationReScheduler",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "com.facebook.android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "com.facebook.android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.helpers.receivers.ActivityTransitionReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.google.android.gms.permission.ACTIVITY_RECOGNITION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.helpers.receivers.NotificationsRemovalTimerReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.imagesnooze.impl.PushImageSnoozeReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.tray.helpers.receivers.NotificationsRemovalAppUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.feedplugins.share.externalshare.logging.FeedShareIntentResultBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.SystemShutdownBootBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_SHUTDOWN",
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.InternalShutdownBootBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.android.intent.action.ACTION_SHUTDOWN",
+    "com.instagram.android.intent.action.ACTION_SHUTDOWN",
+    "com.facebook.android.intent.action.BOOT_COMPLETED",
+    "com.instagram.android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.ProtectedLockScreenBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_SCREEN_ON",
+    "android.intent.action.ACTION_SCREEN_OFF"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.PublicLockScreenBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.instagram.android.intent.action.ACTION_SCREEN_ON",
+    "com.instagram.android.intent.action.ACTION_SCREEN_OFF"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.notifications.badging.stealthnotification.controller.StealthNotificationDeleteBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.notifications.badging.stealthnotification.ACTION_DELETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.adm.MessageAlertReceiver",
+   "exported": "true",
+   "actions": [
+    "com.amazon.device.messaging.intent.REGISTRATION",
+    "com.amazon.device.messaging.intent.RECEIVE"
+   ],
+   "permission": "com.amazon.device.messaging.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fbnslite.FbPushSdkFbnsReceiverShim",
+   "exported": "true",
+   "actions": [
+    "com.facebook.rti.fbns.intent.RECEIVE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fbnslite.FbnsLiteRtcPushNotificationReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.rti.fbns.intent.RECEIVE_RTC"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.negativefeedback.PushNegativeFeedbackReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.PUSH_NEGATIVE_FEEDBACK_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.nna.NNABroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.nokia.pushnotifications.intent.RECEIVE",
+    "com.nokia.pushnotifications.intent.REGISTRATION"
+   ],
+   "permission": "com.nokia.pushnotifications.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.feed.platformads.AppInstallReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.PACKAGE_ADDED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.clicktocall.CTCPhoneCallBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.PHONE_STATE",
+    "com.facebook.android.intent.action.PHONE_STATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.clicktocall.LeadAdsP2BCallStateChangeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.PHONE_STATE",
+    "com.facebook.android.intent.action.PHONE_STATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.clicktocall.ctm.CtmPhoneCallBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.PHONE_STATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppFlag",
+   "exported": "false",
+   "actions": [
+    "com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppFlag"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IS_MANAGED_APP_CHANGED"
+   ],
+   "permission": "com.facebook.appmanager.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.RegistrarHelperReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY",
+    "com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY_GCM",
+    "com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY_FBNS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.registration.FacebookPushServerRegistrar$LocalBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.push.registration.ACTION_ALARM"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.nobreak.CrashLoop$LastState",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.integration.tosacceptance.TosAcceptedFlagComponent",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.bugreporter.core.scheduler.AlarmsBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.bugreporter.core.scheduler.AlarmsBroadcastReceiver.RETRY_UPLOAD"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.analytics.AnalyticsReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.settings.TosAcceptedFlag",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.mqtt.receiver.BootCompleteBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.device_id.UniqueIdSupplier",
+   "exported": "true",
+   "actions": [
+    "com.facebook.GET_UNIQUE_ID"
+   ],
+   "permission": "com.facebook.receiver.permission.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fdidlite.FDIDSyncLiteReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.GET_PHONE_ID"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.delayedworker.DelayedWorkerServiceReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.intent.action.prod.FOR_DELAYED_WORKER_SERVICE"
+   ],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.analytics2.logger.legacy.uploader.HighPriUploadRetryReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "com.facebook.contacts.provider.ContactsConnectionsProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.provider.AttributionIdProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.platform.common.provider.PlatformProviderBase",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.database.threads.MessagesDbContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.twilight.deeplinks.DeferredDeeplinkProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.threads.util.FbTixuDeferredDeeplinkProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.xapp.messaging.composer.broadcast.transportagnostic.attachment.source.TamAttachmentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.secure.fileprovider.SecureFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.push.dedup.provider.ClientMessagePushDedupInfoProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.facebook.permission.prod.FB_APP_COMMUNICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "libraries.accessv2.src.provider.AccessLibraryContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.sharekey.contentprovider.SecureMessagingKeyContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.liteprovider.usdid.UsdidValuesProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.liteprovider.FirstPartyUserValuesLiteProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.provider.UserValuesProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.provider.FirstPartyUserValuesProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.provider.InstallReferrerProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.provider.LastUsedTimestampProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.katana.provider.CacheProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.push.fcm.customprovider.FirebaseInitCustomProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.integration.dogfooding.AppManagerSsoProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.facebook.appmanager.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.photos.provider.PhotosProvider",
+   "exported": null,
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.rti.common.sharedprefs.SharedPreferencesContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.messaging.database.threads.ThreadsDbPropertiesContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.content.FileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.mobileidservices.feo2.fb4a.fbprovider.FeO2InAppContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.contacts.data.FbContactsContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.abtest.qe.db.QuickExperimentContentProvider",
+   "exported": null,
+   "actions": [],
+   "permission": "com.facebook.katana.provider.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.fdidlite.FDIDLiteProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

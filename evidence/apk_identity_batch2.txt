@@ -58,3 +58,8 @@
   cert sha256 : 29f34e5f27f211b424bc5bf9d67162c0eafba2da35af35c16416fc446276ba26
   cert subject: Common Name: Signal Messenger, LLC; Serial Number: 6703101; Business Category: Private Organization; Organization: Signal Messenger, LLC; Incorporation State/Province: Delaware; Incorporation Country: US; Locality: Mountain View; State/Province: California; Country: US
   cert sha256 : 4be4f6cd5be844083e900279dc822af65a547fecc26aba7ff1f5203a45518cd8
+== apks/base/telegram.apk
+  package=org.telegram.messenger version=13.0.1 (71671) minSdk=23 targetSdk=36
+  signed v1=True v2=True v3=True
+  cert subject: Common Name: Nikolay Kudashov, Organizational Unit: VK, Organization: VK, Locality: Saint-Petersburg
+  cert sha256 : 49c1522548ebacd46ce322b6fd47f6092bb745d0f88082145caf35e14dcc38e1

@@ -1,0 +1,572 @@
+{
+ "package": "bbc.mobile.news.ww",
+ "version": "2026.9.0",
+ "permissions": [
+  "air.com.cc.uk.co.bbc.cbeebiesstorytime.permission.LOGIN_PROVIDER",
+  "air.uk.co.bbc.cbeebiesstorytime.permission.LOGIN_PROVIDER",
+  "android.permission.ACCESS_ADSERVICES_AD_ID",
+  "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+  "android.permission.ACCESS_ADSERVICES_TOPICS",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.AD_SERVICES_CONFIG",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "android.permission.INTERNET",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.SCHEDULE_EXACT_ALARM",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "bbc.iplayer.android.permission.LOGIN_PROVIDER",
+  "bbc.mobile.news.uk.permission.LOGIN_PROVIDER",
+  "bbc.mobile.news.ww.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "bbc.mobile.weather.permission.LOGIN_PROVIDER",
+  "com.android.vending.BILLING",
+  "com.bbc.sounds.permission.LOGIN_PROVIDER",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "com.google.android.gms.permission.AD_ID",
+  "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
+  "com.samsung.android.mapsagent.permission.READ_APP_INFO",
+  "uk.co.bbc.android.sportdomestic.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.authtoolkit.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.authtoolkit.sandbox.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.cbeebiesgetcreative.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.cbeebiesgoexplore.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.cbeebiesplaytimeisland.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.integrationapp.permission.LOGIN_PROVIDER"
+ ],
+ "dangerous_permissions": [
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "uk.co.bbc.authtoolkit",
+   "uk.co.bbc.integrationapp",
+   "uk.co.bbc.authtoolkit.sandbox",
+   "uk.co.bbc.android.sportdomestic",
+   "bbc.iplayer.android",
+   "com.bbc.sounds",
+   "bbc.mobile.weather",
+   "bbc.mobile.news.uk",
+   "com.amazon.dee.app",
+   "com.facebook.katana",
+   "com.instagram.android",
+   "com.facebook.lite",
+   "com.samsung.android.mapsagent"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     },
+     {
+      "host": "www.bbc.com"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.IS_READY_TO_PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.UPDATE_PAYMENT_DETAILS"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.OPEN_DOCUMENT_TREE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "http"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.support.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.INSERT"
+    ],
+    "data": [
+     {
+      "mimeType": "vnd.android.cursor.dir/event"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "sms"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.DIAL"
+    ],
+    "data": [
+     {
+      "path": "tel:"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.android.vending.billing.InAppBillingService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.appsflyer.referrer.INSTALL_PROVIDER"
+    ],
+    "data": []
+   }
+  ],
+  "providers": []
+ },
+ "app_attrs": {
+  "theme": "@7F1402BB",
+  "label": "@7F130021",
+  "icon": "@7F100000",
+  "name": "com.mobile.MainApplication",
+  "allowBackup": "false",
+  "largeHeap": "true",
+  "extractNativeLibs": "false",
+  "fullBackupContent": "@7F170000",
+  "networkSecurityConfig": "@7F17000A",
+  "roundIcon": "@7F100003",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "dataExtractionRules": "@7F170001"
+ },
+ "meta_data": {
+  "com.google.firebase.messaging.default_notification_icon": "@7F08013E",
+  "com.urbanairship.autopilot": "com.urbanairship.reactnative.ReactAutopilot",
+  "com.google.android.gms.ads.APPLICATION_ID": "ca-app-pub-1378326636891429~3937594710",
+  "com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT": "false",
+  "com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION": "true",
+  "com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING": "true",
+  "android.support.FILE_PROVIDER_PATHS": "@7F170004",
+  "org.unimodules.core.AppLoader#react-native-headless": "expo.modules.adapters.react.apploader.RNHeadlessAppLoader",
+  "com.facebook.soloader.enabled": "true",
+  "firebase_analytics_collection_enabled": "true",
+  "firebase_analytics_collection_deactivated": "false",
+  "google_analytics_adid_collection_enabled": "true",
+  "google_analytics_ssaid_collection_enabled": "true",
+  "google_analytics_automatic_screen_reporting_enabled": "true",
+  "google_analytics_default_allow_analytics_storage": "true",
+  "google_analytics_default_allow_ad_storage": "true",
+  "google_analytics_default_allow_ad_user_data": "true",
+  "google_analytics_default_allow_ad_personalization_signals": "true",
+  "firebase_crashlytics_collection_enabled": "false",
+  "app_data_collection_default_enabled": "true",
+  "com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "androidx.credentials.CREDENTIAL_PROVIDER_KEY": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl",
+  "asset_statements": "@7F130038",
+  "com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW": "true",
+  "com.urbanairship.AirshipInitializer": "androidx.startup",
+  "androidx.work.WorkManagerInitializer": "androidx.startup",
+  "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "androidx.profileinstaller.ProfileInstallerInitializer": "androidx.startup",
+  "com.russhwolf.settings.SettingsInitializer": "androidx.startup",
+  "com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED": "true",
+  "com.google.android.play.billingclient.version": "9.1.0",
+  "com.bumptech.glide.integration.okhttp3.OkHttpGlideModule": "GlideModule",
+  "com.google.android.gms.version": "@7F0B0010",
+  "backend:com.google.android.datatransport.cct.CctBackendFactory": "cct",
+  "com.android.vending.splits.required": "true",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_DISTRIBUTION_APK",
+  "com.android.vending.splits": "@7F170010",
+  "com.android.vending.derived.apk.id": "2"
+ },
+ "activities": 37,
+ "services": [
+  {
+   "name": "com.mobile.MediaPlayerService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.FOREGROUND_SERVICE",
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.mobile.download.DownloadService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.urbanairship.reactnative.AirshipHeadlessEventService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "uk.co.bbc.smpan.audio.notification.androidNotificationSystem.AudioNotificationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.urbanairship.push.fcm.AirshipFirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.transistorsoft.tsbackgroundfetch.FetchJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.ads.AdService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.mobile.audio.MediaPlayerActionReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MEDIA_BUTTON"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.liveupdate.notification.LiveUpdateNotificationReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.push.NotificationProxyReceiver",
+   "exported": "false",
+   "actions": [
+    "com.urbanairship.push.OPENED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.locale.LocaleChangeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.transistorsoft.tsbackgroundfetch.FetchAlarmReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.transistorsoft.tsbackgroundfetch.BootReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "com.reactnativecommunity.webview.RNCWebViewFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "io.invertase.firebase.crashlytics.ReactNativeFirebaseCrashlyticsInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "cl.json.RNShareFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "expo.modules.filesystem.FileSystemFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "uk.co.bbc.authtoolkit.autoSignIn.AuthToolkitLoginProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "bbc.mobile.news.ww.permission.LOGIN_PROVIDER",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.provider.FirebaseInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.ads.MobileAdsInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

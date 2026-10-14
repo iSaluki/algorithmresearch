@@ -63,19 +63,28 @@ def rg(pattern, path, globs):
     return r.stdout.splitlines()
 
 def ctx(pattern, path, globs, limit):
-    cmd = ["rg", "-n", "--no-heading", "-M", "260", "--max-columns-preview", "-e", pattern, path] + sum([["-g", g] for g in globs], [])
-    r = subprocess.run(cmd, capture_output=True, text=True)
-    return r.stdout.splitlines()[:limit]
+    # A per-DEX tree (scripts/decompile_per_dex.sh) has classesN/sources/ roots.
+    roots = [path] if os.path.isdir(path) else sorted(
+        os.path.join(os.path.dirname(path), d, "sources") for d in os.listdir(os.path.dirname(path))
+        if os.path.isdir(os.path.join(os.path.dirname(path), d, "sources")))
+    out = []
+    for root in roots:
+        cmd = ["rg", "-n", "--no-heading", "-M", "260", "--max-columns-preview", "-e", pattern, root] + sum([["-g", g] for g in globs], [])
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        out += [l.replace(root + "/", (os.path.basename(os.path.dirname(root)) + ":") if root != path else "", 1) for l in r.stdout.splitlines()]
+    return out[:limit]
 
 def main(jadx, strings, out):
     src = os.path.join(jadx, "sources")
-    globs = ["*.java"] + [f"!{l}**" for l in LIB]
+    # SCAN_KEEP=org/telegram/,... re-includes the app's own code under an excluded prefix.
+    keep = [k for k in os.environ.get("SCAN_KEEP", "").split(",") if k]
+    globs = ["*.java"] + [f"!{l}**" for l in LIB] + [f"{k}**" for k in keep]
     res = {}
     with open(out, "w") as f:
         f.write(f"# Pattern scan: {jadx}\n\n## Code categories (library packages excluded)\n\n")
         for k, p in CODE.items():
             lines = ctx(p, src, globs, 100000)
-            files = collections.Counter(l.split(":", 1)[0].replace(src + "/", "") for l in lines)
+            files = collections.Counter(re.match(r"(?:classes\d*:)?[^:]+", l.replace(src + "/", "")).group(0) for l in lines)
             res[k] = {"hits": len(lines), "files": len(files)}
             f.write(f"### {k} — {len(lines)} hits in {len(files)} files\n\n")
             for fn, c in files.most_common(12):

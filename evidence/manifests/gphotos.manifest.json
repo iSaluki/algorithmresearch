@@ -1,0 +1,1555 @@
+{
+ "package": "com.google.android.apps.photos",
+ "version": "7.97.0.997578476",
+ "permissions": [
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_LOCAL_NETWORK",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.BLUETOOTH",
+  "android.permission.CAMERA",
+  "android.permission.CHANGE_NETWORK_STATE",
+  "android.permission.CHANGE_WIFI_STATE",
+  "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.GET_PACKAGE_SIZE",
+  "android.permission.INTERNET",
+  "android.permission.MANAGE_ACCOUNTS",
+  "android.permission.MANAGE_MEDIA",
+  "android.permission.NFC",
+  "android.permission.READ_CALENDAR",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.READ_PROFILE",
+  "android.permission.READ_SYNC_SETTINGS",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.RUN_USER_INITIATED_JOBS",
+  "android.permission.SET_WALLPAPER",
+  "android.permission.SUBSCRIBED_FEEDS_READ",
+  "android.permission.SUBSCRIBED_FEEDS_WRITE",
+  "android.permission.SYSTEM_ALERT_WINDOW",
+  "android.permission.USE_CREDENTIALS",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_CALENDAR",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.WRITE_SETTINGS",
+  "android.permission.WRITE_SYNC_SETTINGS",
+  "com.google.android.apps.photos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.gms.permission.AD_ID",
+  "com.google.android.googlequicksearchbox.permission.LENS_SERVICE",
+  "com.google.android.providers.gsf.permission.READ_GSERVICES"
+ ],
+ "dangerous_permissions": [
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.CAMERA",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.READ_CALENDAR",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.WRITE_CALENDAR",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "com.google.android.gms",
+   "com.android.vending",
+   "com.google.android.googlequicksearchbox",
+   "com.google.android.apps.photos.scanner",
+   "com.google.ar.core",
+   "com.google.android.apps.photosxr",
+   "com.google.android.apps.restore",
+   "com.google.android.apps.tips",
+   "com.lemon.lvoverseas",
+   "com.google.android.apps.maps",
+   "com.google.android.gms.tflite_dynamite",
+   "com.google.android.apps.chrome"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.EDIT"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.EDIT"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND_MULTIPLE"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND_MULTIPLE"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "text/plain"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "application/vnd.google.panorama360+jpg"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.ATTACH_DATA"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.service.wallpaper.CROP_AND_SET_WALLPAPER"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.media.action.STILL_IMAGE_CAMERA"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.DIAL"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.speech.action.RECOGNIZE_SPEECH"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.photos.OEM_PROVIDER"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.photos.OEM_VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.google.android.apps.photos.OEM_VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.google.android.apps.photos.OEM_EDIT"
+    ],
+    "data": [
+     {
+      "mimeType": "image/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.google.android.apps.photos.OEM_EDIT"
+    ],
+    "data": [
+     {
+      "mimeType": "video/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.google.camera.action.LOCATION_SETTINGS"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.IS_READY_TO_PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.UPDATE_PAYMENT_DETAILS"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "content",
+      "host": "com.android.calendar"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.lemon.lvoverseas.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.lemon.lvoverseas.action.COMMON_EDIT"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.TTS_SERVICE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.android.vending.billing.InAppBillingService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.tsa.action.GET_TIMESTAMP"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "androidx.camera.extensions.action.VENDOR_ACTION"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "androidx.window.extensions.layout.EngagementModeService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.android.setupwizard.action.PARTNER_CUSTOMIZATION"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.setupcompat.restore.restoreprogress.RESTORE_PROGRESS_SERVICE_ACTION"
+    ],
+    "data": []
+   }
+  ],
+  "providers": [
+   "com.samsung.android.agent.storage.mediasync.SyncStatusContentProvider"
+  ]
+ },
+ "app_attrs": {
+  "theme": "@7F1509F6",
+  "label": "@7F142475",
+  "icon": "@7F110004",
+  "name": "com.google.android.apps.photos.PhotosRoot_Application",
+  "manageSpaceActivity": "com.google.android.apps.photos.managespace.ManageSpaceActivity",
+  "backupAgent": "com.google.android.apps.photos.kvbackup.PhotosBackupAgent",
+  "allowBackup": "true",
+  "restoreAnyVersion": "true",
+  "logo": "@7F110004",
+  "hardwareAccelerated": "true",
+  "largeHeap": "true",
+  "supportsRtl": "true",
+  "requiredAccountType": "com.google",
+  "usesCleartextTraffic": "true",
+  "networkSecurityConfig": "@7F180022",
+  "roundIcon": "@7F110007",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "requestLegacyExternalStorage": "true",
+  "enableOnBackInvokedCallback": "@7F05001F",
+  "allowCrossUidActivitySwitchFromBelow": "false"
+ },
+ "meta_data": {
+  "android.max_aspect": "2.400000",
+  "com.google.android.geo.API_KEY": "[redacted]",
+  "com.google.android.backup.api_key": "[redacted]",
+  "com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME": "com.google.android.apps.photos.cast.CastOptionsProvider",
+  "moto_cli_default_display_mode": "fullscreen",
+  "tflite_dynamite:3:required": null,
+  "tflite_gpu_dynamite:0:preferred": null,
+  "tflite_gpu_dynamite:222612000:required": null,
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.social.connections": "@7F130024",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.social.connections": "@7F130025",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_account_client": "@7F13000A",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.auth_account_client": "@7F13000B",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.clearcut_client": "@7F13000C",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.clearcut_client": "@7F13000D",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.consentverifier": "@7F13001B",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.consentverifier": "@7F13001C",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.device_performance": "@7F13000E",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.device_performance": "@7F13000F",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.droidguardclient": "@7F130010",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.droidguardclient": "@7F130011",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.fido": "@7F130012",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gmscompliance": "@7F130015",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gmscompliance_client": "@7F130013",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.gmscompliance_client": "@7F130014",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.icing.mdd": "@7F130016",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.setupservices": "@7F130017",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.ulr": "@7F130018",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.usagereporting": "@7F130019",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.notifications.platform": "@7F13001F",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.notifications.platform": "@7F130020",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.abuse.hades.moirai": "@7F13001A",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.mdi.sync": "@7F13001D",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.mdi.sync": "@7F13001E",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.onegoogle": "@7F130021",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.social.peoplekit": "@7F130026",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.social.peoplekit": "@7F130027",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.apps.photos": "@7F130008",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:photos_android_auto": "@7F130056",
+  "com.google.android.gms.phenotype.registration.binarypb:photos_android_auto": "@7F130057",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.android.billingclient": "@7F130003",
+  "com.google.android.gms.phenotype.registration.binarypb:com.android.billingclient": "@7F130004",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.social.populous": "@7F130028",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.social.populous": "@7F130029",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.performance.primes": "@7F130022",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.performance.primes": "@7F130023",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.privacy.ptoken.ondevice": "@7F13002E",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.privacy.ptoken.ondevice": "@7F13002F",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.subscriptions": "@7F13002C",
+  "com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.subscriptions_android_libraries_user": "@7F13002A",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.subscriptions_android_libraries_user": "@7F13002B",
+  "com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.surveys": "@7F13002D",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.social.connections": "@7F180013",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.gms.auth_account_client": "@7F180007",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.gms.clearcut_client": "@7F180008",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.consentverifier": "@7F18000E",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.gms.device_performance": "@7F180009",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.gms.droidguardclient": "@7F18000A",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.gms.gmscompliance_client": "@7F18000B",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.gms.icing.mdd": "@7F18000C",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.notifications.platform": "@7F180010",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.abuse.hades.moirai": "@7F18000D",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.mdi.sync": "@7F18000F",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.onegoogle": "@7F180011",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.social.peoplekit": "@7F180014",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.apps.photos": "@7F180005",
+  "com.google.android.gms.phenotype.registration.xml:photos_android_auto": "@7F180023",
+  "com.google.android.gms.phenotype.registration.xml:com.android.billingclient": "@7F180001",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.social.populous": "@7F180015",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.performance.primes": "@7F180012",
+  "com.google.android.gms.phenotype.registration.xml:com.google.privacy.ptoken.ondevice": "@7F180019",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.subscriptions": "@7F180017",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.subscriptions_android_libraries_user": "@7F180016",
+  "com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.surveys": "@7F180018",
+  "WindowManagerPreference:FreeformWindowSize": "system-default",
+  "android.service.dream": "@7F18001A",
+  "android.support.FILE_PROVIDER_PATHS": "@7F180000",
+  "firebase_analytics_collection_enabled": "false",
+  "WindowManagerPreference:SuppressWindowControlNavigationButton": "true",
+  "com.google.android.apps.photos.share.integrations.snap.SNAP_STAGING_CLIENT_ID": "[redacted]",
+  "com.google.android.apps.photos.share.integrations.snap.SNAP_PROD_CLIENT_ID": "[redacted]",
+  "android.appwidget.provider": "@7F180026",
+  "com.google.android.gms.version": "@7F0C0047",
+  "com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.iid.Registrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.label.defaults.thin.ThinLabelRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.android.play.billingclient.version": "9.2.0",
+  "native_handler": "true",
+  "android.hardware.usb.action.USB_DEVICE_ATTACHED": "@7F18001C",
+  "distractionOptimized": "true",
+  "android.net.http.EnableTelemetry": "true",
+  "androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER": "androidx.camera.camera2.Camera2Config$DefaultProvider",
+  "com.google.android.build.data.properties": "@7F130000",
+  "com.android.dynamic.apk.fused.modules": "base",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_STANDALONE_APK",
+  "com.android.vending.splits": "@7F18002D",
+  "com.android.vending.derived.apk.id": "2"
+ },
+ "activities": 330,
+ "services": [
+  {
+   "name": "com.google.android.gms.metadata.ModuleDependencies",
+   "exported": "false",
+   "actions": [
+    "com.google.android.gms.metadata.MODULE_DEPENDENCIES"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService",
+   "exported": "false",
+   "actions": [
+    "com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.account.full.SyncAccountsForLoginService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.actionqueue.impl.OnlineActionJobsService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.extensions.BackupExtensionsApiService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.apps.photos.backup.apiservice.extensions.BACKUP_EXTENSIONS_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.grpc.PhotosBackupGrpcService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.grpc.PhotosSmuiBackupGrpcService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.hybridrestore.HybridRestoreApiService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.PhotosBackupApiService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.apps.photos.backup.apiservice.PHOTOS_BACKUP_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.PhotosCustomBackupApiService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.backup.action.CUSTOM_BACKUP"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.sdk.PhotosSdkBackupApiService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.core.AutobackupJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.core.BackupRetryJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.core.UriTriggeredBackupJob",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.core.UserInitiatedBackupJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.persistentstatus.UploadStatusNotificationForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.video.impl.VideoCompressionJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.video.impl.VideoCompressionNotificationForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.cameraassistant.CameraAssistantService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.cast.impl.CastPresentationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.google.android.apps.photos.curatedwallpapers.apiservice.PhotosCuratedWallpapersApiService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.daydream.PhotosDreamService",
+   "exported": "true",
+   "actions": [
+    "android.service.dreams.DreamService"
+   ],
+   "permission": "android.permission.BIND_DREAM_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.dbprocessor.impl.DatabaseProcessorJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.devicemanagement.foregroundservice.impl.FreeUpSpaceForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.devicemanagement.overdrive.DeletionService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.download.multidownload.DownloadForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.importsurfaces.osmigration.service.SourceEndpointService",
+   "exported": "true",
+   "actions": [
+    "io.grpc.action.BIND"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.importsurfaces.osmigration.service.TargetEndpointService",
+   "exported": "true",
+   "actions": [
+    "io.grpc.action.BIND"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.jobqueue.PhotosJobQueueJobsService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.jobqueue.PhotosOfflineJobQueueJobsService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.mdd.MddDownloadForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.mediametadataservice.MediaMetadataService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.metasync.async.DeltaSyncJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.pagingapi.apiservice.PhotosPagingApiService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.partneraccount.rpc.ReadPartnerMediaJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.restore.apiservice.PhotosRestoreApiService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.apps.photos.restore.apiservice.PHOTOS_RESTORE_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.restore.service.RestoreServiceInternal",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.share.apiservice.grpc.PhotosMediaShareService",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.slideshow.SlideshowService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.videocomposition.export.impl.VideoExportForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.google.android.apps.photos.watchface.preview.OpenPhotosWatchFaceConfigurationWearableListenerService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.wearable.MESSAGE_RECEIVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.directboot.DirectBootHelperService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.mediaprovenance.service.MediaProvenanceService",
+   "exported": "false",
+   "actions": [
+    "com.google.android.libraries.mediaprovenance.action.BIND_MEDIA_PROVENANCE_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.entrypoints.scheduled.ScheduledTaskService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.entrypoints.firebase.FirebaseMessagingServiceImpl",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.executor.impl.GnpExecutorApiService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.albumupload.impl.UploadSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.async.BackgroundTaskService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.async.BackgroundTaskJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.ingest.IngestService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000010"
+  },
+  {
+   "name": "com.google.android.libraries.social.mediamonitor.BackgroundThreadNotifierIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.mediamonitor.MediaMonitorJobSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "android.net.http.MetaDataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.camera.core.impl.MetadataHolderService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.build.data.PropertiesServiceHolder",
+   "exported": "false",
+   "actions": [
+    "com.google.android.build.data.Properties"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.google.android.apps.photos.account.full.FetchAccountPropertiesAppUpgradeBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.account.full.SyncAccountsForLoginBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.account.full.RefreshAccountsReceiver",
+   "exported": "true",
+   "actions": [
+    "android.accounts.LOGIN_ACCOUNTS_CHANGED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.actionqueue.impl.SystemReceiver",
+   "exported": "true",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE",
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.analytics.install.InstallReceiver",
+   "exported": "true",
+   "actions": [
+    "com.android.vending.INSTALL_REFERRER"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.core.BackupAlarmReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.notifications.FolderBackupReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.backup.persistentstatus.NotificationActionReceiver",
+   "exported": "false",
+   "actions": [
+    "com.google.android.apps.photos.backup.persistentstatus.notificationactionreceiver"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.devicemanagement.FreeUpSpaceStopBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.diskcache.cacheresize.CacheResizeReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.DEVICE_STORAGE_LOW",
+    "android.intent.action.DEVICE_STORAGE_OK"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.download.PhotosDownloadReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.DOWNLOAD_COMPLETE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.download.multidownload.DownloadNotificationBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.experiments.phenotype.full.PhenotypeUpdateBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.phenotype.UPDATE"
+   ],
+   "permission": "com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.jobqueue.JobServiceBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.localization.LocaleChangedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.metasync.periodic.PackageUpdatedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.PACKAGE_ADDED",
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.notificationchannels.AppUpdateBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.notificationchannels.BootCompleteBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.notifications.DismissNotificationBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.pixel.offer.full.PixelOfferReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.printingskus.common.notification.PrintingNotificationHandlingBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.restore.service.RestoreRestartReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.scheduler.LpbjWorkSchedulerOnBroadcast",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.PACKAGE_ADDED",
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.sdcard.envcache.ExternalStorageStateChangeBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MEDIA_BAD_REMOVAL",
+    "android.intent.action.MEDIA_MOUNTED",
+    "android.intent.action.MEDIA_REMOVED",
+    "android.intent.action.MEDIA_UNMOUNTED",
+    "android.intent.action.MEDIA_EJECT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.settings.connectedapps.AppUninstallBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.PACKAGE_FULLY_REMOVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.settings.notifications.PhotosNotificationManager$NotificationAlarmReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.share.handler.system.SharesheetBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.google.android.apps.photos.share.handler.sharesheet_broadcast"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.share.integrations.snap.SnapBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.google.android.apps.photos.share.integrations.snap.snap_broadcast"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.widget.people.WidgetProviderPeoplePets",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.widget.pinning.WidgetPinnedReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.widget.WidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.widget.WidgetClickHandlerReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.appdoctor.AppDoctorReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.libraries.appdoctor.ACTION_TELE_DOCTOR_FIX"
+   ],
+   "permission": "com.google.android.gms.permission.INTERNAL_BROADCAST",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.internal.growth.growthkit.internal.debug.TestingToolsBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.libraries.internal.growth.growthkit.ADD_PROMO",
+    "com.google.android.libraries.internal.growth.growthkit.ADD_PREVIEW_PROMO",
+    "com.google.android.libraries.internal.growth.growthkit.SYNC",
+    "com.google.android.libraries.internal.growth.growthkit.CLEAR_COUNTERS",
+    "com.google.android.libraries.internal.growth.growthkit.FETCH_PROMOTIONS",
+    "com.google.android.libraries.internal.growth.growthkit.FETCH_EVAL_RESULTS",
+    "com.google.android.libraries.internal.growth.growthkit.GET_REGISTRATION_STATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.entrypoints.blockstatechanged.BlockStateChangedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.app.action.APP_BLOCK_STATE_CHANGED",
+    "android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED",
+    "android.app.action.NOTIFICATION_CHANNEL_GROUP_BLOCK_STATE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.entrypoints.systemtray.SystemTrayBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.entrypoints.accountchanged.AccountChangedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.accounts.LOGIN_ACCOUNTS_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.entrypoints.localechanged.LocaleChangedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.entrypoints.restart.RestartReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.entrypoints.timezonechanged.TimezoneChangedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.TIMEZONE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.entrypoints.update.UpdateReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.performance.primes.transmitter.LifeboatReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.phenotype.client.stable.AccountRemovedBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "android.accounts.action.ACCOUNT_REMOVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.phenotype.client.stable.PhenotypeUpdateBackgroundBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.phenotype.UPDATE"
+   ],
+   "permission": "com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.jobscheduler.JobSchedulerOnPackageUpgrade",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.jobscheduler.JobSchedulerOnBootComplete",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.mediastoresync.reset.impl.MediaStoreClearedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.PACKAGE_DATA_CLEARED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.social.peoplekit.thirdparty.viewcontrollers.ThirdPartyReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.PACKAGE_FULLY_REMOVED",
+    "android.intent.action.PACKAGE_REMOVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "com.google.android.apps.photos.backup.apiservice.status.BackupStatusContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.cloudpicker.CloudMediaProviderWrapper",
+   "exported": "true",
+   "actions": [
+    "android.content.action.CLOUD_MEDIA_PROVIDER"
+   ],
+   "permission": "com.android.providers.media.permission.MANAGE_CLOUD_MEDIA_PROVIDERS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.contentprovider.impl.MediaContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.devicemanagement.contentprovider.FreeUpSpaceContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.editor.contentprovider.EditMediaContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.content.FileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.mars.contentprovider.impl.MarsStoreProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.mars.contentprovider.impl.LocalLockedMediaStoreProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.memoriesapi.MemoriesContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.partnercontentprovider.PartnerContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.photoeditor.cachedfileprovider.impl.CachedFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.photoeditor.localeditcontentprovider.LocalEditContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.photoeditor.renderedimageprovider.RenderedImageContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.apps.photos.share.sharousel.contentprovider.SharouselContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.libraries.notifications.platform.media.GnpFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

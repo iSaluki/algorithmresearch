@@ -1,0 +1,1627 @@
+{
+ "package": "com.whatsapp",
+ "version": "2.26.39.79",
+ "permissions": [
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.AUTHENTICATE_ACCOUNTS",
+  "android.permission.BLUETOOTH",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.BROADCAST_STICKY",
+  "android.permission.CAMERA",
+  "android.permission.CHANGE_NETWORK_STATE",
+  "android.permission.CHANGE_WIFI_STATE",
+  "android.permission.DETECT_SCREEN_CAPTURE",
+  "android.permission.DETECT_SCREEN_RECORDING",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_CAMERA",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.FOREGROUND_SERVICE_LOCATION",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+  "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.GET_TASKS",
+  "android.permission.INSTALL_SHORTCUT",
+  "android.permission.INTERNET",
+  "android.permission.MANAGE_ACCOUNTS",
+  "android.permission.MANAGE_OWN_CALLS",
+  "android.permission.MODIFY_AUDIO_SETTINGS",
+  "android.permission.NEARBY_WIFI_DEVICES",
+  "android.permission.NFC",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_BASIC_PHONE_STATE",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_NUMBERS",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.READ_PROFILE",
+  "android.permission.READ_SYNC_SETTINGS",
+  "android.permission.READ_SYNC_STATS",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.RECEIVE_SMS",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.REQUEST_INSTALL_PACKAGES",
+  "android.permission.RUN_USER_INITIATED_JOBS",
+  "android.permission.SCHEDULE_EXACT_ALARM",
+  "android.permission.SEND_SMS",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_CREDENTIALS",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.USE_FULL_SCREEN_INTENT",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_CONTACTS",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.WRITE_SYNC_SETTINGS",
+  "com.amazon.device.messaging.permission.RECEIVE",
+  "com.android.launcher.permission.INSTALL_SHORTCUT",
+  "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+  "com.android.vending.BILLING",
+  "com.facebook.services.identity.FEO2",
+  "com.google.android.apps.aicore.service.BIND_SERVICE",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "com.google.android.gms.permission.AD_ID",
+  "com.google.android.providers.gsf.permission.READ_GSERVICES",
+  "com.htc.launcher.permission.READ_SETTINGS",
+  "com.htc.launcher.permission.UPDATE_SHORTCUT",
+  "com.huawei.android.launcher.permission.CHANGE_BADGE",
+  "com.huawei.android.launcher.permission.READ_SETTINGS",
+  "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+  "com.sec.android.provider.badge.permission.READ",
+  "com.sec.android.provider.badge.permission.WRITE",
+  "com.sonyericsson.home.permission.BROADCAST_BADGE",
+  "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+  "com.whatsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "com.whatsapp.permission.BROADCAST",
+  "com.whatsapp.permission.MAPS_RECEIVE",
+  "com.whatsapp.permission.RECEIVE_ADM_MESSAGE",
+  "com.whatsapp.permission.REGISTRATION",
+  "com.whatsapp.sticker.READ"
+ ],
+ "dangerous_permissions": [
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.CAMERA",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.NEARBY_WIFI_DEVICES",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_CONTACTS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+  "android.permission.READ_PHONE_NUMBERS",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECEIVE_SMS",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.SEND_SMS",
+  "android.permission.WRITE_CONTACTS",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "com.facebook.orca",
+   "com.facebook.adsmanager",
+   "com.facebook.analytics",
+   "com.facebook.talk",
+   "com.facebook.arstudio.player",
+   "com.instagram.boomerang",
+   "com.facebook.katana",
+   "com.facebook.lite",
+   "com.instagram.android",
+   "com.oculus.home",
+   "com.oculus.horizon",
+   "com.facebook.services",
+   "com.whatsapp.w4b",
+   "com.facebook.aura",
+   "com.google.android.tts",
+   "com.google.android.aicore",
+   "com.microsoft.appmanager",
+   "com.facebook.stella",
+   "com.facebook.stella_debug",
+   "com.google.android.apps.pixelmigrate",
+   "com.google.android.apps.restore",
+   "com.google.android.apps.pixel.relationships",
+   "com.google.android.apps.nbu.paisa.user",
+   "com.phonepe.app",
+   "net.one97.paytm",
+   "com.dreamplug.androidapp",
+   "com.mobikwik_new",
+   "in.amazon.mShop.android.shopping",
+   "in.org.npci.upiapp",
+   "com.garmin.android.apps.connectmobile",
+   "com.android.telephonycore",
+   "com.google.android.telephonycore",
+   "com.meta.testing",
+   "com.facebook.appmanager",
+   "com.facebook.system",
+   "com.LogiaGroup.LogiaDeck",
+   "com.google.android.apps.maps"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https",
+      "host": "messenger.com"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.facebook.GET_PHONE_ID"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.PICK"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.MAIN"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.SEND_MULTIPLE"
+    ],
+    "data": [
+     {
+      "mimeType": "*/*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "*"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.DIAL"
+    ],
+    "data": [
+     {
+      "scheme": "tel"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.CALL"
+    ],
+    "data": [
+     {
+      "scheme": "tel"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.MAIN"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.support.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "http"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "whatsapp.payments.intent.action.STEP_UP"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.android.vending.billing.InAppBillingService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.whatsapp.action.INSTRUMENTATION_CALLBACK_SERVICE"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "com.whatsapp.otp.OTP_RETRIEVED"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.IS_READY_TO_PAY"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "org.chromium.intent.action.UPDATE_PAYMENT_DETAILS"
+    ],
+    "data": []
+   }
+  ],
+  "providers": [
+   "androidx.car.app.connection"
+  ]
+ },
+ "app_attrs": {
+  "theme": "@7F1504C8",
+  "label": "@7F125381",
+  "icon": "@7F130002",
+  "name": "com.whatsapp.AppShell",
+  "manageSpaceActivity": "com.whatsapp.storage.StorageUsageManageSpaceActivity",
+  "debuggable": "false",
+  "backupAgent": "com.whatsapp.infra.backup.system.SystemBackupAgent",
+  "allowBackup": "true",
+  "vmSafeMode": "@7F050003",
+  "restoreAnyVersion": "true",
+  "hardwareAccelerated": "@7F050008",
+  "largeHeap": "false",
+  "supportsRtl": "true",
+  "fullBackupOnly": "true",
+  "extractNativeLibs": "false",
+  "fullBackupContent": "@7F180003",
+  "networkSecurityConfig": "@7F18000B",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "hasFragileUserData": "true",
+  "requestLegacyExternalStorage": "true",
+  "preserveLegacyExternalStorage": "true",
+  "gwpAsanMode": "-1",
+  "dataExtractionRules": "@7F180006",
+  "enableOnBackInvokedCallback": "false"
+ },
+ "meta_data": {
+  "com.google.android.maps.v2.API_KEY": "@7F1252D7",
+  "com.google.android.gms.car.application": "@7F180002",
+  "com.google.android.gms.version": "@7F0C000D",
+  "com.google.android.ALLOW_PHISHING_DETECTION": "false",
+  "com.sec.android.support.multiwindow": "true",
+  "com.sec.android.multiwindow.DEFAULT_SIZE_W": "632.0dip",
+  "com.sec.android.multiwindow.DEFAULT_SIZE_H": "598.0dip",
+  "com.sec.android.multiwindow.MINIMUM_SIZE_W": "632.0dip",
+  "com.sec.android.multiwindow.MINIMUM_SIZE_H": "598.0dip",
+  "android.max_aspect": "2.100000",
+  "firebase_analytics_collection_deactivated": "true",
+  "android.accounts.AccountAuthenticator": "@7F180001",
+  "android.app.shortcuts": "@7F180010",
+  "android.appwidget.provider": "@7F180012",
+  "photopicker_activity:0:required": null,
+  "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "asset_statements": "@7F125194",
+  "androidx.car.app.minCarApiLevel": "6",
+  "com.microsoft.crossdevice.resumeActivityProvider": "true",
+  "com.microsoft.crossdevice.trigger.PartnerApp": "4",
+  "com.facebook.wearable.companion.fbpermission.APP_LINKS": null,
+  "com.meta.wearable.acdc.service.fbpermission.ACDC_SERVICE": null,
+  "android.telephony.PROPERTY_SATELLITE_DATA_OPTIMIZED": "com.whatsapp",
+  "android.content.SyncAdapter": "@7F180013",
+  "android.provider.CONTACTS_STRUCTURE": "@7F180004",
+  "android.service.chooser.chooser_target_service": "androidx.sharetarget.ChooserTargetServiceCompat",
+  "com.google.android.play.billingclient.version": "8.3.0",
+  "com.google.android.backup.api_key": "[redacted]",
+  "android.support.FILE_PROVIDER_PATHS": "@7F180007",
+  "com.facebook.secure.fileprovider.SECURE_FILE_PROVIDER_PATHS": "@7F18000F",
+  "com.facebook.katana.fbpermission.SSO_ACCESS": null,
+  "com.facebook.katana.fbpermission.LITE_PROVIDER_ACCESS": null,
+  "com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED": "true",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "androidx.credentials.CREDENTIAL_PROVIDER_KEY": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl",
+  "com.facebook.services.fbpermission.FEO2": null,
+  "com.facebook.services.fbpermission.FEO2_IMPLICIT_CALLER": null,
+  "com.facebook.services.fbpermission.FEO2_READ_DEVICE_COOKIE": null,
+  "com.android.vending.splits.required": "true",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_DISTRIBUTION_APK",
+  "com.android.vending.splits": "@7F180015",
+  "com.android.vending.derived.apk.id": "2"
+ },
+ "activities": 838,
+ "services": [
+  {
+   "name": "com.google.android.gms.nearby.exposurenotification.WakeUpService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.accountsync.AccountAuthenticatorService",
+   "exported": "false",
+   "actions": [
+    "android.accounts.AccountAuthenticator"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.alarmservice.AlarmService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.backup.google.GoogleBackupService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.backup.google.integration.impl.BackupNowService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.backup.apps.EXTERNAL_CUSTOM_BACKUP_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.backup.google.integration.impl.BackupStateService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.backup.apps.state.APP_BACKUP_STATE_SERVICE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.payments.brazilpay.ui.viewmodel.BrazilBankListFetchService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.security.sandbox.SecuritySandboxService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.voicemessaging.productinfra.VoiceMessagingService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000800"
+  },
+  {
+   "name": "com.google.android.gms.metadata.ModuleDependencies",
+   "exported": "false",
+   "actions": [
+    "com.google.android.gms.metadata.MODULE_DEPENDENCIES"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.accountlinking.ipc.service.WaAccountsCenterService",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.wfl.OPERATION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.car.androidauto.WhatsAppCarAppService",
+   "exported": "true",
+   "actions": [
+    "androidx.car.app.CarAppService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companiondevice.wearos.WearOsListenerService",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.wearable.BIND_LISTENER",
+    "com.google.android.gms.wearable.MESSAGE_RECEIVED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.meta.wearable.acdc.sdk.service.ACDCRegistrationService",
+   "exported": "false",
+   "actions": [
+    "com.meta.wearable.acdc.sdk.service.ACDCRegistrationService.BIND"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.push.adm.AdmLegacyMessageHandler",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.push.adm.AdmJobMessageHandler",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.migration.crossplat.android.integration.service.OsMigrationAppDataService",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.migration.crossplat.android.integration.service.OS_MIGRATION_APP_DATA_SERVICE"
+   ],
+   "permission": "android.permission.BACKUP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.migration.android.integration.service.GoogleMigrateService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.migration.export.service.MessagesExporterService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.migration.crossplat.service.OsmosisImportService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl",
+   "exported": "false",
+   "actions": [
+    "org.npci.upi.security.services.CLRemoteService"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.contact.ui.sync.ContactsSyncAdapterService",
+   "exported": "true",
+   "actions": [
+    "android.content.SyncAdapter"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companiondevice.garmin.GarminBindingServiceShim",
+   "exported": "true",
+   "actions": [
+    "com.garmin.android.connectiq.GARMIN_BINDING_SERVICE_ACTION",
+    "com.whatsapp.garmin.GARMIN_BINDING_SERVICE_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.garmin.android.connectiq.IQGarminBindingService",
+   "exported": "true",
+   "actions": [
+    "com.garmin.android.connectiq.GARMIN_BINDING_SERVICE_ACTION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companiondevice.tethered.TetheredService",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.companiondevice.tethered.REQUEST"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.instrumentation.product.service.InstrumentationFGService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.instrumentation.product.api.InstrumentationService",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.instrumentation.REQUEST"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.calling.service.VoiceFGService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x000000E4"
+  },
+  {
+   "name": "com.whatsapp.calling.telecom.SelfManagedConnectionService",
+   "exported": "false",
+   "actions": [
+    "android.telecom.ConnectionService"
+   ],
+   "permission": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.telecom.internal.JetpackConnectionService",
+   "exported": "true",
+   "actions": [
+    "android.telecom.ConnectionService"
+   ],
+   "permission": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.messageservice.messaging.MessageService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.messaging.service.GcmFGService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.migration.transfer.network.service.WifiGroupCreatorP2pTransferService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.migration.transfer.network.service.WifiGroupScannerP2pTransferService",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "androidx.sharetarget.ChooserTargetServiceCompat",
+   "exported": "true",
+   "actions": [
+    "android.service.chooser.ChooserTargetService"
+   ],
+   "permission": "android.permission.BIND_CHOOSER_TARGET_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.networkavailable.service.UnsentMessagesNetworkAvailableJob",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.media.audio.service.BackgroundMediaControlService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.whatsapp.consumer.notification.AndroidWear",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.consumer.widget.WidgetService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_REMOTEVIEWS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.consumer.notification.DirectReplyService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.media.transcode.MediaTranscodeService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.media.download.service.MediaDownloadService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000001"
+  },
+  {
+   "name": "com.whatsapp.media.download.service.MediaDownloadJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.media.upload.jobs.MediaProcessNotificationJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.media.ExternalMediaManager",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.voltron.download.scheduledinstaller.OxygenScheduledInstallerJobService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.locationsharing.location.LocationSharingService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000008"
+  },
+  {
+   "name": "com.whatsapp.infra.push.GcmListenerService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.push.RegistrationIntentService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.video.heroplayer.service.HeroKeepAliveService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.perf.profilo.ProfiloUploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.crash.upload.ExceptionsUploadService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "com.whatsapp.alarmservice.AlarmBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.action.DAILY_CRON",
+    "com.whatsapp.action.DAILY_CATCHUP_CRON",
+    "com.whatsapp.action.HOURLY_CRON",
+    "com.whatsapp.action.BACKUP_MESSAGES",
+    "com.whatsapp.action.UPDATE_NTP",
+    "com.whatsapp.action.HEARTBEAT_WAKEUP",
+    "com.whatsapp.action.ROTATE_SIGNED_PREKEY",
+    "com.whatsapp.action.AWAY_MESSAGES_CLEANUP"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.SystemShutdownBootBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_SHUTDOWN",
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.InternalShutdownBootBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.facebook.android.intent.action.ACTION_SHUTDOWN",
+    "com.instagram.android.intent.action.ACTION_SHUTDOWN",
+    "com.facebook.android.intent.action.BOOT_COMPLETED",
+    "com.instagram.android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.ProtectedLockScreenBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_SCREEN_ON",
+    "android.intent.action.ACTION_SCREEN_OFF"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.errorreporting.lacrima.detector.broadcast.PublicLockScreenBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.instagram.android.intent.action.ACTION_SCREEN_ON",
+    "com.instagram.android.intent.action.ACTION_SCREEN_OFF"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.messagedrafts.reminder.notification.DraftReminderNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.messagedrafts.reminder.notification.DraftReminderNotificationDismissedReceiver.DISMISS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.metaai.ui.widget.MetaAiAppWidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.otpmessage.notification.OtpZeroTapMarkAsReadNotificationHandlerReceiver",
+   "exported": null,
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.otpmessage.otp.OtpRequestedReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.OTP_REQUESTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.otpmessage.otp.OtpIdentityHashRequestedReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.otp.ID_HASH_REQUESTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.pttwidget.PttWidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.app.notifications.RegRetryVerificationReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.alarm.REGISTRATION_RETRY",
+    "com.whatsapp.alarm.SMS_RECEIVED_WHILE_INACTIVE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.app.notifications.OnboardingIncompleteReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.alarm.ONBOARDING_INCOMPLETE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.app.notifications.EnterPhoneNumberNotificationReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.alarm.ENTER_PHONE_NUMBER"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.app.verifyphone.SMSRetrieverAppInactiveReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+   ],
+   "permission": "com.google.android.gms.auth.api.phone.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.aura.main.LauncherIconUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.push.adm.AdmMessageReceiver",
+   "exported": "true",
+   "actions": [
+    "com.amazon.device.messaging.intent.REGISTRATION",
+    "com.amazon.device.messaging.intent.RECEIVE"
+   ],
+   "permission": "com.amazon.device.messaging.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.migration.android.api.DeferredRestoreBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.apps.pixelmigrate.IOS_APP_DATA_AVAILABLE"
+   ],
+   "permission": "android.permission.BACKUP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.accountswitching.notifications.InactiveAccountNotificationReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.accountswitching.inactiveaccount.IgnoreCall"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.notification.MessageOtpNotificationBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.notification.MessageOtpNotificationBroadcastReceiver.RECEIVE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.ui.RegistrationCompletedReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.SMBRegistrationCompleted"
+   ],
+   "permission": "com.whatsapp.permission.REGISTRATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.inorganicnotifications.InorganicNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.banner.LargeScreenFileSharingUpsellBannerReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.reminders.logging.ReminderNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.reminders.NOTIFICATION_DISMISS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companiondevice.garmin.DelayedNotificationReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.companiondevice.garmin.DelayedNotificationReceiver.SHOW_DELAYED_NOTIFICATION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.instrumentation.product.notification.DelayedNotificationReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.instrumentation.product.notification.DelayedNotificationReceiver.SHOW_DELAYED_NOTIFICATION"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.calling.calllink.CallLinkShareReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.calling.callnotification.DeclineIntentReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.calling.hangup_call",
+    "com.whatsapp.calling.reject_call",
+    "com.whatsapp.calling.reject_group_reminder",
+    "com.whatsapp.calling.end_bot_call"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.car.app.notification.CarAppNotificationBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.telecom.internal.MuteStateReceiver",
+   "exported": "true",
+   "actions": [
+    "android.media.action.MICROPHONE_MUTE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.group.joinrequest.GroupJoinRequestNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.event.notification.events.EventStartAlarmReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.newsletter.notification.helper.NewsletterNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.directmigration.MigrationProviderOrderedBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.registration.directmigration.initialMigrationInfoAction",
+    "com.whatsapp.registration.directmigration.recoveryTokenAction",
+    "com.whatsapp.registration.directmigration.setMigrationStateOnProviderSide"
+   ],
+   "permission": "com.whatsapp.permission.REGISTRATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.directmigration.MigrationRequesterBroadcastReceiver",
+   "exported": "true",
+   "actions": [
+    "com.whatsapp.registration.directmigration.providerIsLoggedOutAction",
+    "com.whatsapp.registration.directmigration.providerAppMigrationSpaceNeededAction"
+   ],
+   "permission": "com.whatsapp.permission.REGISTRATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.appwidget.WidgetProvider",
+   "exported": "true",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.consumer.widget.StatusOnlyWidgetProvider",
+   "exported": "false",
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.consumer.notification.MessageNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.consumer.notification.MessageNotificationDismissedReceiver.DISMISS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.consumer.notification.MissedCallNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.consumer.notification.MissedCallNotificationDismissedReceiver.DISMISS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.consumer.registration.PreRegNotificationLearnMoreReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.payments.productinfra.MessagelessPaymentNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.payments.productinfra.MessagelessPaymentNotificationDismissedReceiver.DISMISS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.payments.productinfra.PaymentMethodUpdateNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.payments.productinfra.PaymentMethodUpdateNotificationDismissedReceiver.DISMISS"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companionmode.CompanionStateHolder$CompanionPreferenceStateReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companionmode.CompanionStateHolder$CompanionLogoutStateReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.managedaccount.activityalerts.ManagedAccountActivityNotificationDismissedReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.status.api.notifications.StatusNotificationDismissReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.interop.notification.InteropNotificationDismissReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.media.ExternalMediaManager$ExternalMediaStateReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MEDIA_BAD_REMOVAL",
+    "android.intent.action.MEDIA_EJECT",
+    "android.intent.action.MEDIA_MOUNTED",
+    "android.intent.action.MEDIA_REMOVED",
+    "android.intent.action.MEDIA_SHARED",
+    "android.intent.action.MEDIA_UNMOUNTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.ml.v2.actions.MLModelDownloadCancelReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.locationsharing.location.FinalLiveLocationBroadcastReceiver",
+   "exported": "false",
+   "actions": [
+    "com.whatsapp.locationsharing.location.FinalLiveLocationBroadcastReceiver.RECEIVE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.push.WAFbnsPreloadReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.rti.fbns.intent.RECEIVE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.contact.TellAFriendReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.core.accounttransfer.AccountTransferReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.gms.auth.START_ACCOUNT_EXPORT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.settings.wa.ITA",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.oxygen.preloads.sdk.firstparty.settings.TosAcceptedFlag",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.companiondevice.devices.CompanionDeviceVerificationReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.phoneid.PhoneIdRequestReceiver",
+   "exported": "true",
+   "actions": [
+    "com.facebook.GET_PHONE_ID"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.systemreceivers.boot.BootReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.infra.systemreceivers.appupdated.AppUpdatedReceiver",
+   "exported": "true",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.ACTION_POWER_CONNECTED",
+    "android.intent.action.ACTION_POWER_DISCONNECTED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BATTERY_OKAY",
+    "android.intent.action.BATTERY_LOW"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.DEVICE_STORAGE_LOW",
+    "android.intent.action.DEVICE_STORAGE_OK"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+   "exported": "false",
+   "actions": [
+    "android.net.conn.CONNECTIVITY_CHANGE"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED",
+    "android.intent.action.TIME_SET",
+    "android.intent.action.TIMEZONE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+   "exported": "false",
+   "actions": [
+    "androidx.work.impl.background.systemalarm.UpdateProxies"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "com.whatsapp.accesslibraryprovider.provider.FamilyAppsUserValuesProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.backup.google.restart.RestartAppContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.accesslibraryprovider.credentials.FamilyAppsCredentialsProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.accountlinking.ipc.handler.quicksends.QuickSendsContactsProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.migration.export.api.ExportMigrationContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.apple.movetoios.ACCESS",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.pixel.besties.provider.PixelBestiesApiContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.permission.besties.API",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.stickers.command.StickerCommandProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.accountswitching.AccountSwitchingContentProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.stickers.ui.storage.WhitelistPackQueryContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.instrumentation.product.api.InstrumentationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.directmigration.MigrationContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.registration.directmigration.DirectMigrationContentProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.core.content.FileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.facebook.secure.fileprovider.SecureFileProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.whatsapp.media.contentprovider.MediaProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.provider.FirebaseInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Decompile every classesN.dex of the given apps separately (low memory), two at a time.
 cd "$(dirname "$0")/.."
-export JAVA_OPTS="-Xmx6g"
+export JAVA_OPTS="${JAVA_OPTS:--Xmx6g}"
 run() { app=$1; dex=$2; out=work/$app/jdex/${dex%.dex}
   [ -f "$out/.done" ] && return
   rm -rf "$out"; mkdir -p "$out"

@@ -26,7 +26,7 @@ for path in sys.argv[2:]:
     app = m.find("application")
     meta = {x.get(NS + "name"): x.get(NS + "value") or x.get(NS + "resource") for x in app.iter("meta-data")}
     # Redact embedded client tokens/keys so audits can be published.
-    meta = {k: ("[redacted]" if re.search(r"token|apikey|api_key|secret|client_?key", k or "", re.I) and v and not str(v).startswith("@") else v) for k, v in meta.items()}
+    meta = {k: ("[redacted]" if re.search(r"token|apikey|api_key|secret|client_?key|client_?id", k or "", re.I) and v and not str(v).startswith("@") else v) for k, v in meta.items()}
     def comps(tag):
         res = []
         for c in app.findall(tag):

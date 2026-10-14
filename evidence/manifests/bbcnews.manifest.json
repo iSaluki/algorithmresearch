@@ -1,0 +1,385 @@
+{
+ "package": "bbc.mobile.news.uk",
+ "version": "9.19.0.32015",
+ "permissions": [
+  "air.com.cc.uk.co.bbc.cbeebiesstorytime.permission.LOGIN_PROVIDER",
+  "air.uk.co.bbc.cbeebiesstorytime.permission.LOGIN_PROVIDER",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "android.permission.INTERNET",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.REORDER_TASKS",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.VIBRATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "bbc.iplayer.android.permission.LOGIN_PROVIDER",
+  "bbc.mobile.news.uk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "bbc.mobile.news.uk.permission.LOGIN_PROVIDER",
+  "bbc.mobile.news.uk.permission.RECEIVE_ADM_MESSAGE",
+  "bbc.mobile.weather.permission.LOGIN_PROVIDER",
+  "com.amazon.device.messaging.permission.RECEIVE",
+  "com.bbc.sounds.permission.LOGIN_PROVIDER",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.google.android.gms.permission.AD_ID",
+  "uk.co.bbc.android.sportdomestic.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.authtoolkit.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.authtoolkit.sandbox.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.cbeebiesgetcreative.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.cbeebiesgoexplore.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.cbeebiesplaytimeisland.permission.LOGIN_PROVIDER",
+  "uk.co.bbc.integrationapp.permission.LOGIN_PROVIDER"
+ ],
+ "dangerous_permissions": [
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.WRITE_EXTERNAL_STORAGE"
+ ],
+ "queries": {
+  "packages": [
+   "uk.co.bbc.authtoolkit",
+   "uk.co.bbc.integrationapp",
+   "uk.co.bbc.authtoolkit.sandbox",
+   "uk.co.bbc.android.sportdomestic",
+   "bbc.iplayer.android",
+   "com.bbc.sounds",
+   "bbc.mobile.weather",
+   "bbc.mobile.news.uk",
+   "com.amazon.dee.app",
+   "androidx.test.orchestrator",
+   "androidx.test.services",
+   "com.google.android.apps.common.testing.services",
+   "com.facebook.katana",
+   "com.instagram.android",
+   "com.facebook.lite",
+   "com.samsung.android.mapsagent"
+  ],
+  "intents": [
+   {
+    "actions": [
+     "android.intent.action.SEND"
+    ],
+    "data": [
+     {
+      "mimeType": "message/rfc822"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "android.support.customtabs.action.CustomTabsService"
+    ],
+    "data": []
+   },
+   {
+    "actions": [
+     "android.intent.action.VIEW"
+    ],
+    "data": [
+     {
+      "scheme": "https"
+     }
+    ]
+   },
+   {
+    "actions": [
+     "com.appsflyer.referrer.INSTALL_PROVIDER"
+    ],
+    "data": []
+   }
+  ],
+  "providers": []
+ },
+ "app_attrs": {
+  "theme": "@7F15001B",
+  "label": "@7F140035",
+  "icon": "@7F100000",
+  "name": "uk.co.bbc.chrysalis.App",
+  "allowBackup": "false",
+  "largeHeap": "true",
+  "supportsRtl": "true",
+  "extractNativeLibs": "false",
+  "fullBackupContent": "@7F170000",
+  "networkSecurityConfig": "@7F170009",
+  "roundIcon": "@7F100001",
+  "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "dataExtractionRules": "@7F170001"
+ },
+ "meta_data": {
+  "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
+  "androidx.profileinstaller.ProfileInstallerInitializer": "androidx.startup",
+  "okhttp3.internal.platform.PlatformInitializer": "androidx.startup",
+  "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
+  "asset_statements": "@7F14004D",
+  "com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW": "true",
+  "androidx.credentials.CREDENTIAL_PROVIDER_KEY": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl",
+  "com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED": "true",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseConfigLegacyRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar": "com.google.firebase.components.ComponentRegistrar",
+  "com.google.android.gms.version": "@7F0B0015",
+  "backend:com.google.android.datatransport.cct.CctBackendFactory": "cct",
+  "com.android.vending.splits.required": "true",
+  "com.android.stamp.source": "https://play.google.com/store",
+  "com.android.stamp.type": "STAMP_TYPE_DISTRIBUTION_APK",
+  "com.android.vending.splits": "@7F17000F",
+  "com.android.vending.derived.apk.id": "2"
+ },
+ "activities": 35,
+ "services": [
+  {
+   "name": "uk.co.bbc.smpan.audio.notification.androidNotificationSystem.AudioNotificationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": "0x00000002"
+  },
+  {
+   "name": "com.urbanairship.push.fcm.AirshipFirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.push.adm.AdmHandlerJobBase",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.push.adm.AdmHandlerBase",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "actions": [],
+   "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.sessions.SessionLifecycleService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "actions": [],
+   "permission": "android.permission.BIND_JOB_SERVICE",
+   "foregroundServiceType": null
+  }
+ ],
+ "receivers": [
+  {
+   "name": "uk.co.bbc.analytics.push_notifications.analytics.AnalyticsReceiver",
+   "exported": "false",
+   "actions": [
+    "uk.co.bbc.news.push.PUSH_RECEIVED",
+    "uk.co.bbc.news.push.PUSH_OPENED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.push.adm.AdmPushReceiver",
+   "exported": "true",
+   "actions": [
+    "com.amazon.device.messaging.intent.REGISTRATION",
+    "com.amazon.device.messaging.intent.RECEIVE"
+   ],
+   "permission": "com.amazon.device.messaging.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.push.NotificationProxyReceiver",
+   "exported": "false",
+   "actions": [
+    "com.urbanairship.push.OPENED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.urbanairship.locale.LocaleChangeReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.LOCALE_CHANGED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ],
+   "permission": "com.google.android.c2dm.permission.SEND",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.optimizely.ab.android.datafile_handler.DatafileRescheduler",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.optimizely.ab.android.event_handler.EventRescheduler",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED",
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ],
+   "permission": "android.permission.DUMP",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ],
+ "providers": [
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  },
+  {
+   "name": "uk.co.bbc.authtoolkit.autoSignIn.AuthToolkitLoginProvider",
+   "exported": "true",
+   "actions": [],
+   "permission": "bbc.mobile.news.uk.permission.LOGIN_PROVIDER",
+   "foregroundServiceType": null
+  },
+  {
+   "name": "com.google.firebase.provider.FirebaseInitProvider",
+   "exported": "false",
+   "actions": [],
+   "permission": null,
+   "foregroundServiceType": null
+  }
+ ]
+}
