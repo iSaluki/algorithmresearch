@@ -1,5 +1,5 @@
 """Summarise privacy-relevant manifest declarations for each APK into JSON."""
-import json, sys, os
+import json, sys, os, re
 from androguard.core.apk import APK
 from androguard.util import set_log
 set_log("ERROR")
@@ -25,6 +25,8 @@ for path in sys.argv[2:]:
             queries["providers"].append(p.get(NS + "authorities"))
     app = m.find("application")
     meta = {x.get(NS + "name"): x.get(NS + "value") or x.get(NS + "resource") for x in app.iter("meta-data")}
+    # Redact embedded client tokens/keys so audits can be published.
+    meta = {k: ("[redacted]" if re.search(r"token|apikey|api_key|secret|client_?key", k or "", re.I) and v and not str(v).startswith("@") else v) for k, v in meta.items()}
     def comps(tag):
         res = []
         for c in app.findall(tag):

@@ -1,1 +1,0 @@
-(function(){const root=document.documentElement;return root?root.innerHTML:""})()

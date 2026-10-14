@@ -337,7 +337,7 @@
  },
  "meta_data": {
   "com.google.android.gms.ads.AD_MANAGER_APP": "true",
-  "com.google.android.backup.api_key": "unused",
+  "com.google.android.backup.api_key": "[redacted]",
   "com.samsung.android.support.REMOTE_ACTION": "@7F16008F",
   "android.service.chooser.chooser_target_service": "com.snap.shortcuts.list.SnapChooserTargetService",
   "android.app.shortcuts": "@7F160136",
@@ -347,7 +347,7 @@
   "android.support.FILE_PROVIDER_PATHS": "@7F160088",
   "androidx.lifecycle.ProcessLifecycleInitializer": "androidx.startup",
   "androidx.emoji2.text.EmojiCompatInitializer": "androidx.startup",
-  "AmazonAPIKey": "eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjlmY2YxMmZkMTVhYTQ5MWZiNTU2NTQwODA5Y2MxNjQyIiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi4zODQyYzg3YTg3NmU0ZjFkYjNmNTY4MjExNzE4Y2UwMSIsImlzcyI6IkFtYXpvbiIsInR5cGUiOiJBUElLZXkiLCJwa2ciOiJjb20uc25hcGNoYXQuYW5kcm9pZCIsImFwcFZhcmlhbnRJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC43OThmMmViZGJlNWE0M2VlODEzNTYzNzM5MDU0ZTgxZiIsInRydXN0UG9vbCI6bnVsbCwiYXBwc2lnU2hhMjU2IjoiMkY6MUM6QUE6RkM6QTE6RUQ6MzA6RDA6QjQ6RTM6ODg6NjM6RUU6RkE6QkU6QTA6RTg6MTU6NzE6MUY6QTQ6Q0Y6Nzk6Qjg6MjI6NTE6OUE6ODI6NTk6RDk6NUE6NTgiLCJhcHBzaWciOiI4ODo1QjoxNDo0MTpCODpGRTpEOTo3NDo5NDo0NTo2QjpBQTpBNzo3MTo4RjpGMiIsImFwcElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50Ljc5OGYyZWJkYmU1YTQzZWU4MTM1NjM3MzkwNTRlODFmIiwiaWQiOiJkM2VhMmZkMi1hY2YxLTQ2MzEtYTRjNy0yMGU3MzAzYWRkNzYiLCJpYXQiOiIxNzA1OTYzMzEzMjkwIn0=.NOya9VmckfuG6Wp+2Ok9yN+Pn2D+xqFTiYk2gdxNsQ5eJHrGAcYkiy676fNcFM7nbc3ql2PDo43h571YtCvtCp68MVsQpgDIXZDs2+zKigThirKrRixLmWwm1vGgTBlkav1SawjRELpyKuZC6hUuqfMwzs8dGFAkbC7zk2OmM032ub9kIxdfNYNpoJVqUZY8XIYKFELXij5j0vOy8baGWCRWtWgTuvbRMfHY73xA4DBpzRPq3lCF7XiA72a8DROQY+BpcAzOlPPPH2zfTFT2W9Q7hC3Lqx9OaRhSPWL74nl0UgKdsc2A8dxLc8ccALoEnB7XNCYcFktHjTtl/Z66uQ==",
+  "AmazonAPIKey": "[redacted]",
   "com.google.android.gms.version": "@7F0C0046",
   "com.a3l.clsName": "com.snap.ms.notification.service.SnapNotificationA3LMessageService",
   "firebase_crashlytics_collection_enabled": "false",

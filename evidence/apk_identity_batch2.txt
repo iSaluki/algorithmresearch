@@ -1,0 +1,60 @@
+== apks/base2/bbc.mobile.news.uk.apk
+  package=bbc.mobile.news.uk version=9.19.0.32015 (10072015) minSdk=24 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Unknown, Organizational Unit: Unknown, Organization: Media Applications Technologies, Locality: London, State/Province: Unknown, Country: GB
+  cert sha256 : df634c1d62f59e88230acb401ee7e4fa45dbabda80f77b3fefe9827149b3f780
+  cert subject: Organization: BBC, Locality: Glasgow, Country: GB
+  cert sha256 : 49bfbdabdf98946ce332d78650ed6e00d5bf29c23dc071810af3066a2eee236b
+== apks/base2/bbc.mobile.news.ww.apk
+  package=bbc.mobile.news.ww version=2026.9.0 (10007108) minSdk=24 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Unknown, Organizational Unit: Unknown, Organization: BBC Worldwide Limited, Locality: London, State/Province: Unknown, Country: GB
+  cert sha256 : fd76b3b8df5fe8fd590957eb0f78a996967dd3c8bd87aff41f47e7799d065dc7
+== apks/base2/ch.protonvpn.android.apk
+  package=ch.protonvpn.android version=5.20.57.0 (605205700) minSdk=26 targetSdk=36
+  signed v1=True v2=True v3=True
+  cert subject: Common Name: FDroid, Organizational Unit: FDroid, Organization: fdroid.org, Locality: ORG, State/Province: ORG, Country: UK
+  cert sha256 : 950ee2d4d0a43ffba7ee1da9541c4a13defe81eb697ba7d24c17f6f886e32124
+== apks/base2/com.chess.apk
+  package=com.chess version=4.10.20-googleplay (280085) minSdk=28 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Anton Shapovalov, Organizational Unit: developer, Organization: Jetmind, Locality: Kharkov
+  cert sha256 : aa8c9ff93efbdc4226a113e49fc9645b2c02092a314305da2d76be6cdf8abfc3
+== apks/base2/com.discord.apk
+  package=com.discord version=348.10 - Stable (348010) minSdk=24 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Jason Citron, Organization: Hammer and Chisel, Locality: Burlingame, State/Province: CA, Country: US
+  cert sha256 : 3c39d23cf9367849a5c699395647fe0e5bfea5a1f1f40d8c717ddc70f8bfa113
+== apks/base2/com.facebook.katana.apk
+  package=com.facebook.katana version=582.0.0.50.54 (475417127) minSdk=28 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Facebook Corporation, Organizational Unit: Facebook, Organization: Facebook Mobile, Locality: Palo Alto, State/Province: CA, Country: US
+  cert sha256 : e3f9e1e0cf99d0e56a055ba65e241b3399f7cea524326b0cdd6ec1327ed0fdc1
+  cert subject: Common Name: Meta Platforms Inc., Organizational Unit: Meta Mobile, Organization: Meta Platforms Inc., Locality: Menlo Park, State/Province: California, Country: US
+  cert sha256 : 911d604446084ca7f4760b775bfc160fa8702441240a7258645d7a72c4312d27
+== apks/base2/com.google.android.apps.photos.apk
+  package=com.google.android.apps.photos version=7.97.0.997578476 (52547203) minSdk=24 targetSdk=37
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Unknown; Organizational Unit: Google, Inc; Organization: Google, Inc; Locality: Mountain View; State/Province: CA; Country: US
+  cert sha256 : 3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a
+  cert subject: Common Name: Android, Organizational Unit: Android, Organization: Google Inc., Locality: Mountain View, State/Province: California, Country: US
+  cert sha256 : 5aad2bee6db95d17e05a08d7d1e64c10a1511879154483916b6ae6c7fd9cb0c6
+== apks/base2/com.waze.apk
+  package=com.waze version=5.25.0.1 (1030736) minSdk=29 targetSdk=36
+  signed v1=False v2=True v3=True
+  cert subject: Common Name: Alex Agranovich, Organizational Unit: Waze, Organization: Waze, Locality: Raanana, State/Province: Israel, Country: Israel
+  cert sha256 : 03637f6c5d8f604e6fdb79a6ffbfa578de4e318f8da22fc6106665247f8807d7
+== apks/base2/com.whatsapp.apk
+  package=com.whatsapp version=2.26.39.79 (263907900) minSdk=23 targetSdk=36
+  signed v1=True v2=True v3=True
+  cert subject: Common Name: Brian Acton, Organizational Unit: Engineering, Organization: WhatsApp Inc., Locality: Santa Clara, State/Province: California, Country: US
+  cert sha256 : 3987d043d10aefaf5a8710b3671418fe57e0e19b653c9df82558feb5ffce5d44
+  cert subject: Common Name: WhatsApp LLC, Organization: WhatsApp LLC, Locality: Menlo Park, State/Province: California, Country: US
+  cert sha256 : fb920d381bee1b2093f27dc8f13d994da629dc91887d0529b35c9a2dc4f4a6c2
+== apks/base2/org.thoughtcrime.securesms.apk
+  package=org.thoughtcrime.securesms version=8.30.3 (176301) minSdk=23 targetSdk=36
+  signed v1=True v2=True v3=True
+  cert subject: Common Name: Whisper Systems, Organizational Unit: Research and Development, Organization: Whisper Systems, Locality: Pittsburgh, State/Province: PA, Country: US
+  cert sha256 : 29f34e5f27f211b424bc5bf9d67162c0eafba2da35af35c16416fc446276ba26
+  cert subject: Common Name: Signal Messenger, LLC; Serial Number: 6703101; Business Category: Private Organization; Organization: Signal Messenger, LLC; Incorporation State/Province: Delaware; Incorporation Country: US; Locality: Mountain View; State/Province: California; Country: US
+  cert sha256 : 4be4f6cd5be844083e900279dc822af65a547fecc26aba7ff1f5203a45518cd8

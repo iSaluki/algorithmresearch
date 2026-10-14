@@ -310,7 +310,7 @@
  "meta_data": {
   "com.instagram.android.channel": "playstore",
   "com.facebook.mobileconfig.params_map": "true",
-  "com.google.android.backup.api_key": "unused",
+  "com.google.android.backup.api_key": "[redacted]",
   "com.google.android.ALLOW_PHISHING_DETECTION": "false",
   "com.facebook.build_rule": "instagram_multi_bytecode_dextr_splitarsc_dlstr_noxz_arm64_release_fbsign",
   "com.facebook.package_type": "release",
