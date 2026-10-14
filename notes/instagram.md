@@ -66,3 +66,8 @@
 - X/C00410Bnd.java registers "IABAPMJSHandler" with 7 scripts incl. detect_3p_analytics_tools (C0BFG, injected onDomLoaded when flag A05); domain map www.paypal.com, apay-us.amazon.com, www.amazon.com, accounts.google.com, pay.google.com, shop.app; logs IABAPMSelectedEvent (url, method, timings).
 ## Clipboard: IgKnotsManager adds OnPrimaryClipChangedListener on foreground; logs "copy_triggered" only (X/ClipboardManagerOnPrimaryClipChangedListenerC1172170kEN.java).
 ## Meta AI promotion: X/EnumC1639006cW.java 97 entry points (acquisition/retention mid-cards, megaphones COPY_1..6, IGD_PROMOTIONAL_PROACTIVE_MESSAGE, HATCH_IG_UPSELL_RETARGET_NOTIF, C50_IG_FOLLOW_JOINED_NOTIF, IG_ONE_CLICK_INSTALL_BANNER).
+
+## Foreground location upload — verified end-to-end (per-DEX tree)
+- jdex/classes3/sources/X/C024202iX.java (= jadx_full X/C657102iX) schedules scans (caller IG_FOREGROUND_LOCATION_UPLOAD, gated MobileConfig 2342164611333175797, only when permission granted; 1800000ms params).
+- jdex/classes7/sources/X/C04790JCj.java onSuccess: queue location packages (EvictingQueue), then upload with precision PRECISE/IMPRECISE via X/C0FfJ (FbLocationUpdateMutation).
+- C0FfJ fields: latitude, longitude, accuracy_meters, altitude_meters, bearing_degrees, speed_meters_per_second, age_ms, is_spoofed, wifi_info{hardware_address, rssi_dbm, connected, scan_results}, cell_info{gsm/cdma/lte/wcdma: cell_id, location_area_code, tracking_area_code, mobile_country_code, mobile_network_code, physical_cell_id, earfcn, timing_advance, network_operator_name, sim_operator_name, sim_country_iso, has_icc_card}, bluetooth_info, family_device_id, app_use_state, collection_source, use_case, place_id, location_manager_info, anonymous_signals.

@@ -22,3 +22,14 @@
 ## Benign checks
 - getInstalledPackages only to check for com.android.vending (defpackage/dtp0.java).
 - getEnabledAccessibilityServiceList: snackbar timing (defpackage/au5.java).
+
+## Second pass (full per-DEX tree work/reddit/jdex)
+- No queryUsageStats/queryEvents anywhere → PACKAGE_USAGE_STATS unused. No contacts reading (only contact photo lookup for share UI), location only AndroidX TwilightManager (no location permission).
+- Daily streaks: StreakExtendedNotification, android_conditional_streak_popup, streakPopups; copy "Your current streak is %s days, not progressed today with an alert"; onboarding "People with longer than 50 day streaks earn 271% more karma."
+- Push categories visible client-side: lifecycle_post_suggestions, subreddit_recommendation, top_post_deeplink, trending (from_trending_pn), upvote_post/comment etc.
+- Age verification: Persona (selfie/ID) or Google age range; "won't retain ... after 7 days"; framed "Unlock all features".
+- Cookie consent: Accept All / Reject Optional Cookies equal weight.
+- Account deletion: posts/comments/messages "dissociated (not deleted)".
+- Ad ID: honours limit_ad_tracking for Amazon/Google IDs (com/reddit/ads/impl/operator/b.java). AppsFlyer used for attribution/deeplinks only.
+- WebView JS injection only on ads.reddit.com / own pages.
+- Answers AI quota: "Come back tomorrow or upgrade to get more."

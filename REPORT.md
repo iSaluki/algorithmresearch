@@ -1,9 +1,9 @@
 # Dark Patterns & Data Practices in Seven Android Apps
 
-**Static reverse-engineering study**, 13 Oct 2026.
-Apps: Snapchat, Duolingo, Instagram, Reddit, Dexcom G7, Proton Mail, Claude (Claude: not analysed — see §7).
+**Static reverse-engineering study**, 13–14 Oct 2026 (second, deeper pass on Instagram, Snapchat and Reddit).
+Apps: Instagram, Snapchat, Reddit (priority), Duolingo, Dexcom G7, Proton Mail. Claude was not analysed (§9).
 
-Everything below comes from the shipped APKs: decompiled code, manifests and bundled UI text. Each finding points at the file and line in the decompiled tree (`work/<app>/jadx*/sources/...`, which can be regenerated with `tools/setup.sh` and the commands in §6). Where something depends on a server-side switch or experiment, I say so. **I can show that the code exists and what it does when it's switched on. I can't show how many people it's switched on for.**
+Everything below comes from the shipped APKs: decompiled code, manifests, bundled UI text and bundled JavaScript. Findings cite the decompiled file (paths in §8). Where behaviour sits behind a server-side switch, I say so and give the shipped default. **Static analysis shows that the code exists and what it does when switched on; it can't show how many users it's switched on for.**
 
 ---
 
@@ -11,154 +11,138 @@ Everything below comes from the shipped APKs: decompiled code, manifests and bun
 
 | # | App | Finding | Severity |
 |---|-----|---------|----------|
-| 1 | **Duolingo** | "Streak in danger" notifications you **can't swipe away** until a set time the next day, plus red countdown timers, angry or "terminator" mascot animations, and the home-screen icon and name changing to things like `Duolingo🚨` | **Critical** (manipulation) |
-| 2 | **Instagram** | Checks which **AI assistants, AI-companion apps and automation tools** you have installed (ChatGPT, Claude, Replika, Character.AI, Tasker, Home Assistant…) and reports the list to Meta analytics | **Critical** (tracking) |
-| 3 | **Snapchat** | Uploads your **whole address book with "closeness" metadata**: which contacts you starred, which have a saved birthday or photo, and (via a remote switch) which other messaging apps each contact uses. It does this during sign-up. | **Critical** (tracking, including non-users) |
-| 4 | **Instagram** | On-device profiling pipeline: training data for an **under-13 age model** (`AGE_SIGMA` / `u13_example`) is uploaded; your **installed keyboards and their languages** are uploaded; and a **"device state snapshot"** (volume, music playing, Do Not Disturb, lock state, brightness…) can be triggered on phone **unlock** by Meta services that phone makers preinstall | **High** |
-| 5 | **Snapchat** | **Churn-risk targeting.** Users the server marks as new or likely to leave get up to **15 full-screen "Added Me" takeovers per session, against 5 for everyone else**. People who abandon sign-up get pushes, and lost streaks can be bought back (the code even handles a child's purchase waiting for parent approval). | **High** |
-| 6 | **Duolingo** | A language-learning app with a large child audience bundles **~25 advertising networks** (Pangle/ByteDance, ironSource, Unity, Vungle, Meta, Mintegral, InMobi…). An experiment **fingerprints your home Wi-Fi** (hashed gateway IP and subnet) so reminders arrive when you get home. | **High** |
-| 7 | **Reddit** | **You can't delete your account until you've cancelled Premium.** Notification-permission prompts are wired into about 15 actions (voting, commenting, posting, chatting, app launch…). | **Medium** |
-| 8 | **Dexcom G7** | A **medical-device** app asks for far more access than it uses (`QUERY_ALL_PACKAGES`, microphone, phone state, always-on location). Its code is **string-encrypted and calls key APIs by reflection**, which makes independent auditing hard. Followers' "Share" alerts and data restore need cloud data-sharing consent. | **Medium** |
-| — | **Proton Mail** | The cleanest app: 14 permissions, no ad or analytics SDKs, self-hosted crash reporting. The only dark patterns found were seasonal "SALE" banners. | Low |
-
-The details follow, worst first within each app.
-
----
-
-## 2. Duolingo 6.101.2 (`com.duolingo`)
-
-### 2.1 Notifications you can't dismiss *(Critical)*
-- `defpackage/oms.java:1502-1525`: for `NotificationType.STREAK_SAVER`, if notifications are on, the phone runs Android 13+ (Samsung on API > 34 and a list of phone makers are excluded, presumably where the trick doesn't work), **your streak is ≥ 7 days**, and a remote flag is on, Duolingo schedules `UnstickNotificationWorker` for a configured time **the next day** (`plusDays(1).atTime(...)`).
-- `defpackage/lg40.java`: that worker finds the live notification carrying `FLAG_NO_CLEAR` (`flags & 32`), removes the flag, and logs `sticky_notification_unstuck` with `unstuck_delay_minutes`. So the notification really is posted as non-swipeable, and stays that way overnight.
-- Streak-saver notifications get their own **IMPORTANCE_HIGH** (heads-up) channel, while other types get default importance (`oms.java:559`).
-- The debug catalogue (`defpackage/sks.java`) shows the production variants: *"Watch out! Your streak is in danger!"* with a red **3,600-second countdown** "to save your streak", and mascot animations named **`terminator_duo`, `mad_duo`, `laser_duo`, `jaw_open_duo`, `surprised_duo`**. There's also *"XP Boost expires soon…"* with its own timer.
-
-**Why it matters.** Taking away the user's ability to dismiss a notification turns a reminder into a nag that can't be ignored. Combined with loss aversion (a streak built over weeks), threatening animations and countdowns, it's a textbook coercive dark pattern, aimed at exactly the users most invested in their streak.
-
-### 2.2 Changing the app's icon and name *(High)*
-The manifest declares activity aliases that swap the launcher icon and label (`apktool/AndroidManifest.xml`):
-- `PreStreakSaver1…9Launcher`: **nine escalating icons** (`ic_launcher_pre_streak_saver_3…9`) as the day goes on;
-- `StreakSaverLauncher{Hourglass,Siren,AlarmClock,ExclamationMarks,EmojiQuestionMark,Eyes…}` with labels **"Duolingo⏳", "Duolingo🚨", "Duolingo⏰", "Duolingo‼️", "Duolingo❓", "Duolingo👀", "Duolingo⁉️"**;
-- `FixedRetentionChallengeLauncher` (`ic_launcher_boiling_cucumber`), plus a push type `APP_ICON_UPDATE`.
-
-The pressure reaches the home screen, even if notifications are off.
-
-### 2.3 A notification taxonomy built for retention *(High)*
-`com/duolingo/data/notifications/NotificationType.java` defines, among others: **`PASSIVE_AGGRESSIVE`**, `ABANDONED_CART_BASICS`, `ABANDONED_CART_PLACEMENT` (re-targeting after you leave a paywall or placement test), `REACTIVATION`, `RESURRECTION`, `CONTINUOUS_RESURRECTION`, `RESURRECTED_QUEST`, `COMEBACK_BOOST`, `FRIENDS_RESURRECTION` (friends asked to nudge lapsed friends), `PASSED` ("someone has passed you"), `LEADERBOARDS_FRIEND_NUDGE`, and `REMOVE_AND_RESEND_NOTIFICATION` (silently re-posting a notification so it jumps back to the top of the shade). The signal object that drives notifications (`defpackage/uls.java`: `NotificationSignal(…, isRiskUserInHapticBucket=…, streak=…)`) also carries a haptics experiment for users flagged as at-risk.
-
-### 2.4 Learning where "home" is, without location permission *(High)*
-- `com/duolingo/notifications/TriggeredNotificationWifiWorker.java`: the experiment **`wifiTriggeredPracticeReminderExperiment`**. A practice push arrives flagged `should_drop_notification=true` and is held until the device is on Wi-Fi. It logs `is_device_idle_mode`, `is_power_save_mode`, `is_ignoring_battery_optimizations` and **`network_days_seen_before_today`**.
-- `defpackage/gde.java`: identifies the network by **hashing the default-gateway IPv4 address and subnet prefix**, and counts the days each network has been seen. That's effectively "you're at a place you visit every day" detection, with no location permission involved.
-
-### 2.5 Pay-to-escape mechanics and confirmshaming *(Medium)*
-Shipped copy (`res/values/strings.xml`):
-- *"Get a **League Repair** to reclaim your spot…"*, *"Don't get demoted! Keep moving up with a Timer Boost."*: paying to avoid social demotion.
-- *"Add Widget to Repair"*, *"Never lose your streak again with Duo on your phone's home screen!"*: a streak repaired in exchange for a permanent home-screen widget.
-- *"Wait, don't go! If you quit, you'll lose your progress."*, *"Losing makes me cry on the outside AND inside!"*, *"Hello, sadness…"*, *"Come back today to protect your streak…"*
-- *"Reaching a N day streak will put you in the top X% of all streaks"* (social comparison).
-- Cancellation: *"Are you sure you want to leave? You'll lose access to Max."*, *"You'll lose access to Super Family Plan in N hours"*.
-
-### 2.6 Advertising surface *(High, given the audience)*
-32 Exodus-catalogued SDKs (`evidence/trackers_exodus.json`). These are **fully bundled** (hundreds to thousands of classes each): Pangle/ByteDance, ironSource, Unity Ads, Vungle, Meta Audience Network, AppLovin MAX, Adjust, Mintegral, InMobi, Smaato, Fyber, Chartboost, HyprMX, BidMachine, PubNative, Moloco, SuperAwesome. Yandex, myTarget, Ogury, Tapjoy and maio appear only as mediation-adapter references. The manifest requests `AD_ID` and Privacy Sandbox `ADSERVICES_AD_ID/ATTRIBUTION/TOPICS`.
-*Mitigation found:* children are tagged `setTagForChildDirectedTreatment(1)` for AdMob (`com/duolingo/data/ads/u.java:157`), and Adjust has COPPA switches. I didn't verify that every mediated network receives the child flag.
-
-### 2.7 Telemetry on whether Android is throttling the app *(Low)*
-`defpackage/pu60.java:771+`: every analytics event carries `app_standby_bucket` (whether Android is restricting Duolingo), `audio_output_volume`, SIM country, timezone, font scale and more.
+| 1 | **Instagram** | **The in-app browser monitors the websites you visit.** Instagram injects scripts into third-party sites opened from the app (up to 131 programs, some downloaded at runtime). They **intercept the events those sites send to Google Tag Manager and to competitors' tracking pixels (TikTok, Snap, Reddit, Pinterest, X)**, list which of 26 analytics/ad tools a site uses along with their account IDs, record **which payment method you choose at checkout** (PayPal, Amazon Pay, Google Pay, Shop Pay), and capture clicks, scroll, key-press timing, page-text samples and network-request URLs. What's extracted is set by server configuration. | **Critical** |
+| 2 | **Instagram** | **Location packages uploaded while the app is open:** GPS position, speed and altitude, plus nearby **Wi-Fi access points (BSSIDs, signal), cell towers and Bluetooth info**, tagged with the cross-app Meta device ID. Separately, your coordinates are sent every 12 hours (by default) to an "event insights" query. | **Critical** |
+| 3 | **Instagram** | Checks which **AI assistants, AI-companion apps and automation tools** are installed (ChatGPT, Claude, Replika, Character.AI, Tasker, Home Assistant… 23 in all) and reports the list to Meta analytics, about daily. | **Critical** |
+| 4 | **Duolingo** | "Streak in danger" notifications that **can't be swiped away** until the next day, red countdowns, "terminator"/"mad" mascot animations, home-screen icon and name swapped to `Duolingo🚨`, and a notification type literally called `PASSIVE_AGGRESSIVE`. | **Critical** |
+| 5 | **Snapchat** | **Address-book upload with "closeness" metadata** (starred contacts, saved birthdays, photos, and, via remote switch, which messaging apps each contact uses), sent at sign-up. **Duolingo does the same**: has-birthday, has-company, has-nickname, has-address, has-photo and WhatsApp/Telegram presence for every contact. | **Critical** (profiles people who never consented) |
+| 6 | **Snapchat** | **Ads inside the chat inbox ("Sponsored Snaps")** with a forced choice: "Smaller In-Feed Ads" or "Larger Banner Ads", with no "no" option. In the EU the consent modal **re-appears 48 hours after each dismissal, up to 10 times**. My AI chats are used "to improve our products **and ads**" and shared with "advertising partners", and the **paid ad-free plan still shows "sponsored … My AI responses"**. | **High** |
+| 7 | **Snapchat** | **Location history and biometrics:** keeps "Places you've visited" and "travel updates" while location is on; "Footsteps" back-fills your past whereabouts from Memories; repeated nudges to "Allow all the time"; and **on-device face recognition** across Memories with face encodings linkable to Snapchat accounts (`tagged_user_id`; server-enabled). | **High** |
+| 8 | **Instagram** | Other on-device profiling: training uploads for an **under-13 age model**, upload of **installed keyboards and languages**, a **device-state snapshot** (volume, music, Do Not Disturb, lock state) that **Meta's preinstalled phone services can trigger on unlock**, **continuous background contact upload**, and **camera-roll scanning on by default** with reverse-geocoded photo locations. | **High** |
+| 9 | **Snapchat** | **Churn-risk targeting:** users flagged new or likely to leave get up to **15 full-screen "Added Me" takeovers per session vs 5 for others**; pushes to people who abandoned sign-up or logged out; paid streak restores, including children's purchases awaiting parent approval. | **High** |
+| 10 | **Duolingo** | About **25 ad networks** in a learning app with a large child audience, plus home-network fingerprinting so reminders arrive when you get home. | **High** |
+| 11 | **Reddit** | **Can't delete your account until Premium is cancelled.** Notification nags at about 15 touchpoints, new daily streaks with a "271% more karma" claim. Otherwise noticeably cleaner than Meta and Snap (§4). | **Medium** |
+| 12 | **Dexcom G7** | Medical-device app that requests far more access than it uses, with string-encrypted code that hinders audit (§6). | **Medium** |
+| — | **Proton Mail** | Cleanest app: 14 permissions, no ad or analytics SDKs, self-hosted crash reporting (§7). | Low |
 
 ---
 
-## 3. Instagram 451.0.0.53.80 (`com.instagram.android`)
+## 2. Instagram 451.0.0.53.80 (`com.instagram.android`)
 
-### 3.1 AI and automation app detector *(Critical)*
-- `X/EnumC525730Kkl.java` lists 23 packages: **Manus, Replit, YouWare, Emergent, a0.dev, NotebookLM, ChatGPT, Gemini, Copilot, Perplexity, Claude, Replika, Character.AI, Poe, Pi, Tasker, IFTTT, Zapier, MacroDroid, Automate, Home Assistant, Notion, Airtable**. Each is also declared in the manifest's `<queries>`, so Android lets Instagram see them.
-- `X/C367410Ebz.java:58-104` (startup task `com.facebook.odinusecases.aiappsdetector.ig4a.AiAppsDetectorStartupTaskBinder`): behind MobileConfig flag `36330376737612461`, at most once per configurable interval (default 24 h, stored in prefs `ig_ai_apps_detector_prefs`), it calls `getPackageInfo` on each package, builds the list of installed ones, and logs it as **`installed_apps`** in the analytics event **`odin_ai_apps_detector`** (`X/C627202di` is Instagram's analytics logger; the event is sampled).
-- I located the caller independently with REA's reference tracer (`evidence/rea/instagram.0Kkl.refs.json`).
+### 2.1 Surveillance of third-party websites in the in-app browser *(Critical)*
+When you tap a link, Instagram opens it in its own browser and injects JavaScript into the page. The DEX contains **131 named scripts** (`//# sourceURL=iabjs://…`). **111 ship in `res/raw/iabjs_*`**, the rest are **downloaded at runtime** into app storage (`X/C0LKR.java`, `context.openFileInput("<sha1>.js")`), and any script can be **overridden over the air** from stored prefs (`X/C0KF7.java`). What I read:
 
-**Why it matters.** Which AI companion apps someone uses (Replika, Character.AI, Pi) is a sensitive signal: it can reveal loneliness, mental-health use, or relationship status. Which automation tools they use reveals technical sophistication. Neither is needed to run a photo-sharing app, and none of it is visible to the user.
+- **Competitor-pixel and tag-manager interception** (`iabjs_data_layer_interceptor`, `iabjs_tiktok_pixel_interceptor`, `iabjs_snap_pixel_interceptor`, `iabjs_reddit_pixel_interceptor`, `iabjs_pinterest_pixel_interceptor`, `iabjs_x_pixel_interceptor`; internally named only `analytics_helper_1…6`):
+  - wraps the site's `window.dataLayer` (Google Tag Manager) in a JavaScript Proxy and forwards **every event, including ones queued before injection, as full JSON**;
+  - wraps `navigator.sendBeacon` to copy beacons sent to `analytics.tiktok.com`/`business.tiktok.com`;
+  - proxies `window.snaptr` (Snap Pixel), **including the `init` call where sites pass advanced-matching data such as email/phone**, and `window.rdt` (Reddit Pixel).
+  - Native side (`X/C0BZu.java` "DataLayerInjectorController", `X/C0LJK.java`): **server-supplied `ExtractionConfig`s** select fields; output is logged with `page_url` and the ad `tracking_token` as `iab_client_analytics_health_monitor` events. The scripts call themselves "health metrics".
+- **Analytics-tool fingerprinting** (`iabjs_detect_3p_analytics_tools`): scans each page for 26 tools (GA/GTM, Clarity, Hotjar, Bing UET, TikTok, LinkedIn, Klaviyo, HubSpot, Criteo, Taboola, Segment, FullStory, Snap Pixel, Amplitude…) and **extracts their account IDs**.
+- **Checkout tracking** (`X/C00410Bnd.java`, handler `IABAPMJSHandler`): watches www.paypal.com, Amazon Pay, accounts.google.com/pay.google.com and shop.app, and logs `IABAPMSelectedEvent` (page, method, timings) when you **choose an alternative payment method on a merchant's site**.
+- **Interaction capture** (`iabjs_iab_inner_frame`, 142 KB): every click (element tag, its text, x/y), scroll end, **key-press timing** (the key itself is *not* captured), page show/hide, and a `PerformanceObserver` recording **the URL of every resource the page loads**.
+- **Content sampling:** `extract_text_for_classification` (10 random text snippets → native `text_classification`), `get_normalized_page_text`, `sim_hash_logging` (page fingerprint), `get_outbound_links`, `detect_login_forms` (form detected/focused/submitted), `credentials_api_interceptor` (monkey-patches `navigator.credentials` to report passkey/password use; type and status only), `utm_recovery` (writes Meta UTM parameters into the URL).
+- `session_replay_recorder` exists, but its body isn't shipped. It's loaded from a downloaded file (`5b305a249260bbf624889858912cc9d247ac7640.js`).
+- *Benign:* `capture_html_source` (full page HTML) is used only when **you report a link** (`ACTION_REPORT`).
 
-### 3.2 Training data for an under-13 age model *(High)*
-`X/C1582206Ke.java:470-520`: reads an on-device store called **`underage_storage`**, packages it as an Odin training example named **`u13_example`**, and uploads it under use case **`AGE_SIGMA` v0.0.1**. Performance markers `ODIN_AGE` and `ODIN_AGE_U13_UPLOAD` match. Age assurance can serve child safety, but it's done invisibly, from behavioural features, and the client doesn't show which features go into `underage_storage`.
+**Why it matters.** This turns every link you open from Instagram into a measurement point on the open web, including other companies' analytics and ad pixels and your checkout choices. The page owner never agreed to it, and the user can't see it.
 
-### 3.3 Uploading keyboards and languages *(High)*
-`X/C1582206Ke.java:125-330`: enumerates `getEnabledInputMethodList()` and each keyboard's language subtypes, together with `CurrentKeyboardLanguages`, and uploads them via the GraphQL mutation **`ZeroDayLanguageSignalUploadMutation`** (`input_methods`). Installed keyboards are both a device fingerprint and a proxy for language or ethnicity.
+### 2.2 Location collection *(Critical)*
+- **Foreground location upload** (`X/C657102iX` / `jdex/classes3/…/X/C024202iX.java` "IG4AForegroundLocation", caller `IG_FOREGROUND_LOCATION_UPLOAD`, remote flag `2342164611333175797`, location permission required). Fixes are queued and uploaded with `FbLocationUpdateMutation` (`jdex/classes7/…/X/C04790JCj.java`, `X/C0FfJ.java`). Fields: **latitude, longitude, accuracy, altitude, speed, bearing, `is_spoofed`, `wifi_info` (hardware_address/BSSID, rssi, scan_results), `cell_info` (cell ID, LAC/TAC, MCC/MNC, timing advance, operator, SIM country), `bluetooth_info`, `family_device_id`, `app_use_state`**.
+- **"Event insights"** (`X/C2167908fd.java`): every 43,200 s (12 h, default) after session start, sends last-known **lat/long** to `EventInsightsUpsamplingQuery`.
+- Plus Friend Map (`com/instagram/friendmap`) and live location in DMs (foreground service `DirectLiveLocationService`).
 
-### 3.4 Device-state snapshot, triggerable on unlock *(High)*
-- `X/C2111108Rp.java` (`device_state_snapshot_client`) has collectors for: audio mode, ringer mode and volume, **is music playing**, screen brightness, connectivity, display state, airplane mode, **Do Not Disturb filter**, media routing (cast/Bluetooth), **device locked / interactive**, and app foreground state. It feeds `IG_ODIN_DEVICE_SIGNALS_COLLECTION` → `pdp_signals_mobile` (`X/EnumC703502q1.java:125`).
-- The manifest declares an exported receiver `PreloadsFbnsUnlockSignalReceiver` for `com.facebook.oxygen.services.fbns.SYS_ENTER`. That action is broadcast by **Meta's "Oxygen" system services, which phone makers preinstall** (`com.facebook.services`, `appmanager`, `system`; all are in Instagram's `<queries>`). The receiver ships disabled and is switched on at runtime.
+### 2.3 AI and automation app detector *(Critical)*
+`X/EnumC525730Kkl.java` lists 23 packages (Manus, Replit, YouWare, Emergent, a0.dev, NotebookLM, ChatGPT, Gemini, Copilot, Perplexity, **Claude, Replika, Character.AI, Poe, Pi**, Tasker, IFTTT, Zapier, MacroDroid, Automate, Home Assistant, Notion, Airtable), all also in `<queries>`. `X/C367410Ebz.java:58-104` (startup task `AiAppsDetectorStartupTaskBinder`, flag `36330376737612461`, at most once per configurable interval, default 24 h) probes each with `getPackageInfo` and logs the installed ones as `installed_apps` in analytics event `odin_ai_apps_detector`. Caller independently traced with REA (`evidence/rea/instagram.0Kkl.refs.json`).
 
-**Why it matters.** This is context sensing: knowing whether you're on Do Not Disturb, listening to music, or have just unlocked your phone is exactly what you'd want for timing engagement pushes. The unlock trigger relies on bloatware most users can't remove.
+### 2.4 More on-device profiling *(High)*
+- **Under-13 age model:** `X/C1582206Ke.java:470-520` reads on-device store `underage_storage`, builds Odin training example `u13_example`, uploads to use case **`AGE_SIGMA` v0.0.1**.
+- **Keyboards and languages:** same class, `getEnabledInputMethodList()` plus language subtypes → `ZeroDayLanguageSignalUploadMutation`.
+- **Device-state snapshot** (`X/C2111108Rp.java`): audio mode, ringer, volume, **music playing**, brightness, connectivity, display, airplane mode, **DND filter**, media routing, **lock/interactive state**. Exported receiver `PreloadsFbnsUnlockSignalReceiver` listens for `com.facebook.oxygen.services.fbns.SYS_ENTER` from **Meta services that phone makers preinstall**. It's enabled at runtime by `DeviceStateSnapshotManager` (`jdex/classes4/…/X/C0AKu.java`) and uploads on unlock when `preloads_fbns_unlock_signal_upload_enabled = 1`.
+- **Continuous contact upload** (`com/instagram/contacts/ccu/impl/XCCUWorker.java`): once contact sync is on, a periodic background WorkManager job (`xccu_periodic_upload`, every N hours) re-uploads deltas with `fdid`.
+- **Camera roll scanned by default** (`X/AbstractC264120AZm.java`: `gallery_suggestions_setting` default `auto_created_reels`). `X/C1958207mu.java` scans at least the last 60 days of media, **reverse-geocodes photo locations** and runs an on-device model to auto-create Reels. As far as the code shows, processing is on-device.
+- **Shopping "risk" fingerprint** (`X/C1322090ozM.java`), sent when opening the wishlist re-engagement screen (`com.bloks.www.buyer.reconsideration.wishlist`): Android ID, phone number (if granted), IP addresses, VPN/proxy, emulator/root checks via `pm list packages`, disk, uptime. SIM serial/IMSI reads exist but are blocked on Android 10+, and GSF ID needs a permission Instagram doesn't declare.
+- **Package visibility:** no `QUERY_ALL_PACKAGES`, but a bare `MAIN` intent query in `<queries>` makes nearly all apps visible.
 
-### 3.5 Visibility of nearly every installed app *(Medium)*
-Instagram doesn't request `QUERY_ALL_PACKAGES`, but its `<queries>` includes a bare `<intent><action android:name="android.intent.action.MAIN"/></intent>` plus `VIEW` with `scheme="*"`. On Android 11+ that makes practically every launchable app visible: a well-known way around the package-visibility restrictions. (Snapchat does the same; Duolingo limits it to launchers.)
-
-### 3.6 A "you have unseen likes" timer *(Medium)*
-`X/C2456109l1.java` and `X/AnonymousClass0297.java` (case 36): when a session ends, Instagram sets an `AlarmManager` alarm for **+24 h** that posts a local `UNSEEN_LIKES` notification. It's a client-side re-engagement trigger that doesn't depend on any real new activity.
-
----
-
-## 4. Snapchat 14.27.0.53 (`com.snapchat.android`)
-
-### 4.1 Contact upload with "closeness" metadata *(Critical)*
-- `defpackage/C0111Ac0.java:403` reads the entire `ContactsContract.Data` table: `contact_id, display_name, contact_last_updated_timestamp, starred, photo_uri, mimetype, data1-3`.
-- For each contact it builds `Contact(contactId, name, type, phoneNumbers, lastUpdatedTimestamp, emailAddresses, starred, hasEvent, hasPhoto, firstSocialLink)` (`defpackage/C40594pf4.java:103-193`).
-- **`firstSocialLink`**: if a contact row has a mimetype matching a **server-supplied keyword list** (`frnd_contact_social_link_mime_type_keywords`, empty by default; `defpackage/WR8.java:114`), that mimetype is recorded. Other apps add these rows (e.g. `vnd.com.whatsapp.profile`), so this can reveal which messaging apps each of your contacts uses.
-- These fields are serialised per number as `{number, hasStarred, hasPhoto, hasSavedDate, hasSocialLink, contactType}` (`defpackage/C16092Zh4.java`) into `contacts_with_meta_data` (`defpackage/C54695yr8.java`, built in `AbstractC13515Vh4.a`).
-- They're sent to **`/bq/find_friends_reg` during registration** (header `early_contact_sync=first|second`) and to `/ph/find_friends` (`com/snap/identity/FriendingHttpInterface.java:23-28`). The request also carries a flag `enable_find_friends_for_UK_under_age`.
-- Contact changes are re-detected through `contact_last_updated_timestamp` (`defpackage/C43861rn5.java:199`).
-
-**Why it matters.** "Starred" and "has a saved birthday" are strong signals of how close you are to someone, and they describe people who never agreed to anything and may not use Snapchat at all. The social-app field can be switched on from the server without an app update.
-
-### 4.2 Churn-risk targeting *(High)*
-- Server-assigned user segments: `is_new_user`, `is_14_days_new_user`, **`is_deep_churn`, `is_high_churn_risk_active/new/resurrected`** (`defpackage/EnumC23587eaa.java:663-677`, mapped in `HB3.java`).
-- The "Added Me" full-screen takeover on the camera is capped at **15 per session for new or churn-risk users and 5 for normal users** (`EnumC23587eaa.java:654-660`, consumed by `AddedMeTakeOverOnCameraProviderImpl` in `C20018cG.java:45-46`).
-- `RegistrationReengagementPushManager` / `GROWTH_NOTIFICATION_REGISTRATION_REENGAGEMENT`: push notifications to people who **started but didn't finish** signing up.
-- Free streak restores for returning users: `ResurrectedRestoreEligibilityCheck`, `RESURRECTED_RESTORE_ELIGIBILITY_WINDOW`, `resurrection_7_days_or_greater`. There's also a Snapchat+ win-back SKU, `winback-1m-599`.
-
-### 4.3 Streaks *(Medium–High)*
-- *"Get notified 1 hour before your streak ends"*, ⌛ expiry indicators, *"YOUR $0-DAY STREAK ENDED"*.
-- **Paid streak restores**: *"Snapstreaks that have ended in the past 48 hours can be restored through an in-app purchase"*, *"Restore for %1$s"*, plus monthly free restores as a Snapchat+ perk. The copy *"You already have a pending purchase waiting to be approved"* is Google Play's family-approval state, i.e. a child asking a parent to pay to restore a streak.
-
-### 4.4 Location consent bundled with ads *(Medium)*
-The location prompt (`app_permission_description`): *"Improve your Snap Map by enabling location – this will **not** share your location with friends. Snapchat will also use your location for Filters, **Ads**, and more."* Advertising rides along with a consent framed as being about the map. The in-app browser has the same pattern: *"Snapchat will use your activity within the in-app browser to … personalize … the ads"*.
-
-### 4.5 Smaller items
-- Bare `MAIN` intent query (see §3.5), giving visibility of almost all apps.
-- `READ_PHONE_NUMBERS`/`getLine1Number` used for phone-number autofill at sign-up (`defpackage/C50121vs7.java`). Expected behaviour.
+### 2.5 Engagement and self-preferencing *(Medium)*
+- **97 surfaces promoting Meta's AI apps** (`X/EnumC1639006cW.java`): feed and story acquisition/retention cards, megaphones with six copy variants, promotional DMs (`IGD_PROMOTIONAL_PROACTIVE_MESSAGE`), retargeting pushes, "someone you follow joined" pushes.
+- **About 100 cross-posting nudges** (`X/EnumC565710MJl.java`), including push/profile/dashboard prompts named `…_XAR_OFF_EU_REACTIVATION`, apparently aimed at EU users who had cross-app sharing switched off.
+- **24-hour "unseen likes" alarm** set at session end (`X/C2456109l1.java`), local and not tied to new activity.
+- Clipboard: a listener logs that you copied something (`copy_triggered`), not the content.
+- *Benign:* `READ_CALL_LOG` reads only the last call, for flash-call phone verification. Cell/Wi-Fi reads are wrapped by an internal audit hook.
 
 ---
 
-## 5. Reddit 2026.40.0, Dexcom G7 2.2.1, Proton Mail 7.11.10
+## 3. Snapchat 14.27.0.53 (`com.snapchat.android`)
 
-### Reddit (`com.reddit.frontpage`)
-- **Account deletion blocked by the subscription** *(Medium)*: *"To delete your account, you need to cancel your Reddit Premium subscription first."*
-- **Constant notification prompting** *(Medium)*: pre-prompt, re-prompt and re-enablement states (`com/reddit/notification/domain/model/NotificationEnablementState.java`) with entry points on **AppLaunch, SessionChange, VoteComment, CommentCreation, PostCreation, FollowComment/Post/User, Chat, StartChat, DirectMessage, AcceptChatInvite, SetAMAReminder…** Escalating banners: *"Don't miss out"*, *"Be in the know"*. The consent is bundled: *"Get notified of the best content for you, **as well as** replies to your posts"*. If you choose "Only post & comment notifications", you get an upsell back to all notifications (`isEligibleForAllNotificationUpsell`).
-- **Ads that send you notifications** *(Low–Medium)*: an "ad reminder" feature, *"Get a notification so you don't miss out."*
-- **Asks for more than it uses** *(Low)*: `PACKAGE_USAGE_STATS` is declared, but the only call is `getAppStandbyBucket()` for Reddit itself (`defpackage/z090.java`). `READ_GSERVICES` exists so Google reCAPTCHA can read the **GSF Android ID**, a persistent device identifier (`com/google/android/recaptcha/internal/zzcx.java:43`).
-- **Reasonable:** AppsFlyer only starts when `TrackingAndAttributionLevel != NONE`, with partner sharing filters (`com/reddit/mmp/appsflyer/c.java`).
+### 3.1 Contact upload with closeness metadata *(Critical)*
+`defpackage/C0111Ac0.java:403` reads the full contacts table and builds per-contact records with **starred, hasEvent (birthday), hasPhoto, emails, phone types and `firstSocialLink`**. The last one is the mimetype of other apps' contact rows (e.g. WhatsApp), matched against server keyword list `frnd_contact_social_link_mime_type_keywords`, which ships empty and is filled remotely. Records are serialised into `contacts_with_meta_data` and sent to `/bq/find_friends_reg` **during registration** and to `/ph/find_friends` (`com/snap/identity/FriendingHttpInterface.java`). The request also carries `enable_find_friends_for_UK_under_age`.
 
-### Dexcom G7 (`com.dexcom.g7`)
-- **Permissions beyond what's needed** *(Medium)*: `QUERY_ALL_PACKAGES` (the only use I found is checking for Dexcom's own Clarity app, which a one-line `<queries>` entry would cover), `RECORD_AUDIO` (voice entry), `READ_PHONE_STATE`, `CALL_PHONE`, `ACCESS_BACKGROUND_LOCATION`, and Health Connect reads of heart rate, steps, exercise and calories. Copy: *"You must **always** allow location permission to continue."* Location is also used to check your country of residence (`com/dexcom/dexcomone/utils/CountryOfResidenceService.java`).
-- **Code that's hard to audit** *(Medium)*: all string literals are encrypted (e.g. `HandlerC2189.m53923(...)`) and `PackageManager` calls go through reflection (`PackageManagerUtils.java`). For software that drives insulin-dosing decisions, this makes independent privacy and safety review much harder.
-- **Features gated on consent** *(Low–Medium)*: *"You can't use Share if you don't allow data sharing to the cloud"*, *"Must Share with Dexcom"* (to use the Lilly Tempo pen), *"If you'd like to be able to restore data next time, change your data consents…"* Sharing to followers genuinely needs the cloud, but the consent text itself comes from Dexcom's server (CAMS), so **I can't tell from the APK whether it's bundled with research or marketing uses.**
-- Firebase Analytics is turned off by default in the manifest. Qualtrics survey SDK and Crashlytics are present.
+### 3.2 Ads in the chat inbox *(High)*
+- Copy: "New in Your Chat Feed: Sponsored Snaps"; "Choose Your Ad Experience": "Smaller In-Feed Ads" or "Larger Banner Ads"; "I'm In!" or "Not Now". There's no way to say no; ads are pitched as "personalized messages from your favorite artists, creators, brands".
+- `defpackage/AKi.java:2481-2489`: `sponsored_snaps_eu_modal_dismissal_reprompt_ttl_seconds = 172800` (48 h), `…_dismissal_reprompt_frequency_cap = 10`, `…_opt_in_reprompt_ttl_days = 183`.
+- **Snap Pixel identity cookie** for web ads: `AdsCookieManagerV2` fetches `https://tr.snapchat.com/cm/wv?scut=<pixel token>` (cookie `sc_at`, 120 h) and attaches it when ad landing pages open, so advertisers' Snap Pixel can tie the visit to you.
+- **Ad-browser autofill**: injected script reports form detection and **the values you type into advertisers' forms** (`defpackage/sQ0.java`) to offer "Save info to autofill future forms?"; saved info "may also be used to improve your ad experience".
+- Remote switches present (default off): location in ad requests, probing which apps can open URLs for app-install ads.
 
-### Proton Mail (`ch.protonmail.android`)
-- 14 permissions (3 dangerous: camera, notifications, contacts for autocomplete and import). Only Sentry is detected, and it reports to Proton's own server (`api.protonmail.ch/core/v4/reports/sentry`, `androidx/activity/b0.java:228`) with session replay not configured. Firebase analytics, ad-ID collection and messaging auto-init are all off.
-- There's a `crashReports` user setting. I didn't confirm that it gates the SDK.
-- Dark patterns are limited to drawer banners (*"Black Friday Sale"*, *"SPECIAL OFFER"*) and upgrade gates. Auto-renew prices are disclosed (*"Welcome offer. Auto-renews at %s"*).
+### 3.3 My AI *(High)*
+Disclosure text: My AI uses content and **location**; content "is retained until you delete it"; "We use My AI information to improve our products **and ads**"; "We share information with … **advertising partners**"; in groups "My AI can read **all messages**". The Snapchat+ ad-free plan: "You may still see **sponsored** places and **My AI responses**."
+
+### 3.4 Location history and background location *(High)*
+- "Clear your location history, including **travel updates and Places you've visited while location is turned on**" (deletion split three ways: location history / Footsteps / tagged Places). "Your location history updates while you have Snapchat open." Places "Visited", "Highly Revisited" and **"Visited by $0"** (friends).
+- **Footsteps** is back-filled from "Snaps in your **Memories**" (photo location metadata).
+- "Allow all the time" upsell trays, plus a `BackgroundLocationRecovery` prompt for people who downgraded. Location foreground service `LodaDaemonService`, geofences (enter/exit/dwell), a push-handler hook and a buffered uploader.
+
+### 3.5 Face recognition and camera-roll indexing *(High, server-enabled)*
+Memories DB (`defpackage/C44243s2b.java`): `detected_face(…, encoding BLOB)`, `face_cluster(tagged_user_id)`, plus visual tagging and CLIP-style captions/embeddings. The toggle copy promises use for "**future manual or automatic creative use**", and turning it off is framed as a loss ("All your face groups … will be deleted"). `FACE_CLUSTERING_ENABLED` defaults off; backfill up to 10,000 items. A **camera-roll metadata scan** runs every 8 h (`CameraRollMetadataScanRecurringDurableJob`) with a gRPC upload path, which is off by default (`ENABLE_CAMERA_ROLL_FS_METADATA_UPLOAD = false`).
+
+### 3.6 Retention targeting and streaks *(High)*
+- Segments `is_deep_churn`, `is_high_churn_risk_active/new/resurrected` (`defpackage/EnumC23587eaa.java:663-677`). "Added Me" camera takeover cap **15 per session for new/churn users vs 5** (`:654-660`, `C20018cG.java`).
+- Pushes to people who abandoned sign-up (`GROWTH_NOTIFICATION_REGISTRATION_REENGAGEMENT`) and logged-out users (`RELOGIN_NOTIFICATION_SEND_TIME`); free streak restores for returning users; win-back SKU `winback-1m-599`.
+- Streak expiry warnings 1 h ahead; **paid restores within 48 h**, including Google Play's "pending purchase waiting to be approved" (a child's request to a parent).
+- Snapchat+ cancellation: "Don't Cancel" → feature-loss list → exit survey → "Finish canceling in settings".
+
+### 3.7 Minors and social pressure *(Medium)*
+- Snapchat itself warns: "If you open this message, $0 may be able to determine that **you have their phone number in your contact book**."
+- 16–17-year-olds are prompted to "Grow Your Audience" with a public profile; **minors can be paid for viral Spotlight Snaps** (16+, parental consent).
+- "Solar Systems" (your rank in a friend's orbit), and screenshot notifications even for **removed group members**.
+- Location prompt bundles **ads** into a map consent: "Snapchat will also use your location for Filters, **Ads**, and more."
+
+*Checked and cleared:* BSSID used only as a local bandwidth-cache key; no installed-package enumeration; "security center" queries are permission-settings deep links.
 
 ---
 
-## 6. Checked and cleared (false positives)
-These looked suspicious at first but turned out to be benign. They're listed so the findings above can be weighed fairly.
-- Snapchat reads the Wi-Fi BSSID only as a local key for a bandwidth-estimate cache (`E1b.java`). Its queries for phone makers' "security center" apps are deep links to permission settings, and Netflix/Spotify are "open in app" targets.
-- Instagram's `READ_CALL_LOG` is used for **flash-call phone verification**: it reads only the latest call within a short window (`X/AbstractC1331880pRm.java:287`). Its cell-tower and Wi-Fi scan reads sit inside an internal `IgLocationRequestDetector` audit hook.
-- Reddit's `getInstalledPackages` only checks whether the Play Store is installed. Its accessibility-service query only affects snackbar timing.
-- Clipboard reads in all apps happen on paste into OTP, chat or comment fields.
+## 4. Reddit 2026.40.0 (`com.reddit.frontpage`)
+Reddit came out markedly better than Instagram and Snapchat on tracking.
+- **Account deletion blocked by subscription** *(Medium)*: "To delete your account, you need to cancel your Reddit Premium subscription first." After deletion, posts/comments/messages are "dissociated (not deleted)".
+- **Notification nagging** *(Medium)*: pre-prompt/re-prompt/re-enablement states with entry points on AppLaunch, SessionChange, voting, commenting, posting, following, chat and more. Bundled consent ("best content for you, **as well as** replies"); upsell from "Only post & comment notifications" back to all.
+- **New daily streaks** *(Low–Medium)*: streak popups and a "not progressed today" alert badge. Onboarding claims "People with longer than 50 day streaks earn **271% more karma**".
+- **Ad reminders** that schedule notifications ("Get a notification so you don't miss out").
+- **Over-declared permissions** *(Low)*: `PACKAGE_USAGE_STATS` never used for usage queries; `READ_GSERVICES` lets Google reCAPTCHA read the GSF device ID.
+- **Good practice found:** both advertising IDs honour "limit ad tracking"; AppsFlyer only for attribution and gated by a tracking setting; equal Accept/Reject cookie buttons; no contacts or location collection; JavaScript injection only on Reddit's own pages; age checks via Persona with stated 7-day retention.
 
-## 7. Method and limitations
-- **Getting the apps:** APKPure via `apkeep` (EFF), arm64 splits. Every base APK's **signing certificate was checked** against the developer's known identity (Instagram "Kevin Systrom", Snapchat "Captain Captcha", Proton Technologies AG, Duolingo, reddit Inc., Dexcom via Play App Signing); see `evidence/apk_identity.txt` and `evidence/apk_sha256.txt`. Nothing was installed or run.
-- **Tools:** **REA (Reverse Engineer Anything)** 6.4.0 with the audited `jadx-headless-mcp` 0.7.1 engine and Apktool 2.12.1 (set up in this repo: `.mcp.json`, `.claude/skills/reverse-engineer-anything`, `tools/setup.sh`), used for evidence-bound package inspection and cross-reference tracing. JADX 1.5.3 for full decompilation. Exodus Privacy tracker signatures. The repo's own scanners are in `scripts/`.
-- **Coverage:** Duolingo, Proton, Dexcom and Instagram were decompiled fully. Reddit's tree is about 84% complete (JADX stalled on one class). Snapchat's tree is about 76% complete (the first pass ran out of memory), with gaps filled by searching raw DEX strings.
-- **Static analysis only.** Remote config, A/B flags and server behaviour can't be seen from the APK. Many findings are **capabilities behind server-side flags**, and are worded that way.
-- **Claude (`com.anthropic.claude`) was not analysed.** It isn't on APKPure or Aptoide, and APKMirror, APKCombo and Aurora's anonymous Google Play token service all blocked this container (Cloudflare 403 or proxy denial). With a Google Play AAS token for `apkeep`, or the APK uploaded to `apks/`, it can be run through the same pipeline.
+---
+
+## 5. Duolingo 6.101.2 (`com.duolingo`)
+- **Notifications you can't dismiss** *(Critical)*: `defpackage/oms.java:1502-1525`. For `STREAK_SAVER`, with streak ≥ 7 days (`uls.streak`), Android 13+ and a remote flag on, the notification is posted with `FLAG_NO_CLEAR` and un-stuck by `UnstickNotificationWorker` at a set time **the next day** (`defpackage/lg40.java`). Its own HIGH-importance channel; 60-minute red countdown; `terminator_duo`/`mad_duo`/`laser_duo` animations (`defpackage/sks.java`).
+- **Launcher icon/name swaps** *(High)*: `PreStreakSaver1…9` escalating icons; labels "Duolingo🚨/⏳/⏰/‼️/❓/👀/⁉️".
+- **Notification taxonomy** *(High)*: `PASSIVE_AGGRESSIVE`, `ABANDONED_CART_*`, `RESURRECTION`, `CONTINUOUS_RESURRECTION`, `FRIENDS_RESURRECTION`, `REMOVE_AND_RESEND_NOTIFICATION`, `APP_ICON_UPDATE`; haptics experiment for "risk users".
+- **Contact sync with closeness flags** *(Critical, see #5)*: `defpackage/jg.java` and `com/duolingo/data/contactsync/ContactItem.java`. Per contact: display name, email, phone, hasBirthday, hasCompanyName, hasNickName, hasAddress, hasPhoto, **WhatsApp/Telegram presence**. SHA-256 hashing applies when server config enables it.
+- **Home-network fingerprinting** *(High)*: Wi-Fi-triggered reminders (`TriggeredNotificationWifiWorker`), with networks identified by hashed gateway IP and subnet and counted by days seen (`defpackage/gde.java`).
+- **Ad stack** *(High)*: 32 Exodus trackers, ~25 ad networks fully bundled. Child-directed flags are set for AdMob and Adjust; I didn't verify every mediated network.
+- **Copy**: League Repair and Timer Boost to avoid demotion, "Add Widget to Repair", "Wait, don't go!", "Losing makes me cry…".
+- *Cleared:* calendar access is limited to Duolingo's own practice events.
+
+## 6. Dexcom G7 2.2.1 (`com.dexcom.g7`)
+`QUERY_ALL_PACKAGES` is used only to find Dexcom's own Clarity app. Microphone is for voice entry. Location covers BLE and a country-of-residence check ("You must **always** allow location"). All strings are encrypted and package calls go through reflection, which hampers audit of a regulated medical device. Sharing to followers and data restore require cloud consent, and consent text is server-side, so its scope can't be judged from the APK. Bulk uploads are device settings and inventory records. Qualtrics and Crashlytics are present; Firebase Analytics is off by default.
+
+## 7. Proton Mail 7.11.10 (`ch.protonmail.android`)
+14 permissions; contacts used for autocomplete and explicit import. Only Sentry, reporting to Proton's own server with session replay not configured. Firebase analytics, ad ID and messaging auto-init are off. A `crashReports` setting exists (I didn't confirm it gates the SDK). Dark patterns are limited to seasonal sale banners; auto-renew prices are disclosed.
+
+## 8. Method, evidence and limits
+- **Getting the apps:** APKPure via `apkeep`; each base APK's signing certificate verified against the developer (`evidence/apk_identity.txt`, `evidence/apk_sha256.txt`). Nothing was installed or run.
+- **Tools:** **REA (Reverse Engineer Anything)** 6.4.0 (`.mcp.json`, `.claude/skills/reverse-engineer-anything`, `tools/setup.sh`) for evidence-bound package inspection and cross-reference tracing; JADX 1.5.3; Apktool 2.12.1; Exodus tracker signatures; `scripts/`.
+- **Decompiled trees:** Instagram, Snapchat and Reddit were decompiled **per DEX file** (`work/<app>/jdex/classesN/sources/…`, script `scripts/decompile_per_dex.sh`) after whole-APK runs ran out of memory. Some Instagram citations use the earlier 83% whole-APK tree (`work/instagram/jadx_full/sources/X/…`). The same classes exist in the per-DEX tree, sometimes under different JADX aliases. Duolingo, Dexcom and Proton use `work/<app>/jadx/sources`. Working notes with more pointers are in `notes/`; the injected Instagram scripts quoted in §2.1 are copied verbatim in `evidence/iab_js/`.
+- **Static only.** Remote configuration, experiments and server behaviour are invisible to static analysis; capabilities behind flags are described with their shipped defaults.
+
+## 9. Not analysed
+**Claude (`com.anthropic.claude`)**: the APK isn't on APKPure or Aptoide, and APKMirror, APKCombo and Aurora's anonymous token service blocked this environment. Skipped as agreed.

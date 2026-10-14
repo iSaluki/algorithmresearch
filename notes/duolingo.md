@@ -26,3 +26,9 @@ Manifest: ACCESS_ADSERVICES_AD_ID/ATTRIBUTION/TOPICS + AD_ID.
 
 ## Copy (apktool res/values/strings.xml)
 "Wait, don't go! If you quit, you'll lose your progress." / "Losing makes me cry on the outside AND inside!" / "Hello, sadness…" / "Streak's in danger!" / "Come back today to protect your streak…" / "Don't get demoted! Keep moving up with a Timer Boost." / "Get a League Repair to reclaim your spot" / "Add Widget to Repair" / "Never lose your streak again with Duo on your phone's home screen!" / "Reaching a N day streak will put you in the top X% of all streaks" / "You'll lose access to Super Family Plan in N hours" / "Are you sure you want to leave? You'll lose access to Max."
+
+## Contact sync enrichment (second pass)
+- defpackage/jg.java case 8 (to8): reads all contacts with email/phone, then per contact checks Data rows for photo, contact_event birthday (data2=3), nickname, organization, vnd.org.telegram.messenger.android.profile, vnd.com.whatsapp.profile, postal-address_v2, display_name; logs found_own_contact.
+- com/duolingo/data/contactsync/ContactItem.java serialized Surrogate(clientIdentifier, displayName, emailAddress, hasAddress, hasBirthday, hasCompanyName, hasNickName, hasPhoto, hasSocialProfile, phoneNumber, hashedIdentifiers); HashingConfig SHA256 (truncation 22) used when useHashedIdentifiers.
+- Endpoints: /contacts/associations, /{apiVersion}/friends/contacts/filter-invitations, /contacts/verify-phone-number.
+## Calendar: inserts recurring practice events (com/duolingo/core/calendar/event/c.java), observes Events+Reminders changes (defpackage/mx0.java:784); instance queries filtered to Duolingo's own events (customAppPackage / eventLocation www.duolingo.com) → benign.
