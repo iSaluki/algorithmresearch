@@ -115,6 +115,19 @@
   "android.permission.WRITE_CONTACTS",
   "android.permission.WRITE_EXTERNAL_STORAGE"
  ],
+ "permissions_sdk23": [
+  "android.permission.ANSWER_PHONE_CALLS",
+  "android.permission.BLUETOOTH_ADMIN",
+  "android.permission.CALL_PHONE",
+  "android.permission.READ_CALL_LOG",
+  "android.permission.READ_PHONE_NUMBERS"
+ ],
+ "dangerous_permissions_sdk23": [
+  "android.permission.ANSWER_PHONE_CALLS",
+  "android.permission.CALL_PHONE",
+  "android.permission.READ_CALL_LOG",
+  "android.permission.READ_PHONE_NUMBERS"
+ ],
  "queries": {
   "packages": [
    "com.google.android.webview",

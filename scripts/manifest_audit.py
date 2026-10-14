@@ -1,6 +1,7 @@
 """Summarise privacy-relevant manifest declarations for each APK into JSON."""
 import json, sys, os, re
 from androguard.core.apk import APK
+from androguard.core.api_specific_resources import load_permissions
 from androguard.util import set_log
 set_log("ERROR")
 
@@ -13,6 +14,10 @@ for path in sys.argv[2:]:
     perms = sorted(a.get_permissions())
     details = a.get_details_permissions()
     dangerous = sorted(p for p, d in details.items() if d and "dangerous" in str(d[0]))
+    # <uses-permission-sdk-23> (granted on Android 6+ only) is not in get_permissions().
+    sdk23 = sorted({e.get(NS + "name") for e in m.findall("uses-permission-sdk-23")} - set(perms))
+    platform = load_permissions(34)
+    sdk23_dangerous = [p for p in sdk23 if "dangerous" in str(platform.get(p, {}).get("protectionLevel", ""))]
     queries = {"packages": [], "intents": [], "providers": []}
     for q in m.findall("queries"):
         for p in q.findall("package"):
@@ -40,7 +45,8 @@ for path in sys.argv[2:]:
         return res
     data = {
         "package": a.get_package(), "version": a.get_androidversion_name(),
-        "permissions": perms, "dangerous_permissions": dangerous, "queries": queries,
+        "permissions": perms, "dangerous_permissions": dangerous,
+        "permissions_sdk23": sdk23, "dangerous_permissions_sdk23": sdk23_dangerous, "queries": queries,
         "app_attrs": {k.replace(NS, ""): v for k, v in app.attrib.items()},
         "meta_data": meta,
         "activities": len(app.findall("activity")) + len(app.findall("activity-alias")),

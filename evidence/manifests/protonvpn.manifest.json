@@ -19,6 +19,8 @@
   "android.permission.CAMERA",
   "android.permission.POST_NOTIFICATIONS"
  ],
+ "permissions_sdk23": [],
+ "dangerous_permissions_sdk23": [],
  "queries": {
   "packages": [],
   "intents": [

@@ -51,6 +51,8 @@
   "android.permission.READ_PHONE_STATE",
   "android.permission.RECORD_AUDIO"
  ],
+ "permissions_sdk23": [],
+ "dangerous_permissions_sdk23": [],
  "queries": {
   "packages": [
    "com.google.android.googlequicksearchbox",

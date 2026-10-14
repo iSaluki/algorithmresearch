@@ -10,7 +10,15 @@ done by statically reverse-engineering the apps as shipped to users.
 | Batch | Apps |
 |-------|------|
 | 1 | Instagram, Snapchat, Reddit, Duolingo, Dexcom G7, Proton Mail |
-| 2 | Facebook, Discord, Signal, WhatsApp, Google Photos, Proton VPN, Waze, Chess.com, BBC News |
+| 2 | Facebook\*, WhatsApp, Telegram, Google Photos, Discord, Chess.com, Waze, BBC News (UK and International), Signal, Proton VPN\*\* |
+
+\* Facebook's main code ships in Meta's proprietary Superpack compression and could not be decompiled. Its
+section rests on the manifest, resources, bundled assets and the names of its server-side feature switches
+(see `scripts/superpack/`).
+
+\*\* Proton VPN was analysed from its open-source F-Droid build, which may differ from the Play Store build.
+
+Claude was also requested but no APK could be obtained.
 
 Exact versions, package names and signing-certificate fingerprints are listed in `evidence/apk_identity*.txt`
 and `evidence/apk_sha256.txt`.
@@ -37,15 +45,17 @@ and `evidence/apk_sha256.txt`.
    meta-data (`scripts/manifest_audit.py`); third-party SDKs via [Exodus Privacy](https://exodus-privacy.eu.org/)
    tracker signatures matched against DEX class descriptors (`scripts/tracker_scan.py`).
 3. **Decompile** with JADX 1.5.3, one DEX file at a time for very large apps (`scripts/decompile_per_dex.sh`), and
-   decode resources with Apktool 2.12.1.
+   decode resources with Apktool 2.12.1. React Native apps (Discord, BBC News International) ship Hermes bytecode,
+   which was disassembled (hermes-dec) or read from string tables.
 4. **Sweep and read**: `scripts/scan_patterns.py` flags privacy-sensitive APIs and engagement or dark-pattern
    identifiers and copy; every finding in the report was then confirmed by reading the code. Leads that turned
    out benign are listed in the report as "checked and cleared".
 5. **Trace** specific questions with **[REA — Reverse Engineer Anything](https://github.com/morluto/rea)**, which
    produces evidence records bound to the APK's SHA-256 (`evidence/rea/`).
 
-The analysis was carried out with AI assistance (Claude Code, driving the tools above). All claims are
-grounded in the cited code and strings, which readers can check independently.
+The analysis was carried out with AI assistance (Claude Code, driving the tools above; batch-2 deep reads were run
+by parallel AI agents and the headline claims re-checked against the code). All claims are grounded in the cited
+code and strings, which readers can check independently.
 
 ## Repository layout
 
@@ -54,7 +64,7 @@ grounded in the cited code and strings, which readers can check independently.
 | `REPORT.md` | The findings report |
 | `notes/` | Per-app working notes with additional file/line pointers |
 | `evidence/` | APK identities and hashes, manifest audits, tracker inventory, pattern-scan output, REA evidence records, short excerpts of injected browser scripts |
-| `scripts/` | Analysis helpers used to produce the evidence |
+| `scripts/` | Analysis helpers used to produce the evidence; `scripts/superpack/` is the (unsuccessful) Facebook unpacking attempt |
 | `tools/setup.sh` | Installs REA, JADX, Apktool and the audited jadx-headless-mcp engine |
 | `.mcp.json`, `.claude/skills/reverse-engineer-anything/` | REA registration and its workflow skill for Claude Code (MIT, © morluto; see the `LICENSE` in that folder) |
 

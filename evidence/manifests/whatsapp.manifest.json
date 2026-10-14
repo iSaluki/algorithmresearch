@@ -111,6 +111,16 @@
   "android.permission.WRITE_CONTACTS",
   "android.permission.WRITE_EXTERNAL_STORAGE"
  ],
+ "permissions_sdk23": [
+  "android.permission.ANSWER_PHONE_CALLS",
+  "android.permission.CALL_PHONE",
+  "android.permission.READ_CALL_LOG"
+ ],
+ "dangerous_permissions_sdk23": [
+  "android.permission.ANSWER_PHONE_CALLS",
+  "android.permission.CALL_PHONE",
+  "android.permission.READ_CALL_LOG"
+ ],
  "queries": {
   "packages": [
    "com.facebook.orca",

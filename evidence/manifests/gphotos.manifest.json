@@ -66,6 +66,22 @@
   "android.permission.WRITE_CALENDAR",
   "android.permission.WRITE_EXTERNAL_STORAGE"
  ],
+ "permissions_sdk23": [
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.POST_PROMOTED_NOTIFICATIONS",
+  "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.WRITE_MEDIA_STORAGE",
+  "com.android.launcher.permission.INSTALL_SHORTCUT",
+  "com.android.providers.media.permission.ACCESS_MEDIA_OWNER_PACKAGE_NAME",
+  "com.android.vending.BILLING"
+ ],
+ "dangerous_permissions_sdk23": [
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.POST_NOTIFICATIONS"
+ ],
  "queries": {
   "packages": [
    "com.google.android.gms",

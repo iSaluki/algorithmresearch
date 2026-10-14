@@ -22,6 +22,8 @@
   "android.permission.POST_NOTIFICATIONS",
   "android.permission.READ_CONTACTS"
  ],
+ "permissions_sdk23": [],
+ "dangerous_permissions_sdk23": [],
  "queries": {
   "packages": [
    "com.android.webview",
